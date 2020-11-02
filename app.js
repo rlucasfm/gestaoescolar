@@ -44,6 +44,9 @@ const express = require('express')
         app.use(express.static(path.join(__dirname,"public")))
 
 // Rotas
+app.get('/', (req,res) => {
+    res.render('index', {layout: false})
+})
 
 // Abertura do LISTEN
     const PORT = process.env.PORT || 8081
