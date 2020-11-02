@@ -1,4 +1,6 @@
-# NodeJS-template
-Template com estruturas padrão para meu framework NodeJS
+# gestaoescolar
+Utilizando template com estruturas padrão para meu framework NodeJS
 
-Este repositório deve ser utilizado como template para os projetos de web apps NodeJS + Express + Handlebars + MongoDB, para agilizar o processo de configuração e desenvolvimento.
+Sistema criado com o objetivo de suprir as necessidades de gestão escolar. 
+
+1 Fase - Sistemas de diários eletrônicas
