@@ -1,4 +1,4 @@
-const express = require('express')
+    const express = require('express')
     const handlebars = require('express-handlebars')
     const bodyParser = require('body-parser')
     const app = express()
@@ -7,6 +7,8 @@ const express = require('express')
     const session = require('express-session')
     const flash = require('connect-flash')
     const db = require("./config/db")
+    const dashboard = require("./routes/dashboard")
+
 
 // Configurações
     // Configuração da sessão
@@ -31,6 +33,7 @@ const express = require('express')
         app.engine('handlebars', handlebars({defaultLayout: 'main'}))
         app.set('view engine', 'handlebars')
     // Mongoose
+        mongoose.set('useCreateIndex', true)
         mongoose.Promise = global.Promise
         mongoose.connect(db.mongoURI, {
             useNewUrlParser: true,
@@ -44,12 +47,15 @@ const express = require('express')
         app.use(express.static(path.join(__dirname,"public")))
 
 // Rotas
+app.use('/dashboard', dashboard)
+
 app.get('/', (req,res) => {
     res.render('index', {layout: false})
 })
 
+
 // Abertura do LISTEN
     const PORT = process.env.PORT || 8081
     app.listen(PORT, () => {
-        console.log("Servidor aberto com sucesso.")
+        console.log("Servidor aberto com sucesso na porta "+PORT)
     })
