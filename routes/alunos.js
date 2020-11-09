@@ -3,7 +3,7 @@ const router = express.Router()
 const mongoose = require("mongoose")
 
 router.get('/cadastro', (req,res) => {
-    res.render('dashboard/main')
+    res.render('alunos/main')
 })
 
 router.get('/busca', (req,res) => {
