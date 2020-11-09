@@ -9,22 +9,31 @@
 </head>
 <body>
 
+	{{#if error_msg}}
+		<div style="position: absolute; z-index: 10; width: 100%; text-align: center;" class="mt-2">
+			<div class="alert alert-danger" style="display: inline-block;">{{error_msg}}</div>
+		</div>		
+	{{/if}}
+
     <img class="wave" src="/img/wave.png">
 	<div class="container">
 		<div class="img">
 			<img src="img/software.svg">
-		</div>
-		<div class="login-content">
-			<form action="index.html">
+		</div>		
+		<div class="login-content">		
+			<form action="/login" method="POST">
 				<img src="/img/avatar.svg">
 				<h3 class="title">SISTEMA DE GESTÃO ESCOLAR</h2>
+				{{#if error}}
+					<div class="alert alert-danger">{{error}}</div>
+				{{/if}}
            		<div class="input-div one">
-           		   <div class="i">
+					<div class="i">
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
            		   		<h5>CPF</h5>
-           		   		<input type="text" class="input">
+           		   		<input type="text" class="input" name="username" required>
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -33,11 +42,11 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Senha</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" class="input" name="password" required>
             	   </div>
             	</div>
             	<a href="#">Precisa de ajuda?</a>
-            	<input type="button" onclick="location.href='/dashboard'" class="btn" value="Entrar">
+            	<input type="submit" class="btn" value="Entrar">
             </form>
         </div>
     </div>

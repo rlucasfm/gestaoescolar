@@ -8,7 +8,10 @@
     const flash = require('connect-flash')
     const db = require("./config/db")
     const dashboard = require("./routes/dashboard")
-
+    const alunos = require("./routes/alunos")
+    const passport = require('passport')
+    require("./config/auth")(passport)
+    const {isLogged} = require("./helpers/logged")
 
 // Configurações
     // Configuração da sessão
@@ -17,6 +20,9 @@
             resave: true,
             saveUninitialized: true
         }))
+        
+        app.use(passport.initialize())
+        app.use(passport.session())
 
         app.use(flash())
     // Middleware para as sessões
@@ -24,6 +30,7 @@
         res.locals.success_msg = req.flash("success_msg")
         res.locals.error_msg = req.flash("error_msg")
         res.locals.error = req.flash("error")
+        res.locals.user = req.user || null
         next()
     })
     // Body Parser
@@ -47,10 +54,28 @@
         app.use(express.static(path.join(__dirname,"public")))
 
 // Rotas
-app.use('/dashboard', dashboard)
+app.use('/dashboard', isLogged, dashboard)
+app.use('/alunos', isLogged, alunos)
 
 app.get('/', (req,res) => {
-    res.render('index', {layout: false})
+    if(req.isAuthenticated()){
+        res.redirect('/dashboard')
+    }else{
+        res.render('index', {layout: false})
+    }
+})
+
+app.post('/login', (req, res, next) => {
+    passport.authenticate("local", {
+        successRedirect: "/dashboard",
+        failureRedirect: "/",
+        failureFlash: true
+    })(req, res, next)
+})
+
+app.get('/logout', (req, res) => {
+    req.logout()
+    res.redirect('/')
 })
 
 

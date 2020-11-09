@@ -23,5 +23,3 @@ const User = new Schema({
 
 mongoose.model('users', User)
 
-const usuario = new mongoose.model('users')
-
