@@ -28,8 +28,7 @@ const Aluno = new Schema({
         type: Number, 
         // 0 - Aguardando Matrícula, 1 - Aguardando transferêcia, 2 - Aguardando vaga, 3 - Inativo - Abandonou a escola,
         // 4 - Inativo - Concluiu o curso, 5 - Inativo - Dispensado, 6 - Inativo - Falecido, 7 - Inativo - Outras situações, 
-        // 8 - Inativo - Trancou a matricula, 9 - Inativo - Transferido da escola, 10 - Matriculado, 11 - Pré-matricula
-        required: true
+        // 8 - Inativo - Trancou a matricula, 9 - Inativo - Transferido da escola, 10 - Matriculado, 11 - Pré-matricula        
     },
     emailAluno:{
         type: String,
@@ -43,9 +42,6 @@ const Aluno = new Schema({
         // 23 - TEA/Autismo, 24 - Transtorno Desintegrativo da Infância, 25 - Transtorno Hipercinético, 
         // 26 - Transtornos Específicos do desenvolvimento de hab, 27 - Transtornos globais de desenvolvimento
     }],
-    matriculaLivro:{
-        type: String        
-    },
     escolaAnterior:{
         type: Schema.Types.ObjectId
     },
@@ -54,6 +50,249 @@ const Aluno = new Schema({
     },
     matriculaAtual:{
         type: String
+    },
+    nacionalidade:{
+        type: Number,
+        // 0 - Brasileira, 1 - Brasileiro Naturalizado, 2 - Estrangeiro
+        default: 0
+    },
+    paisOrigem:{
+        type: String,
+        default: 'BRASIL'
+    },
+    uf:{
+        type: String
+    },
+    naturalidade:{
+        type: String
+    },
+    distritoNatINEP:{
+        type: String
+    },
+    cpf:{
+        type: String
+    },
+    tipoCertidao:{
+        type: Number
+        // 0 - Não consta, 1 - Nascimento, 2 - Casamento
+    },
+    numeroCertidao:{
+        type: String
+    },
+    dataExp:{
+        type: Date
+    },
+    ufCertidao:{
+        type: String
+    },
+    municipioCertidao:{
+        type: String
+    },
+    distritoRegINEP:{
+        type: String
+    },
+    cartorio:{
+        type: String
+    },
+    rg:{
+        type: String
+    },
+    orgEmissor:{
+        type: String
+    },
+    ufRg:{
+        type: String
+    },
+    dataEmissaoRg:{
+        type: String
+    },
+    certidaoReservista:{
+        type: String
+    },
+    justificativa:{
+        type: Number,
+        // 0 - Documento OK, 1 - Não possui os documentos pessoais solicitados, 2 - A escola não dispõe ou não recebeu os documentos
+        default: 0
+    },
+    eResponsavel:{
+        type: Boolean,
+        default: false
+    },
+    endereco:{
+        cep: String,
+        endereco: String,
+        numero: String,
+        bairro: String,
+        complemento: String,
+        uf: String,
+        municipio: String,
+        distrito: String,
+        telResidencial: String,
+        telCelular: String,
+        nucleoHabitacional:{
+            type: Number,
+            // 0 - Zona urbana, 1 - Zona rural
+            default: 0
+        },
+        tipoMoradia:{
+            type: Number
+            // 0 - Aluguel, 1 - Cedida, 2 - Própria, 3 - Opção
+        },
+        moraCompanhia:{
+            type: Number,
+            // 0 - Familiares, 1 - Somente Pai, 2 - Somente mãe, 3 - Outras pessoas, 4 - Pai e mãe
+            default: 0
+        }
+    },
+    transporte:{
+        transportePublico: Boolean, // false - não utiliza, true - utiliza
+        poderPubResp:{
+            type: Number,
+            // 0 - Municipal, 1 - Estadual, 2 - Nenhum
+            default: 0
+        },
+        transp1:{
+            type: Number,
+            // 0 - Nenhum
+            // 1 - Rodoviário - Onibus, 2 - Rod - Microonibus, 3 - Rod - Vans/Kombi, 4 - Rod - Bicicleta, 5 - Rod - Tração Animal
+            // 6 - Rod - Outros, 7 - Aquaviário - Capacidade até 5, 8 - Aqua - 5 a 15, 9 - Aqua - 15 a 35, 10 - Aqua - Mais que 35
+            default: 0
+        },
+        transp2:{
+            type: Number,
+            // 0 - Nenhum
+            // 1 - Rodoviário - Onibus, 2 - Rod - Microonibus, 3 - Rod - Vans/Kombi, 4 - Rod - Bicicleta, 5 - Rod - Tração Animal
+            // 6 - Rod - Outros, 7 - Aquaviário - Capacidade até 5, 8 - Aqua - 5 a 15, 9 - Aqua - 15 a 35, 10 - Aqua - Mais que 35
+            default: 0
+        },
+        transp3:{
+            type: Number,
+            // 0 - Nenhum
+            // 1 - Rodoviário - Onibus, 2 - Rod - Microonibus, 3 - Rod - Vans/Kombi, 4 - Rod - Bicicleta, 5 - Rod - Tração Animal
+            // 6 - Rod - Outros, 7 - Aquaviário - Capacidade até 5, 8 - Aqua - 5 a 15, 9 - Aqua - 15 a 35, 10 - Aqua - Mais que 35
+            default: 0
+        },
+        recebeEscOutroLugar:{
+            type: Number,
+            // 0 - Não recebe, 1 - Hospital, 2 - Domicílio
+            default: 0 
+        }
+    },
+    pai:{
+        nome: String,
+        rg: String,
+        orgEmissor: String,
+        ufRG: String,
+        dataEmissao: String,
+        cpf: String,
+        NIS: String,
+        rendaFamilia: Number,
+        nacionalidade:{
+            type: Number,
+            // 0 - Brasileira, 1 - Brasileiro Naturalizado, 2 - Estrangeiro
+            default: 0
+        },
+        paisOrigem:{
+            type: String,
+            default: 'BRASIL'
+        },        
+        ufNasc: String,
+        naturalidade: String,
+        distritoINEP: String,
+        escolaridade: String,
+        profissao: String,
+        localTrabalho: String,
+        telefone: String,
+        cep: String,
+        endereco: String,
+        numero: String,
+        bairro: String,
+        complemento: String,
+        uf: String,
+        municipio: String,
+        distrito: String,
+        estadoCivil:{
+            type: Number
+            // 0 - Casado, 1 - Separado, 2 - Solteiro, 3 - Juntos, 4 - Viuvo, 5 - Outros
+        }
+    },
+    mae:{
+        nome: String,
+        rg: String,
+        orgEmissor: String,
+        ufRG: String,
+        dataEmissao: String,
+        cpf: String,
+        NIS: String,
+        rendaFamilia: Number,
+        nacionalidade:{
+            type: Number,
+            // 0 - Brasileira, 1 - Brasileiro Naturalizado, 2 - Estrangeiro
+            default: 0
+        },
+        paisOrigem:{
+            type: String,
+            default: 'BRASIL'
+        },        
+        ufNasc: String,
+        naturalidade: String,
+        distritoINEP: String,
+        escolaridade: String,
+        profissao: String,
+        localTrabalho: String,
+        telefone: String,
+        cep: String,
+        endereco: String,
+        numero: String,
+        bairro: String,
+        complemento: String,
+        uf: String,
+        municipio: String,
+        distrito: String,
+        estadoCivil:{
+            type: Number
+            // 0 - Casado, 1 - Separado, 2 - Solteiro, 3 - Juntos, 4 - Viuvo, 5 - Outros
+        }
+    },
+    responsavel:{
+        nome: String,
+        rg: String,
+        orgEmissor: String,
+        ufRG: String,
+        dataEmissao: String,
+        cpf: String,
+        NIS: String,
+        rendaFamilia: Number,
+        nacionalidade:{
+            type: Number,
+            // 0 - Brasileira, 1 - Brasileiro Naturalizado, 2 - Estrangeiro
+            default: 0
+        },
+        paisOrigem:{
+            type: String,
+            default: 'BRASIL'
+        },        
+        ufNasc: String,
+        naturalidade: String,
+        distritoINEP: String,
+        escolaridade: String,
+        profissao: String,
+        localTrabalho: String,
+        telefone: String,
+        cep: String,
+        endereco: String,
+        numero: String,
+        bairro: String,
+        complemento: String,
+        uf: String,
+        municipio: String,
+        distrito: String,
+        estadoCivil:{
+            type: Number
+            // 0 - Casado, 1 - Separado, 2 - Solteiro, 3 - Juntos, 4 - Viuvo, 5 - Outros
+        },
+        nomePai: String,
+        nomeMae: String
     }
 })
 
