@@ -1,5 +1,7 @@
     const express = require('express')
     const handlebars = require('express-handlebars')
+    const Handlebars = require('handlebars')
+    const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
     const bodyParser = require('body-parser')
     const app = express()
     const path = require('path')
@@ -31,13 +33,14 @@
         res.locals.error_msg = req.flash("error_msg")
         res.locals.error = req.flash("error")
         res.locals.user = req.user || null
+
         next()
     })
     // Body Parser
         app.use(bodyParser.urlencoded({extended: true}))
         app.use(bodyParser.json())
     // Handlebars
-        app.engine('handlebars', handlebars({defaultLayout: 'main'}))
+        app.engine('handlebars', handlebars({defaultLayout: 'main', handlebars: allowInsecurePrototypeAccess(Handlebars)}))
         app.set('view engine', 'handlebars')
     // Mongoose
         mongoose.set('useCreateIndex', true)

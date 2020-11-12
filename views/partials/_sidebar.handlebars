@@ -2,18 +2,20 @@
             <div class="sidebar-content">
                 <!-- sidebar-brand  -->
                 <div class="sidebar-item sidebar-brand">
-                    <a href="#">Sistema de Gestão Escolar</a>
+                    <a href="/">Sistema de Gestão Escolar</a>
                 </div>
                 <!-- sidebar-header  -->
                 <div class="sidebar-item sidebar-header d-flex flex-nowrap">
                     <div class="user-pic">
-                        <img class="img-responsive img-rounded" src="img/user.jpg" alt="User picture">
+                        <img class="img-responsive img-rounded" src="/img/user.jpg" alt="User picture">
                     </div>
                     <div class="user-info">
-                        <span class="user-name">Nome
-                            <strong>Sobrenome</strong>
+                        <span class="user-name">
+                            {{user.name}}
                         </span>
-                        <span class="user-role">Professor</span>
+                        <span class="user-role">
+                            {{userStatus}}
+                        </span>
                         <span class="user-status">
                             <i class="fa fa-circle"></i>
                             <span>Online</span>
@@ -35,7 +37,7 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                        <a href="#">Cadastrar aluno
+                                        <a href="/alunos/cadastro">Cadastrar aluno
                                             <span class="badge badge-pill badge-success">Pro</span>
                                         </a>
                                     </li>
