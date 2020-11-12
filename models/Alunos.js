@@ -66,9 +66,6 @@ const Aluno = new Schema({
     naturalidade:{
         type: String
     },
-    distritoNatINEP:{
-        type: String
-    },
     cpf:{
         type: String
     },
@@ -86,9 +83,6 @@ const Aluno = new Schema({
         type: String
     },
     municipioCertidao:{
-        type: String
-    },
-    distritoRegINEP:{
         type: String
     },
     cartorio:{
@@ -197,8 +191,7 @@ const Aluno = new Schema({
             default: 'BRASIL'
         },        
         ufNasc: String,
-        naturalidade: String,
-        distritoINEP: String,
+        naturalidade: String,        
         escolaridade: String,
         profissao: String,
         localTrabalho: String,
@@ -236,7 +229,6 @@ const Aluno = new Schema({
         },        
         ufNasc: String,
         naturalidade: String,
-        distritoINEP: String,
         escolaridade: String,
         profissao: String,
         localTrabalho: String,
@@ -273,8 +265,7 @@ const Aluno = new Schema({
             default: 'BRASIL'
         },        
         ufNasc: String,
-        naturalidade: String,
-        distritoINEP: String,
+        naturalidade: String,        
         escolaridade: String,
         profissao: String,
         localTrabalho: String,
