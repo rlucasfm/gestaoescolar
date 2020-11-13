@@ -1,1 +1,289 @@
-<h2>Alunos</h2>
+<form>
+    <div class="card">        
+        <div class="card-body">
+            <h5 class="card-title">Informações do aluno</h5>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nomeAluno">Nome</label>
+                        <input type="text" class="form-control" id="nomeAluno" name="nomeAluno" placeholder="Nome do aluno" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="dataNascAluno">Nascimento</label>
+                        <input type="date" class="form-control" id="dataNascAluno" name="dataNascAluno" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="NISAluno">NIS</label>
+                        <input type="text" class="form-control" id="NISAluno" name="NISAluno" placeholder="NIS" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="idCensoAluno">ID Censo</label>
+                        <input type="text" class="form-control" id="idCensoAluno" name="idCensoAluno" placeholder="ID Censo" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="sexoAluno">Sexo</label>
+                        <select class="form-control" id="sexoAluno" name="sexoAluno">
+                            <option>MASCULINO</option>
+                            <option>FEMININO</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="corAluno">Cor/Raça</label>
+                        <select class="form-control" id="corAluno" name="corAluno">
+                            <option value="0">BRANCA</option>
+                            <option value="1">PRETA</option>
+                            <option value="2">PARDA</option>
+                            <option value="3">AMARELA</option>
+                            <option value="4">INDÍGENA</option>
+                            <option value="5">QUILOMBOLA</option>
+                            <option value="6">NÃO DECLARADA</option>                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="situacaoAluno">Situação do aluno</label>
+                        <select class="form-control" id="situacaoAluno" name="situacaoAluno">
+                            <option value="0">Aguardando matrícula</option>
+                            <option value="1">Aguardando transferência</option>
+                            <option value="2">Aguardando vaga</option>
+                            <option value="3">Inativo - Abandonou a escola</option>
+                            <option value="4">Inativo - Concluiu o curso</option>
+                            <option value="5">Inativo - Dispensado</option>
+                            <option value="6">Inativo - Falecido</option>                            
+                            <option value="7">Inativo - Outras situações</option>
+                            <option value="8">Inativo - Trancou matrícula</option>
+                            <option value="9">Inativo - Transferido da escola</option>
+                            <option value="10">Matriculado</option>
+                            <option value="11">Pré-matrícula</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="emailAluno">E-mail do aluno</label>
+                        <input type="text" class="form-control" id="emailAluno" name="emailAluno" placeholder="E-mail do aluno" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="deficienciaAluno">Deficiências do aluno</label>
+                        <select class="form-control" id="deficienciaAluno" name="deficienciaAluno">
+                            <option value="100">Sem necessidades especiais</option>
+                            <option value="0">Altas Habilidades/Superdotação</option>
+                            <option value="1">Baixa visão</option>
+                            <option value="2">Cegueira</option>
+                            <option value="3">Condutas Típicas</option>
+                            <option value="4">Deficiência Auditiva</option>
+                            <option value="5">Deficiência física</option>
+                            <option value="6">Deficiência Intelectual</option>                            
+                            <option value="7">Deficiência multipla</option>
+                            <option value="8">Deficiencia visual</option>
+                            <option value="9">Dislexia</option>
+                            <option value="10">Distúrbios alimentares</option>
+                            <option value="11">Outras</option>
+                            <option value="12">Paralisia Cerebral</option>
+                            <option value="13">Sindrome Asperger</option>
+                            <option value="14">Crouzon</option>
+                            <option value="15">Moebius</option>
+                            <option value="16">Rett</option>
+                            <option value="17">Down</option>
+                            <option value="18">Williams</option>                            
+                            <option value="19">Surdez</option>
+                            <option value="20">Surdocegueira</option>
+                            <option value="21">TDAH</option>
+                            <option value="22">TEA/Autismo</option>
+                            <option value="23">Transtorno Desintegrativo da Infância</option>
+                            <option value="24">Transtorno Hipercinético</option>
+                            <option value="25">Transtornos Específicos do desenvolvimento de hab</option>
+                            <option value="26">Transtornos globais de desenvolvimento</option>                            
+                        </select>                        
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="deficienciaAluno2"> 2</label>
+                        <select class="form-control" id="deficienciaAluno2" name="deficienciaAluno2">
+                            <option value="100">Sem necessidades especiais</option>
+                            <option value="0">Altas Habilidades/Superdotação</option>
+                            <option value="1">Baixa visão</option>
+                            <option value="2">Cegueira</option>
+                            <option value="3">Condutas Típicas</option>
+                            <option value="4">Deficiência Auditiva</option>
+                            <option value="5">Deficiência física</option>
+                            <option value="6">Deficiência Intelectual</option>                            
+                            <option value="7">Deficiência multipla</option>
+                            <option value="8">Deficiencia visual</option>
+                            <option value="9">Dislexia</option>
+                            <option value="10">Distúrbios alimentares</option>
+                            <option value="11">Outras</option>
+                            <option value="12">Paralisia Cerebral</option>
+                            <option value="13">Sindrome Asperger</option>
+                            <option value="14">Crouzon</option>
+                            <option value="15">Moebius</option>
+                            <option value="16">Rett</option>
+                            <option value="17">Down</option>
+                            <option value="18">Williams</option>                            
+                            <option value="19">Surdez</option>
+                            <option value="20">Surdocegueira</option>
+                            <option value="21">TDAH</option>
+                            <option value="22">TEA/Autismo</option>
+                            <option value="23">Transtorno Desintegrativo da Infância</option>
+                            <option value="24">Transtorno Hipercinético</option>
+                            <option value="25">Transtornos Específicos do desenvolvimento de hab</option>
+                            <option value="26">Transtornos globais de desenvolvimento</option>                            
+                        </select>                        
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group"> 
+                        <label for="deficienciaAluno3"> 3</label>                       
+                        <select class="form-control" id="deficienciaAluno3" name="deficienciaAluno3">
+                            <option value="100">Sem necessidades especiais</option>
+                            <option value="0">Altas Habilidades/Superdotação</option>
+                            <option value="1">Baixa visão</option>
+                            <option value="2">Cegueira</option>
+                            <option value="3">Condutas Típicas</option>
+                            <option value="4">Deficiência Auditiva</option>
+                            <option value="5">Deficiência física</option>
+                            <option value="6">Deficiência Intelectual</option>                            
+                            <option value="7">Deficiência multipla</option>
+                            <option value="8">Deficiencia visual</option>
+                            <option value="9">Dislexia</option>
+                            <option value="10">Distúrbios alimentares</option>
+                            <option value="11">Outras</option>
+                            <option value="12">Paralisia Cerebral</option>
+                            <option value="13">Sindrome Asperger</option>
+                            <option value="14">Crouzon</option>
+                            <option value="15">Moebius</option>
+                            <option value="16">Rett</option>
+                            <option value="17">Down</option>
+                            <option value="18">Williams</option>                            
+                            <option value="19">Surdez</option>
+                            <option value="20">Surdocegueira</option>
+                            <option value="21">TDAH</option>
+                            <option value="22">TEA/Autismo</option>
+                            <option value="23">Transtorno Desintegrativo da Infância</option>
+                            <option value="24">Transtorno Hipercinético</option>
+                            <option value="25">Transtornos Específicos do desenvolvimento de hab</option>
+                            <option value="26">Transtornos globais de desenvolvimento</option>                            
+                        </select>                        
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="matricAluno">Matricula do aluno</label>
+                        <input type="text" class="form-control" id="matricAluno" name="matricAluno" placeholder="Matricula do aluno" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <label for="escolaAnterior">Escola anterior</label>
+                        <select class="form-control" name="escolaAnterior" id="escolaAnterior">
+                            <option value="0">Escola 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="matricAntAluno">Matricula anterior do aluno</label>
+                        <input type="text" class="form-control" id="matricAntAluno" name="matricAntAluno" placeholder="Matricula anterior do aluno" required>
+                    </div>
+                </div>
+            </div>
+            <h5 class="card-title mt-4">Informações do aluno</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="nacionalidadeAluno">Nacionalidade</label>
+                        <select class="form-control" id="nacionalidadeAluno" name="nacionalidadeAluno">
+                            <option value="0">Brasileira</option>
+                            <option value="1">Brasileira naturalizado</option>
+                            <option value="2">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="paisAluno">País de origem</label>
+                        <select class="form-control" id="paisAluno" name="paisAluno">
+                            <option value="0">BRASIL</option>
+                            <option value="1">País A</option>
+                            <option value="2">País B</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufAluno">UF</label>
+                        <select class="form-control" id="ufAluno" name="ufAluno">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="naturalidadeAluno">Naturalidade</label>
+                        <input type="text" class="form-control" id="naturalidadeAluno" name="naturalidadeAluno" placeholder="Cidade de nascimento do aluno" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="cpfAluno">CPF do Aluno</label>
+                        <input type="text" class="form-control" id="cpfAluno" name="cpfAluno" placeholder="CPF do aluno" required>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>    
+</form>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#cpfAluno").mask("999.999.999-99");
+	});
+</script>

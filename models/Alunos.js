@@ -17,7 +17,7 @@ const Aluno = new Schema({
         type: String
     },
     sexo:{
-        type: Number, // 0 - Masculino, 1 - Feminino
+        type: String,
         required: true 
     },
     cor:{
@@ -37,10 +37,11 @@ const Aluno = new Schema({
         type: Number
         // 0 - Altas Habilidades/Superdotação, 1 - Baixa visão, 2 - Cegueira, 3 - Condutas Típicas, 4 - Deficiência Auditiva,
         // 5 - Deficiência física, 6 - Deficiência Intelectual, 7 - Deficiência multipla, 8 - Deficiencia visual, 9 - Dislexia
-        // 10 - Distúrbios alimentares, 11 - Normal, 12 - Outras, 13 - Paralisia Cerebral, 14 - Sindrome Asperger,
-        // 15 - Crouzon, 16 - Moebius, 17 - Rett, 18 - Down, 19 - Williams, 20 - Surdez, 21 - Surdocegueira, 22 - TDAH,
-        // 23 - TEA/Autismo, 24 - Transtorno Desintegrativo da Infância, 25 - Transtorno Hipercinético, 
-        // 26 - Transtornos Específicos do desenvolvimento de hab, 27 - Transtornos globais de desenvolvimento
+        // 10 - Distúrbios alimentares, 11 - Outras, 12 - Paralisia Cerebral, 13 - Sindrome Asperger,
+        // 14 - Crouzon, 15 - Moebius, 16 - Rett, 17 - Down, 18 - Williams, 19 - Surdez, 20 - Surdocegueira, 21 - TDAH,
+        // 22 - TEA/Autismo, 23 - Transtorno Desintegrativo da Infância, 24 - Transtorno Hipercinético, 
+        // 25 - Transtornos Específicos do desenvolvimento de hab, 26 - Transtornos globais de desenvolvimento
+        // 100 - Sem necessidade
     }],
     escolaAnterior:{
         type: Schema.Types.ObjectId
