@@ -208,7 +208,7 @@
                     </div>
                 </div>
             </div>
-            <h5 class="card-title mt-4">Informações do aluno</h5>
+            <h5 class="card-title mt-4">Documentação do aluno</h5>
             <hr>
             <div class="row">
                 <div class="col-sm-2">
@@ -269,7 +269,9 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="naturalidadeAluno">Naturalidade</label>
-                        <input type="text" class="form-control" id="naturalidadeAluno" name="naturalidadeAluno" placeholder="Cidade de nascimento do aluno" required>
+                        <select class="form-control" id="naturalidadeAluno" name="naturalidadeAluno">
+                            <option value="0">Municipio 1</option>
+                        </select>                            
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -279,11 +281,308 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="tipoDoc">Tipo de Documento</label>
+                        <select class="form-control" id="tipoDoc" name="tipoDoc">
+                            <option value="0">Não consta</option>
+                            <option value="1">Nascimento</option>
+                            <option value="2">Casamento</option>                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="numeroDoc">Número do documento</label>
+                        <input type="text" class="form-control" id="numeroDoc" name="numeroDoc" placeholder="Número do documento" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufDoc">UF</label>
+                        <select class="form-control" id="ufDoc" name="ufDoc">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="municipioDoc">Município Registro</label>
+                        <select class="form-control" id="municipioDoc" name="municipioDoc">
+                            <option value="0">Município 1</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="cartorioDoc">Cartório</label>
+                        <select class="form-control" id="cartorioDoc" name="cartorioDoc">
+                            <option value="0">Cartório 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="rgDoc">RG do aluno</label>
+                        <input type="text" class="form-control" id="rgDoc" name="rgDoc" placeholder="RG do Aluno" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="emissorRg">Orgão emissor</label>
+                        <select class="form-control" id="emissorRg" name="emissorRg">
+                            <option value="0">Emissor 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufRg">UF</label>
+                        <select class="form-control" id="ufRg" name="ufRg">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="dataDoc">Data emissão</label>
+                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="certReserv">Certidão de Reservista</label>
+                        <input type="text" class="form-control" id="certReserv" name="certReserv" placeholder="Certidão de reservista" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="justifDoc">Justificativa para falta de documentação do aluno</label>
+                        <select class="form-control" id="justifDoc" name="justifDoc">
+                            <option value="0">Documento OK</option>
+                            <option value="1">Não possui os documentos pessoais solicitados</option>
+                            <option value="2">A escola não dispõe ou não recebeu os documentos</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <input type="checkbox" class="form-control-md" id="eResp" name="eResp">
+                        O aluno é responsável
+                    </div>
+                </div>
+            </div>
+            <h5 class="card-title mt-4">Endereço do aluno</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cepEnd">CEP do Endereço</label>
+                        <input type="text" class="form-control cep" id="cepEnd" name="cepEnd" placeholder="CEP do Endereço" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="numEnd">Número</label>
+                        <input type="text" class="form-control" id="numEnd" name="numEnd" placeholder="Nº" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="bairroEnd">Bairro</label>
+                        <input type="text" class="form-control" id="bairroEnd" name="bairroEnd" placeholder="Bairro" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="complementoEnd">Complemento</label>
+                        <input type="text" class="form-control" id="complementoEnd" name="complementoEnd" placeholder="Complemento" required>
+                    </div>
+                </div>                  
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufEnd">UF</label>
+                        <select class="form-control" id="ufEnd" name="ufEnd">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="municipioEnd">Municipio</label>
+                        <select class="form-control" id="municipioEnd" name="municipioEnd">
+                            <option value="0">Municipio 1</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="distritoEnd">Distrito</label>
+                        <input type="text" class="form-control" id="distritoEnd" name="distritoEnd" placeholder="Distrito do Endereço">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="telresEnd">Tel. Residencial</label>
+                        <input type="text" class="form-control phone" id="telresEnd" name="telresEnd" required>                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="celEnd">Tel. Celular</label>
+                        <input type="text" class="form-control phone" id="celEnd" name="celEnd" required>                                                      
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="nucleohab">Núcleo habitacional</label>
+                        <select class="form-control" id="nucleohab" name="nucleohab">
+                            <option value="0">Zona urbana</option>
+                            <option value="1">Zona rural</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="tipomoradia">Tipo de moradia</label>
+                        <select class="form-control" id="tipomoradia" name="tipomoradia">
+                            <option value="0">Aluguel</option>
+                            <option value="1">Cedida</option>
+                            <option value="2">Própria</option>
+                            <option value="3">Compartilhado</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="companhiaMoradia">Mora em companhia de quem</label>
+                        <select class="form-control" id="companhiaMoradia" name="companhiaMoradia">
+                            <option value="0">Somente com o pai</option>
+                            <option value="1">Somente com a mãe</option>
+                            <option value="2">Familiares</option>
+                            <option value="3">Outras pessoas</option>
+                            <option value="4">Com pai e mãe</option>
+                        </select>                            
+                    </div>
+                </div>
+            </div>
         </div>        
-    </div>    
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Informações do Pai</h5>
+            <hr>
+        </div>
+    </div>       
 </form>
+
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#cpfAluno").mask("999.999.999-99");
 	});
+
+    $(document).ready(function(){
+	    $(".cep").mask("99.999-999");
+    });
+
+    $(document).ready(function(){
+	    $(".phone").mask("(99) 9999-9999");
+    });
 </script>

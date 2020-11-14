@@ -131,7 +131,7 @@ const Aluno = new Schema({
         },
         tipoMoradia:{
             type: Number
-            // 0 - Aluguel, 1 - Cedida, 2 - Própria, 3 - Opção
+            // 0 - Aluguel, 1 - Cedida, 2 - Própria, 3 - Compartilhado
         },
         moraCompanhia:{
             type: Number,
@@ -249,6 +249,8 @@ const Aluno = new Schema({
     },
     responsavel:{
         nome: String,
+        nascimento: Date,
+        parentesco: String,
         rg: String,
         orgEmissor: String,
         ufRG: String,
