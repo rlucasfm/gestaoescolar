@@ -1,8 +1,11 @@
 if(process.env.NODE_ENV == "production"){
-    // Senha Tll0xtEcWL7l88Gh
-    // DB Cluster0
-    module.exports = {mongoURI: "mongodb+srv://richard:Tll0xtEcWL7l88Gh@cluster0.unqwq.mongodb.net/Cluster0?retryWrites=true&w=majority"}
+    // User gestaoescolar
+    // Senha gestaoapp
+    // DB GestaoApp
+    module.exports = {mongoURI: "mongodb+srv://gestaoescolar:gestaoapp@gestaodb.qaui8.mongodb.net/GestaoDB?retryWrites=true&w=majority"}
 }else{
     // Substituir o <DBNAME> pelo nome do banco
-    module.exports = {mongoURI: "mongodb://localhost/gestaoescolar"}
+    //module.exports = {mongoURI: "mongodb://localhost/gestaoescolar"}
+    // Usar apenas o banco online para desenvolvimento distribuido
+    module.exports = {mongoURI: "mongodb+srv://gestaoescolar:gestaoapp@gestaodb.qaui8.mongodb.net/GestaoDB?retryWrites=true&w=majority"}
 }
