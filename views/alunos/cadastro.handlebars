@@ -277,7 +277,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="cpfAluno">CPF do Aluno</label>
-                        <input type="text" class="form-control" id="cpfAluno" name="cpfAluno" placeholder="CPF do aluno" required>
+                        <input type="text" class="form-control cpf" id="cpfAluno" name="cpfAluno" placeholder="CPF do aluno" required>
                     </div>
                 </div>
             </div>
@@ -461,7 +461,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="complementoEnd">Complemento</label>
-                        <input type="text" class="form-control" id="complementoEnd" name="complementoEnd" placeholder="Complemento" required>
+                        <input type="text" class="form-control" id="complementoEnd" name="complementoEnd" placeholder="Complemento">
                     </div>
                 </div>                  
             </div>
@@ -661,14 +661,892 @@
         <div class="card-body">
             <h5 class="card-title">Informações do Pai</h5>
             <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nomePai">Nome</label>
+                        <input type="text" class="form-control" id="nomePai" name="nomePai" placeholder="Nome do pai">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="rgPai">RG</label>
+                        <input type="text" class="form-control" id="rgPai" name="rgPai" placeholder="RG do pai">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="emissorRgPai">Orgão emissor</label>
+                        <select class="form-control" id="emissorRgPai" name="emissorRgPai">
+                            <option value="0">Emissor 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufrgPai">UF</label>
+                        <select class="form-control" id="ufrgPai" name="ufrgPai">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>                                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="dataEmissRgPai">Data de Emissão</label>
+                        <input type="date" class="form-control" id="dataEmissRgPai" name="dataEmissRgPai">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cpfPai">CPF do Pai</label>
+                        <input type="text" class="form-control cpf" id="cpfPai" name="cpfPai">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="nisPai">NIS do Pai</label>
+                        <input type="text" class="form-control" id="nisPai" name="nisPai">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="rendaPai">Renda familiar</label>
+                        <input type="number " class="form-control" id="rendaPai" name="rendaPai">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="nacionalidadePai">Nacionalidade</label>
+                        <select class="form-control" id="nacionalidadePai" name="nacionalidadePai">
+                            <option value="0">Brasileira</option>
+                            <option value="1">Brasileira naturalizado</option>
+                            <option value="2">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="paisPai">País de origem</label>
+                        <select class="form-control" id="paisPai" name="paisPai">
+                            <option value="0">BRASIL</option>
+                            <option value="1">País A</option>
+                            <option value="2">País B</option>
+                        </select>
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufnascPai">UF</label>
+                        <select class="form-control" id="ufnascPai" name="ufnascPai">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="naturalidadePai">Naturalidade</label>
+                        <select class="form-control" id="naturalidadePai" name="naturalidadePai">
+                            <option value="0">Municipio 1</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="escolaridadePai">Escolaridade</label>
+                        <select class="form-control" id="escolaridadePai" name="escolaridadePai">
+                            <option value="FUNDAMENTAL COMPLETO">FUNDAMENTAL COMPLETO</option>
+                            <option value="FUNDAMENTAL INCOMPLETO">FUNDAMENTAL INCOMPLETO</option>
+                            <option value="MEDIO COM MAGISTERIO COMPLETO">MEDIO COM MAGISTERIO COMPLETO</option>
+                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA">MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
+                            <option value="SUPERIOR COM LICENCIATURA COMPLETO">SUPERIOR COM LICENCIATURA COMPLETO</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
+                            <option value="OUTRA FORMACAO">OUTRA FORMAÇÃO</option>
+                            <option value="POS GRADUADO ESPECIALIZACAO">PÓS-GRADUADO ESPECIALIZAÇÃO</option>
+                            <option value="MESTRADO">MESTRADO</option>
+                            <option value="DOUTORADO">DOUTORADO</option>
+                            <option value="ANALFABETO">ANALFABETO</option>
+                            <option value="ENSINO MEDIO INCOMPLETO">ENSINO MÉDIO INCOMPLETO</option>
+                            <option value="ENSINO SUPERIOR INCOMPLETO">ENSINO SUPERIOR INCOMPLETO</option>
+                            <option value="ENSINO MEDIO">ENSINO MÉDIO</option>
+                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA">ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
+                            <option value="SUPERIOR">SUPERIOR</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="profPai">Profissão do pai</label>
+                        <input type="text" class="form-control" id="profPai" name="profPai" placeholder="Profissão do pai">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="localtrabPai">Local de trabalho</label>
+                        <input type="text" class="form-control" id="localtrabPai" name="localtrabPai" placeholder="Local de trabalho">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="telPai">Telefone</label>
+                        <input type="text" class="form-control phone" id="telPai" name="telPai" placeholder="Telefone do pai">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cepPai">CEP</label>
+                        <input type="text" class="form-control cep" id="cepPai" name="cepPai" placeholder="CEP do Pai">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="enderecoPai">Endereço</label>
+                        <input type="text" class="form-control" id="enderecoPai" name="enderecoPai" placeholder="Endereço">
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="numPai">Número</label>
+                        <input type="text" class="form-control" id="numPai" name="numPai" placeholder="Nº">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="bairroPai">Bairro</label>
+                        <input type="text" class="form-control" id="bairroPai" name="bairroPai" placeholder="Bairro">
+                    </div>
+                </div>                                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufPai">UF</label>
+                        <select class="form-control" id="ufPai" name="ufPai">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="municipioPai">Municipio</label>
+                        <select class="form-control" id="municipioPai" name="municipioPai">
+                            <option value="0">Municipio 1</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="distritoPai">Distrito</label>
+                        <input type="text" class="form-control" id="distritoPai" name="distritoPai" placeholder="Distrito do Endereço">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="estadocivilPai">Estado civil</label>
+                        <select name="estadocivilPai" id="estadocivilPai" class="form-control">
+                            <option value="0">Casado</option>
+                            <option value="1">Separado</option>
+                            <option value="2">Solteiro</option>
+                            <option value="3">Juntos</option>
+                            <option value="4">Viuvo</option>
+                            <option value="5">Outros</option>                            
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>       
+    </div>    
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Informações da Mae</h5>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nomeMae">Nome</label>
+                        <input type="text" class="form-control" id="nomeMae" name="nomeMae" placeholder="Nome da Mae" required>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="rgMae">RG</label>
+                        <input type="text" class="form-control" id="rgMae" name="rgMae" placeholder="RG da Mae" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="emissorRgMae">Orgão emissor</label>
+                        <select class="form-control" id="emissorRgMae" name="emissorRgMae">
+                            <option value="0">Emissor 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufrgMae">UF</label>
+                        <select class="form-control" id="ufrgMae" name="ufrgMae">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>                                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="dataEmissRgMae">Data de Emissão</label>
+                        <input type="date" class="form-control" id="dataEmissRgMae" name="dataEmissRgMae" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cpfMae">CPF da Mae</label>
+                        <input type="text" class="form-control cpf" id="cpfMae" name="cpfMae" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="nisMae">NIS da Mae</label>
+                        <input type="text" class="form-control" id="nisMae" name="nisMae">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="rendaMae">Renda familiar</label>
+                        <input type="number " class="form-control" id="rendaMae" name="rendaMae">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="nacionalidadeMae">Nacionalidade</label>
+                        <select class="form-control" id="nacionalidadeMae" name="nacionalidadeMae">
+                            <option value="0">Brasileira</option>
+                            <option value="1">Brasileira naturalizado</option>
+                            <option value="2">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="paisMae">País de origem</label>
+                        <select class="form-control" id="paisMae" name="paisMae">
+                            <option value="0">BRASIL</option>
+                            <option value="1">País A</option>
+                            <option value="2">País B</option>
+                        </select>
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufnascMae">UF</label>
+                        <select class="form-control" id="ufnascMae" name="ufnascMae">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="naturalidadeMae">Naturalidade</label>
+                        <select class="form-control" id="naturalidadeMae" name="naturalidadeMae">
+                            <option value="0">Municipio 1</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="escolaridadeMae">Escolaridade</label>
+                        <select class="form-control" id="escolaridadeMae" name="escolaridadeMae">
+                            <option value="FUNDAMENTAL COMPLETO">FUNDAMENTAL COMPLETO</option>
+                            <option value="FUNDAMENTAL INCOMPLETO">FUNDAMENTAL INCOMPLETO</option>
+                            <option value="MEDIO COM MAGISTERIO COMPLETO">MEDIO COM MAGISTERIO COMPLETO</option>
+                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA">MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
+                            <option value="SUPERIOR COM LICENCIATURA COMPLETO">SUPERIOR COM LICENCIATURA COMPLETO</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
+                            <option value="OUTRA FORMACAO">OUTRA FORMAÇÃO</option>
+                            <option value="POS GRADUADO ESPECIALIZACAO">PÓS-GRADUADO ESPECIALIZAÇÃO</option>
+                            <option value="MESTRADO">MESTRADO</option>
+                            <option value="DOUTORADO">DOUTORADO</option>
+                            <option value="ANALFABETO">ANALFABETO</option>
+                            <option value="ENSINO MEDIO INCOMPLETO">ENSINO MÉDIO INCOMPLETO</option>
+                            <option value="ENSINO SUPERIOR INCOMPLETO">ENSINO SUPERIOR INCOMPLETO</option>
+                            <option value="ENSINO MEDIO">ENSINO MÉDIO</option>
+                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA">ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
+                            <option value="SUPERIOR">SUPERIOR</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="profMae">Profissão da Mae</label>
+                        <input type="text" class="form-control" id="profMae" name="profMae" placeholder="Profissão da Mae">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="localtrabMae">Local de trabalho</label>
+                        <input type="text" class="form-control" id="localtrabMae" name="localtrabMae" placeholder="Local de trabalho">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="telMae">Telefone</label>
+                        <input type="text" class="form-control phone" id="telMae" name="telMae" placeholder="Telefone da Mae">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cepMae">CEP</label>
+                        <input type="text" class="form-control cep" id="cepMae" name="cepMae" placeholder="CEP da Mae" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="enderecoMae">Endereço</label>
+                        <input type="text" class="form-control" id="enderecoMae" name="enderecoMae" placeholder="Endereço" required>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="numMae">Número</label>
+                        <input type="text" class="form-control" id="numMae" name="numMae" placeholder="Nº" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="bairroMae">Bairro</label>
+                        <input type="text" class="form-control" id="bairroMae" name="bairroMae" placeholder="Bairro" required>
+                    </div>
+                </div>                                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufMae">UF</label>
+                        <select class="form-control" id="ufMae" name="ufMae">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="municipioMae">Municipio</label>
+                        <select class="form-control" id="municipioMae" name="municipioMae">
+                            <option value="0">Municipio 1</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="distritoMae">Distrito</label>
+                        <input type="text" class="form-control" id="distritoMae" name="distritoMae" placeholder="Distrito do Endereço">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="estadocivilMae">Estado civil</label>
+                        <select name="estadocivilMae" id="estadocivilMae" class="form-control">
+                            <option value="0">Casado</option>
+                            <option value="1">Separado</option>
+                            <option value="2">Solteiro</option>
+                            <option value="3">Juntos</option>
+                            <option value="4">Viuvo</option>
+                            <option value="5">Outros</option>                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Informações do Responsável</h5>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nomeResp">Nome</label>
+                        <input type="text" class="form-control" id="nomeResp" name="nomeResp" placeholder="Nome da Resp" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="nascResp">Data do Nascimento</label>
+                        <input type="date" class="form-control" id="nascResp" name="nascResp" required>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="rgResp">RG</label>
+                        <input type="text" class="form-control" id="rgResp" name="rgResp" placeholder="RG da Resp" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="emissorRgResp">Orgão emissor</label>
+                        <select class="form-control" id="emissorRgResp" name="emissorRgResp">
+                            <option value="0">Emissor 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufrgResp">UF</label>
+                        <select class="form-control" id="ufrgResp" name="ufrgResp">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>                                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="dataEmissRgResp">Data de Emissão</label>
+                        <input type="date" class="form-control" id="dataEmissRgResp" name="dataEmissRgResp" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cpfResp">CPF do Responsável</label>
+                        <input type="text" class="form-control cpf" id="cpfResp" name="cpfResp" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="nisResp">NIS do Responsável</label>
+                        <input type="text" class="form-control" id="nisResp" name="nisResp">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="rendaResp">Renda familiar</label>
+                        <input type="number " class="form-control" id="rendaResp" name="rendaResp">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="nacionalidadeResp">Nacionalidade</label>
+                        <select class="form-control" id="nacionalidadeResp" name="nacionalidadeResp">
+                            <option value="0">Brasileira</option>
+                            <option value="1">Brasileira naturalizado</option>
+                            <option value="2">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="paisResp">País de origem</label>
+                        <select class="form-control" id="paisResp" name="paisResp">
+                            <option value="0">BRASIL</option>
+                            <option value="1">País A</option>
+                            <option value="2">País B</option>
+                        </select>
+                    </div>
+                </div>                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufnascResp">UF</label>
+                        <select class="form-control" id="ufnascResp" name="ufnascResp">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="naturalidadeResp">Naturalidade</label>
+                        <select class="form-control" id="naturalidadeResp" name="naturalidadeResp">
+                            <option value="0">Municipio 1</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="escolaridadeResp">Escolaridade</label>
+                        <select class="form-control" id="escolaridadeResp" name="escolaridadeResp">
+                            <option value="FUNDAMENTAL COMPLETO">FUNDAMENTAL COMPLETO</option>
+                            <option value="FUNDAMENTAL INCOMPLETO">FUNDAMENTAL INCOMPLETO</option>
+                            <option value="MEDIO COM MAGISTERIO COMPLETO">MEDIO COM MAGISTERIO COMPLETO</option>
+                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA">MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
+                            <option value="SUPERIOR COM LICENCIATURA COMPLETO">SUPERIOR COM LICENCIATURA COMPLETO</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
+                            <option value="OUTRA FORMACAO">OUTRA FORMAÇÃO</option>
+                            <option value="POS GRADUADO ESPECIALIZACAO">PÓS-GRADUADO ESPECIALIZAÇÃO</option>
+                            <option value="MESTRADO">MESTRADO</option>
+                            <option value="DOUTORADO">DOUTORADO</option>
+                            <option value="ANALFABETO">ANALFABETO</option>
+                            <option value="ENSINO MEDIO INCOMPLETO">ENSINO MÉDIO INCOMPLETO</option>
+                            <option value="ENSINO SUPERIOR INCOMPLETO">ENSINO SUPERIOR INCOMPLETO</option>
+                            <option value="ENSINO MEDIO">ENSINO MÉDIO</option>
+                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA">ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
+                            <option value="SUPERIOR">SUPERIOR</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="profResp">Profissão do Responsável</label>
+                        <input type="text" class="form-control" id="profResp" name="profResp" placeholder="Profissão da Resp">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="localtrabResp">Local de trabalho</label>
+                        <input type="text" class="form-control" id="localtrabResp" name="localtrabResp" placeholder="Local de trabalho">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="telResp">Telefone</label>
+                        <input type="text" class="form-control phone" id="telResp" name="telResp" placeholder="Telefone da Resp">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cepResp">CEP</label>
+                        <input type="text" class="form-control cep" id="cepResp" name="cepResp" placeholder="CEP da Resp" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="enderecoResp">Endereço</label>
+                        <input type="text" class="form-control" id="enderecoResp" name="enderecoResp" placeholder="Endereço" required>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="numResp">Número</label>
+                        <input type="text" class="form-control" id="numResp" name="numResp" placeholder="Nº" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="bairroResp">Bairro</label>
+                        <input type="text" class="form-control" id="bairroResp" name="bairroResp" placeholder="Bairro" required>
+                    </div>
+                </div>                                
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufResp">UF</label>
+                        <select class="form-control" id="ufResp" name="ufResp">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="municipioResp">Municipio</label>
+                        <select class="form-control" id="municipioResp" name="municipioResp">
+                            <option value="0">Municipio 1</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="distritoResp">Distrito</label>
+                        <input type="text" class="form-control" id="distritoResp" name="distritoResp" placeholder="Distrito do Endereço">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="estadocivilResp">Estado civil</label>
+                        <select name="estadocivilResp" id="estadocivilResp" class="form-control">
+                            <option value="0">Casado</option>
+                            <option value="1">Separado</option>
+                            <option value="2">Solteiro</option>
+                            <option value="3">Juntos</option>
+                            <option value="4">Viuvo</option>
+                            <option value="5">Outros</option>                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="parentescoResp">Grau de parentesco</label>
+                        <input type="text" class="form-control" id="parentescoResp" name="parentescoResp" placeholder="Grau Parentesco do responsável">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="nomePaiResp">Nome do pai do responsável</label>
+                        <input type="text" class="form-control" id="nomePaiResp" name="nomePaiResp" placeholder="Nome do pai do responsável">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="nomeMaeResp">Nome da mãe do responsável</label>
+                        <input type="text" class="form-control" id="nomeMaeResp" name="nomeMaeResp" placeholder="Nome da mãe do responsável">                                                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
 </form>
 
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#cpfAluno").mask("999.999.999-99");
+		$(".cpf").mask("999.999.999-99");
 	});
 
     $(document).ready(function(){
