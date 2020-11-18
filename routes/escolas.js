@@ -56,7 +56,7 @@ router.post("/nova", (req, res) =>{
             municipioINEP: req.body.municipioINEP,
             distritoINEP: req.body.distritoINEP,
             telefone: req.body.telefone,
-            celular: req.body.celular
+            celular: req.body.celular,
             email: req.body.email,
             situacao: req.body.situacao,
             formaocupacao: req.body.formaocupacao,
@@ -72,7 +72,7 @@ router.post("/nova", (req, res) =>{
             livrofolha: req.body.livrofolha,
             registromec: req.body.registromec,
             dataregistro: req.body.dataregistro,
-            site: req.body.site
+            site: req.body.site,
             entidademantenedora: req.body.entidademantenedora,
             numerosalas: req.body.numerosalas,
             numeropavimentos: req.body.numeropavimentos,
