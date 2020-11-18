@@ -11,6 +11,7 @@
     const db = require("./config/db")
     const dashboard = require("./routes/dashboard")
     const alunos = require("./routes/alunos")
+    const escolas = require("./routes/escolas")
     const passport = require('passport')
     require("./config/auth")(passport)
     const {isLogged} = require("./helpers/logged")
@@ -59,6 +60,7 @@
 // Rotas
 app.use('/dashboard', isLogged, dashboard)
 app.use('/alunos', isLogged, alunos)
+app.use('/escolas', isLogged, escolas)
 
 app.get('/', (req,res) => {
     if(req.isAuthenticated()){
