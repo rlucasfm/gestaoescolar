@@ -1,0 +1,596 @@
+<form>
+    <div class="card">        
+        <div class="card-body">
+            <div class="card">
+                <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">INFORMAÇÕES DA UNIDADE ESCOLAR</h5>
+            <hr>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                    <label for="pais">País</label>
+                    <select class="form-control" id="pais" name="pais">
+                        <option>REPÚBLICA FEDERATIVA DO BRASIL</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufEscola">Estado</label>
+                        <select class="form-control" id="ufEscola" name="ufEscola">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="regiaoAdministrativa">Região Administrativa</label>
+                    <select class="form-control" id="regiaoAdministrativa" name="regiaoAdministrativa">
+                        <option value="URE DE AÇAILÂNDIA">URE DE AÇAILÂNDIA</option>
+                        <option value="URE DE">URE DE BACABAL</option>
+                        <option value="URE DE BALSAS">URE DE BALSAS</option>
+                        <option value="URE DE BARRA DO CORDA">URE DE BARRA DO CORDA</option>
+                        <option value="URE DE CAXIAS">URE DE CAXIAS</option>
+                        <option value="URE DE CHAPADINHA">URE DE CHAPADINHA</option>
+                        <option value="URE DE CODÓ">URE DE CODÓ</option>
+                        <option value="URE DE IMPERATRIZ">URE DE IMPERATRIZ</option>
+                        <option value="URE DE ITAPECURU-MIRIM">URE DE ITAPECURU-MIRIM</option>
+                        <option value="URE DE PEDREIRAS">URE DE PEDREIRAS</option>
+                        <option value="URE DE PINHEIRO">URE DE PINHEIRO</option>
+                        <option value="URE DE PRESIDENTE DUTRA">URE DE PRESIDENTE DUTRA</option>
+                        <option value="URE DE ROSÁRIO">URE DE ROSÁRIO</option>
+                        <option value="URE DE SÃO JOÃO DOS PATOS">URE DE SÃO JOÃO DOS PATOS</option>
+                        <option value="URE DE SANTA ÍNES">URE DE SANTA ÍNES</option>
+                        <option value="URE DE TIMON">URE DE TIMON</option>
+                        <option value="URE DE VIANA">URE DE VIANA</option>
+                        <option value="URE DE ZÉ DOCA">URE DE ZÉ DOCA</option>
+                        <option value="URE DE SÃO LUÍS">URE DE SÃO LUÍS</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="municipio">Município</label>
+                    <select class="form-control" id="municipio" name="municipio">
+                        <option value="AÇAILÂNDIA">AÇAILÂNDIA</option>
+                        <option value="ITINGA">ITINGA</option>
+                        <option value="SÃO FRANCISCO DO BREJÃO">SÃO FRANCISCO DO BREJÃO</option>
+                        <option value="BOM JESUS DA SELVA">BOM JESUS DA SELVA</option>
+                        <option value="CIDELÂNDIA">CIDELÂNDIA</option>
+                        <option value="VILA NOVA DOS MARTÍRIOS">VILA NOVA DOS MARTÍRIOS</option>
+                        <option value="SÃO PEDRO DA ÁGUA BRANCA">SÃO PEDRO DA ÁGUA BRANCA</option>
+                        <option value="BURITICUPU">BURITICUPU</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descricao da Escola" required>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                    <label for="apelido">Apelido</label>
+                    <input type="text" class="form-control" id="apelido" name="apelido" placeholder="Apelido da Escola">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="orgao">Orgão</label>
+                    <input type="text" class="form-control" id="orgao" name="orgao" placeholder="Orgão">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="orgaoregional">Orgão Regional</label>
+                    <select class="form-control" id="orgaoregional" name="orgaoregional">
+                        <option value="AÇAILÂNDIA">AÇAILÂNDIA</option>
+                        <option value="BACABAL">BACABAL</option>
+                        <option value="BALSAS">BALSAS</option>
+                        <option value="BARRA DO CORDA">BARRA DO CORDA</option>
+                        <option value="CAXIAS">CAXIAS</option>
+                        <option value="CHAPADINHA">CHAPADINHA</option>
+                        <option value="CODÓ">CODÓ</option>
+                        <option value="IMPERATRIZ">IMPERATRIZ</option>
+                        <option value="ITAPECURU-MIRIM">ITAPECURU-MIRIM</option>
+                        <option value="PEDREIRAS">PEDREIRAS</option>
+                        <option value="PINHEIRO">PINHEIRO</option>
+                        <option value="PRESIDENTE DUTRA">PRESIDENTE DUTRA</option>
+                        <option value="ROSÁRIO">ROSÁRIO</option>
+                        <option value="SÃO JOÃO DOS PATOS">SÃO JOÃO DOS PATOS</option>
+                        <option value="SANTA ÍNES">SANTA ÍNES</option>
+                        <option value="TIMON">TIMON</option>
+                        <option value="VIANA">VIANA</option>
+                        <option value="ZÉ DOCA">ZÉ DOCA</option>
+                        <option value="SÃO LUÍS">SÃO LUÍS</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cep">CEP do Endereço</label>
+                        <input type="text" class="form-control cep" id="cep" name="cep" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endreco da Escola" required>
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                    <label for="numero">N.</label>
+                    <input type="text" class="form-control" id="numero" name="numero">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro da Escola" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Complemento do Endereço">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                    <label for="tipodezona">Tipo de Zona</label>
+                    <select class="form-control" id="tipodezona" name="tipodezona">
+                        <option value="0">Zona Urbana</option>
+                        <option value="1">Zona Rural</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufINEP">UF</label>
+                        <select class="form-control" id="ufINEP" name="ufINEP">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="municipioINEP">Município - INEP</label>
+                    <select class="form-control" id="municipioINEP" name="municipioINEP">
+                        <option value="AÇAILÂNDIA">AÇAILÂNDIA</option>
+                        <option value="BACABAL">BACABAL</option>
+                        <option value="BALSAS">BALSAS</option>
+                        <option value="BARRA DO CORDA">BARRA DO CORDA</option>
+                        <option value="CAXIAS">CAXIAS</option>
+                        <option value="CHAPADINHA">CHAPADINHA</option>
+                        <option value="CODÓ">CODÓ</option>
+                        <option value="IMPERATRIZ">IMPERATRIZ</option>
+                        <option value="ITAPECURU-MIRIM">ITAPECURU-MIRIM</option>
+                        <option value="PEDREIRAS">PEDREIRAS</option>
+                        <option value="PINHEIRO">PINHEIRO</option>
+                        <option value="PRESIDENTE DUTRA">PRESIDENTE DUTRA</option>
+                        <option value="ROSÁRIO">ROSÁRIO</option>
+                        <option value="SÃO JOÃO DOS PATOS">SÃO JOÃO DOS PATOS</option>
+                        <option value="SANTA ÍNES">SANTA ÍNES</option>
+                        <option value="TIMON">TIMON</option>
+                        <option value="VIANA">VIANA</option>
+                        <option value="ZÉ DOCA">ZÉ DOCA</option>
+                        <option value="SÃO LUÍS">SÃO LUÍS</option>
+                    </select> 
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="distritoINEP">Distrito - INEP</label>
+                    <select class="form-control" id="distritoINEP" name="distritoINEP">
+                        <option value="AÇAILÂNDIA">AÇAILÂNDIA</option>
+                        <option value="BACABAL">BACABAL</option>
+                        <option value="BALSAS">BALSAS</option>
+                        <option value="BARRA DO CORDA">BARRA DO CORDA</option>
+                        <option value="CAXIAS">CAXIAS</option>
+                        <option value="CHAPADINHA">CHAPADINHA</option>
+                        <option value="CODÓ">CODÓ</option>
+                        <option value="IMPERATRIZ">IMPERATRIZ</option>
+                        <option value="ITAPECURU-MIRIM">ITAPECURU-MIRIM</option>
+                        <option value="PEDREIRAS">PEDREIRAS</option>
+                        <option value="PINHEIRO">PINHEIRO</option>
+                        <option value="PRESIDENTE DUTRA">PRESIDENTE DUTRA</option>
+                        <option value="ROSÁRIO">ROSÁRIO</option>
+                        <option value="SÃO JOÃO DOS PATOS">SÃO JOÃO DOS PATOS</option>
+                        <option value="SANTA ÍNES">SANTA ÍNES</option>
+                        <option value="TIMON">TIMON</option>
+                        <option value="VIANA">VIANA</option>
+                        <option value="ZÉ DOCA">ZÉ DOCA</option>
+                        <option value="SÃO LUÍS">SÃO LUÍS</option>
+                    </select> 
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="telefone">Fone Fixo</label>
+                        <input type="text" class="form-control phone" id="telefone" name="telefone" placeholder="(99)9999-9999">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="celular">Fone Celular</label>
+                        <input type="text" class="form-control phone" id="celular" name="celular" placeholder="(99)9999-9999" required>                                                      
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="exemplo@exemplo.com.br">                                                      
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="situacao">Situação</label>
+                        <select class="form-control" id="situacao" name="situacao">
+                            <option value="EM ATIVIDADE - 1">EM ATIVIDADE - 1</option>
+                            <option value="PARALIZADA - 2">PARALIZADA - 2</option>
+                            <option value="EXTINTA - 3">EXTINTA - 3</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="formaocupacao">Forma de Ocupação</label>
+                        <select class="form-control" id="formaocupacao" name="formaocupacao">
+                            <option value="PRÉDIO PRÓPRIO">PRÉDIO PRÓPRIO</option>
+                            <option value="PRÉDIO ALUGADO">PRÉDIO ALUGADO</option>
+                            <option value="PRÉDIO CEDIDO">PRÉDIO CEDIDO</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="regulamentacao">Regulamentação / Autorização no conselho</label>
+                        <select class="form-control" id="regulamentacao" name="regulamentacao">
+                            <option value="Não">Não</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Em tramitação">Em tramitação</option>
+                        </select>                            
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="sistemaimplantado">Sistema Implantado</label>
+                        <select class="form-control" id="sistemaimplantado" name="sistemaimplantado">
+                            <option value="Não">Não</option>
+                            <option value="Sim">Sim</option>
+                        </select>                            
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="form-group">
+                        <label for="localarea">Local da Área</label>
+                        <select class="form-control" id="localarea" name="localarea">
+                            <option value="Área de Assentamento">Área de Assentamento</option>
+                            <option value="Terra Indígena">Terra Indígena</option>
+                            <option value="Área onde se localiza comunidade remanescente de quilombos">Área onde se localiza comunidade remanescente de quilombos</option>
+                            <option value="A escola não está em área de localização diferenciada">A escola não está em área de localização diferenciada</option>
+                        </select>    
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label for="nucleohabitacional">Núcleo Habitacional/ Polo</label>
+                        <select class="form-control" id="nucleohabitacional" name="nucleohabitacional">
+                            <option value="Zona Urbana - 110111">Zona Urbana - 110111</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">Outras Informações</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="organizacaoescolar">Organização Escolar</label>
+                        <select class="form-control" id="organizacaoescolar" name="organizacaoescolar">
+                            <option value="SERIADA">SERIADA</option>
+                            <option value="MULTISERIADA">MULTISERIADA</option>
+                            <option value="SERIADA E MULTISERIADA">SERIADA E MULTISERIADA</option>
+                            <option value="ENSINO REGULAR">ENSINO REGULAR</option>
+                            <option value="CICLOS DE FORMAÇÃO HUMANA">CICLOS DE FORMAÇÃO HUMANA</option>
+                            <option value="SER.\CICLO BÁSICO DE ALFABETIZAÇÃO">SER.\CICLO BÁSICO DE ALFABETIZAÇÃO</option>
+                        </select>    
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="dependenciaadm">Dependência Administrativa</label>
+                        <select class="form-control" id="dependenciaadm" name="dependenciaadm">
+                            <option value="REDE PÚBLICA MUNICIPAL">REDE PÚBLICA MUNICIPAL</option>
+                            <option value="REDE PÚBLICA ESTADUAL">REDE PÚBLICA ESTADUAL</option>
+                            <option value="REDE PÚBLICA FEDERAL">REDE PÚBLICA FEDERAL</option>
+                            <option value="REDE PRIVADA PARTICULAR">REDE PRIVADA PARTICULAR</option>
+                            <option value="REDE PRIVADA COMUNITÁRIA">REDE PRIVADA COMUNITÁRIA</option>
+                            <option value="REDE PRIVADA CONFESSIONAL">REDE PRIVADA CONFESSIONAL</option>
+                            <option value="REDE PRIVADA FILANTRÓPICA">REDE PRIVADA FILANTRÓPICA</option>
+                        </select>    
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="turnosoferecidos">Turnos Oferecidos</label>
+                        <select class="form-control" id="turnosoferecidos" name="turnosoferecidos">
+                            <option value="MATUTINO">MATUTINO</option>
+                            <option value="VESPERTINO">VESPERTINO</option>
+                            <option value="NOTURNO">NOTURNO</option>
+                            <option value="DIURNO">DIURNO</option>
+                            <option value="MATUTINO E VESPERTINO">MATUTINO E VESPERTINO</option>
+                            <option value="MATUTINO E NOTURNO">MATUTINO E NOTURNO</option>
+                            <option value="VESPERTINO E NOTURNO">VESPERTINO E NOTURNO</option>
+                            <option value="MATUTINO, VESPERTINO E NOTURNO">MATUTINO, VESPERTINO E NOTURNO</option>
+                            <option value="INTENGRAL">INTENGRAL</option>
+                            <option value="INTERMEDIARIO">INTERMEDIARIO</option>
+                            <option value="MATUTINO E VESPERTINO INTEGRAL">MATUTINO E VESPERTINO INTEGRAL</option>
+                            <option value="ALTERNANCIA">ALTERNANCIA</option>
+                        </select>    
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" class="form-control cnpj" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="atocriacao">Ato de criação</label>
+                        <input type="text" class="form-control" id="atocriacao" name="atocriacao" placeholder="Ato de criação">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="livrofolha">Livro/Folha</label>
+                        <input type="text" class="form-control" id="livrofolha" name="livrofolha" placeholder="__/___">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="registromec">Registro no MEC</label>
+                        <input type="text" class="form-control" id="registromec" name="registromec" placeholder="________">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="dataregistro">Data Registro</label>
+                        <input type="text" class="form-control" id="dataregistro" name="dataregistro" placeholder="__/__/____">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="site">Site</label>
+                        <input type="text" class="form-control" id="site" name="site" placeholder="exemplo.com.br">                                                      
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="entidademantenedora">Entidade Mantenedora</label>
+                        <input type="text" class="form-control" id="entidademantenedora" name="entidademantenedora">                                                      
+                    </div>
+                </div>    
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="numerosalas">N. Salas</label>
+                        <input type="text" class="form-control" id="numerosalas" name="numerosalas">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="numeropavimentos">N. Pavimentos</label>
+                        <input type="text" class="form-control" id="numeropavimentos" name="numeropavimentos">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="areatotal">Área Total m²</label>
+                        <input type="text" class="form-control" id="areatotal" name="areatotal">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="capacidadealunos">Capacidade de Alunos</label>
+                        <input type="text" class="form-control" id="capacidadealunos" name="capacidadealunos">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="latitude">Latitude</label>
+                        <input type="text" class="form-control" id="latitude" name="latitude">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="longitude">Longitude</label>
+                        <input type="text" class="form-control" id="longitude" name="longitude">                                                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color: darkblue">Coordenação Atual</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cpfdiretor">CPF</label>
+                        <input type="text" class="form-control cpf" id="cpfdiretor" name="cpfdiretor" placeholder="000.000.000-00">                                                      
+                    </div>    
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="diretor">Diretor</label>
+                        <input type="text" class="form-control" id="diretor" name="diretor" placeholder="Nome do Diretor" required>                                                      
+                    </div>    
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="tratamento">Tratamento</label>
+                        <select class="form-control" id="tratamento" name="tratamento">
+                            <option value="Diretor">Diretor</option>
+                            <option value="Diretora">Diretora</option>
+                        </select>    
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="portariadiretor">Matricula/Portaria</label>
+                        <input type="text" class="form-control" id="portariadiretor" name="portariadiretor" placeholder="Matricula do Diretor">                                                      
+                    </div>    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="coordenadorpedag">Coordenador Pedagógico</label>
+                        <input type="text" class="form-control" id="coordenadorpedag" name="coordenadorpedag" placeholder="Nome do Diretor">                                                      
+                    </div>    
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="tratamentocoordenadorpedag">Tratamento</label>
+                        <select class="form-control" id="tratamentocoordenadorpedag" name="tratamentocoordenadorpedag">
+                            <option value="Coordenador">Coordenador</option>
+                            <option value="Coordenadora">Coordenadora</option>
+                            <option value="Coordenador Pedagógico">Coordenador Pedagógico</option>
+                            <option value="Coordenadora Pedagógica">Coordenadora Pedagógica</option>
+                        </select>    
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="portariacoordenadorpedag">Matricula/Portaria</label>
+                        <input type="text" class="form-control" id="portariacoordenadorpedag" name="portariacoordenadorpedag" placeholder="Matricula do Coordenador">                                                      
+                    </div>    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="coordenadorsecret">Coordenador Secret</label>
+                        <input type="text" class="form-control" id="coordenadorsecret" name="coordenadorsecret" placeholder="Nome do Diretor">                                                      
+                    </div>    
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="tratamentocoordenadorsecret">Tratamento</label>
+                        <select class="form-control" id="tratamentocoordenadorsecret" name="tratamentocoordenadorsecret">
+                            <option value="Secretário">Secretário</option>
+                            <option value="Secretária">Secretária</option>
+                            <option value="Coordenador Secretário">Coordenador Secretário</option>
+                            <option value="Coordenador Secretária">Coordenadora Secretária</option>
+                        </select>    
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="portariacoordenadorsecret">Matricula/Portaria</label>
+                        <input type="text" class="form-control" id="portariacoordenadorsecret" name="portariacoordenadorsecret" placeholder="Matricula do Coordenador">                                                      
+                    </div>    
+                </div>
+            </div>  
+        </div>
+    </div>
+    <br>
+    <div class="row d-flex justify-content-center">
+        <button class="btn btn-success" align="center">Adicionar Escola</button>
+    </div>         
+</form>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".cpf").mask("999.999.999-99");
+	});
+
+    $(document).ready(function(){
+		$(".cnpj").mask("99.999.999/9999-99");
+	});
+
+    $(document).ready(function(){
+	    $(".cep").mask("99.999-999");
+    });
+
+    $(document).ready(function(){
+	    $(".phone").mask("(99) 9999-9999");
+    });
+</script>
