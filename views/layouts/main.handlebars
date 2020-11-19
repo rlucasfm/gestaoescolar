@@ -16,8 +16,6 @@
     <script src="/js/bootstrap.js"></script>
     <script src="//malihu.github.io/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/jquery-1.2.6.pack.js"></script>
-    <script src="/js/jquery.maskedinput-1.1.4.pack.js"></script>
 
     <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
 
@@ -36,10 +34,14 @@
         <main class="page-content pt-2">
             <div id="overlay" class="overlay"></div>
             <div class="container-fluid">
-                {{#if error}}
-                <div class="alert-danger alert">{{error}}</div>
-                {{/if}}
-                {{>_msg}}
+                             
+                <div style="position: absolute; z-index: 10; width: 100%; text-align: center;" class="mt-2">
+                    {{>_msg}}
+                    {{#if error}}
+                    <div class="alert-danger alert" style="display: inline-block;">{{error}}</div>
+                    {{/if}}   
+                </div>
+
                 {{{body}}}
             </div>
         </main>
