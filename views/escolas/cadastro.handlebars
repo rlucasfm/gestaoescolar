@@ -269,13 +269,13 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="telefone">Fone Fixo</label>
-                        <input type="text" class="form-control phone" id="telefone" name="telefone" placeholder="(99)9999-9999">                                                      
+                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(99)9999-9999">                                                      
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="celular">Fone Celular</label>
-                        <input type="text" class="form-control phone" id="celular" name="celular" placeholder="(99)9999-9999" required>                                                      
+                        <input type="text" class="form-control" id="celular" name="celular" placeholder="(99)9999-9999" required>                                                      
                     </div>
                 </div>
                 <div class="col-sm-5">
@@ -405,7 +405,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="cnpj">CNPJ</label>
-                        <input type="text" class="form-control cnpj" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">                                                      
+                        <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">                                                      
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -495,7 +495,7 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cpfdiretor">CPF</label>
-                        <input type="text" class="form-control cpf" id="cpfdiretor" name="cpfdiretor" placeholder="000.000.000-00">                                                      
+                        <input type="text" class="form-control" id="cpfdiretor" name="cpfdiretor" placeholder="000.000.000-00">                                                      
                     </div>    
                 </div>
                 <div class="col-sm-4">
@@ -620,23 +620,5 @@
     $("#modalOk").click(() => {
         $("#formCadastro").trigger("reset")
     }) 
-</script>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$(".cpf").mask("999.999.999-99");
-	});
-
-    $(document).ready(function(){
-		$(".cnpj").mask("99.999.999/9999-99");
-	});
-
-    $(document).ready(function(){
-	    $(".ceps").mask("99.999-999");
-    });
-
-    $(document).ready(function(){
-	    $(".phone").mask("(99) 9999-9999");
-    });
 </script>
 
