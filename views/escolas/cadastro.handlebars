@@ -1,4 +1,4 @@
-<form>
+<form id="formCadastro">
     <div class="card">        
         <div class="card-body">
             <div class="card">
@@ -18,6 +18,7 @@
                     <div class="form-group">
                         <label for="ufEscola">Estado</label>
                         <select class="form-control" id="ufEscola" name="ufEscola">
+                            <option value="MA">Maranhão</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
                             <option value="AP">Amapá</option>
@@ -27,7 +28,6 @@
                             <option value="DF">Distrito Federal</option>
                             <option value="ES">Espírito Santo</option>
                             <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
                             <option value="MT">Mato Grosso</option>
                             <option value="MS">Mato Grosso do Sul</option>
                             <option value="MG">Minas Gerais</option>
@@ -140,7 +140,7 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cep">CEP do Endereço</label>
-                        <input type="text" class="form-control cep" id="cep" name="cep" required>
+                        <input type="text" class="form-control ceps" id="cep" name="cep" placeholder="00.000-000" required>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -182,6 +182,7 @@
                     <div class="form-group">
                         <label for="ufINEP">UF</label>
                         <select class="form-control" id="ufINEP" name="ufINEP">
+                            <option value="MA">MA</option>
                             <option value="AC">AC</option>
                             <option value="AL">AL</option>
                             <option value="AP">AP</option>
@@ -191,7 +192,6 @@
                             <option value="DF">DF</option>
                             <option value="ES">ES</option>
                             <option value="GO">GO</option>
-                            <option value="MA">MA</option>
                             <option value="MT">MT</option>
                             <option value="MS">MS</option>
                             <option value="MG">MG</option>
@@ -402,7 +402,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label for="cnpj">CNPJ</label>
                         <input type="text" class="form-control cnpj" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">                                                      
@@ -426,27 +426,29 @@
                         <input type="text" class="form-control" id="registromec" name="registromec" placeholder="________">                                                      
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label for="dataregistro">Data Registro</label>
-                        <input type="text" class="form-control" id="dataregistro" name="dataregistro" placeholder="__/__/____">                                                      
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label for="site">Site</label>
-                        <input type="text" class="form-control" id="site" name="site" placeholder="exemplo.com.br">                                                      
+                        <input type="date" class="form-control" id="dataregistro" name="dataregistro" placeholder="__/__/____">                                                      
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="site">Site</label>
+                        <input type="text" class="form-control" id="site" name="site" placeholder="www.exemplo.com.br">                                                      
+                    </div>
+                </div>
+                <div class="col-sm-6">
                     <div class="form-group">
                         <label for="entidademantenedora">Entidade Mantenedora</label>
                         <input type="text" class="form-control" id="entidademantenedora" name="entidademantenedora">                                                      
                     </div>
-                </div>    
-                <div class="col-sm-1">
+                </div>
+            </div>
+            <div class="row">    
+                <div class="col-sm-2">
                     <div class="form-group">
                         <label for="numerosalas">N. Salas</label>
                         <input type="text" class="form-control" id="numerosalas" name="numerosalas">                                                      
@@ -470,13 +472,13 @@
                         <input type="text" class="form-control" id="capacidadealunos" name="capacidadealunos">                                                      
                     </div>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                     <div class="form-group">
                         <label for="latitude">Latitude</label>
                         <input type="text" class="form-control" id="latitude" name="latitude">                                                      
                     </div>
                 </div>
-                <div class="col-sm-1">
+                <div class="col-sm-2">
                     <div class="form-group">
                         <label for="longitude">Longitude</label>
                         <input type="text" class="form-control" id="longitude" name="longitude">                                                      
@@ -577,6 +579,49 @@
 </form>
 
 
+<!-- Modal -->
+<div class="modal hide fade mx-auto" id="cadastroSucesso" tabindex="-1" aria-labelledby="cadastroSucessoLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cadastroSucessoLabel">Sucesso!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        O cadastro da escola foi efetuada!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modalOk" data-dismiss="modal">OK!</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+
+<!-- ENVIO DO FORMULÁRIO -->
+<script>
+    $(document).ready(() => {
+        $("#formCadastro").submit(function(event){
+            event.preventDefault();            
+            $.ajax({
+                type: "post",
+                url: "/escolas/cadastro/add",
+                data: $(this).serialize(),
+                success: function(data){                               
+                    $("#cadastroSucesso").modal('show')
+                }
+            })
+        })
+    })   
+
+    $("#modalOk").click(() => {
+        $("#formCadastro").trigger("reset")
+    }) 
+</script>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		$(".cpf").mask("999.999.999-99");
@@ -587,10 +632,11 @@
 	});
 
     $(document).ready(function(){
-	    $(".cep").mask("99.999-999");
+	    $(".ceps").mask("99.999-999");
     });
 
     $(document).ready(function(){
 	    $(".phone").mask("(99) 9999-9999");
     });
 </script>
+
