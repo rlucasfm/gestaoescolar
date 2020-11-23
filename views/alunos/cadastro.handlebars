@@ -197,7 +197,10 @@
                     <div class="form-group">
                         <label for="escolaAnterior">Escola anterior</label>
                         <select class="form-control" name="escolaAnterior" id="escolaAnterior">
-                            <option value="0">Escola 1</option>
+                            <option value="0">Nenhuma</option>
+                            {{#each escolas}}
+                                <option value="{{_id}}">{{apelido}}</option>
+                            {{/each}}
                         </select>
                     </div>
                 </div>

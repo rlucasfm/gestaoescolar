@@ -3,21 +3,29 @@ const router = express.Router()
 const mongoose = require("mongoose")
 require("../models/Alunos")
 const Aluno = mongoose.model("alunos")
+require("../models/Escolas")
+const Escola = mongoose.model("escolas")
 
 router.get('/cadastro', (req,res) => {
-    res.render('alunos/cadastro')
+    Escola.find().sort({apelido: 'desc'}).lean().then((escolas) => {
+      res.render('alunos/cadastro', {escolas: escolas})
+    }).catch((err) => {
+        req.flash("error_msg", "Houve um erro ao listar as escolas")
+        res.redirect("/")
+    })
+    
 })
 
 router.get('/busca', (req,res) => {
-    res.render('alunos/cadastro')
+    res.render('alunos/busca')
 })
 
 router.get('/editar', (req,res) => {
-    res.render('alunos/cadastro')
+    res.render('alunos/editar')
 })
 
 router.get('/deletar', (req,res) => {
-    res.render('alunos/cadastro')
+    res.render('alunos/deletar')
 })
 
 router.post('/cadastro/add', (req,res)=> {
