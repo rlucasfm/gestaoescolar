@@ -106,7 +106,7 @@ const Aluno = new Schema({
         moraCompanhia: String
     },
     transporte:{
-        transportePublico: Boolean, // false - não utiliza, true - utiliza
+        transportePublico: String,
         poderPubResp: String,
         transp1: String,
         transp2: String,

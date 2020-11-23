@@ -29,15 +29,153 @@ router.get('/deletar', (req,res) => {
 })
 
 router.post('/cadastro/add', (req,res)=> {
-    const novoAluno = {
-        nome: req.body.nomeAluno,
-        nascimento: req.body.dataNascAluno
+  let defsAluno = []
+  defsAluno.push(req.body.deficienciaAluno)
+  defsAluno.push(req.body.deficienciaAluno2)
+  defsAluno.push(req.body.deficienciaAluno3)
+  const novoAluno = {
+        nome: req.body.nomeAluno || "",
+        nascimento: req.body.dataNascAluno || "",
+        NIS: req.body.NISAluno || "",
+        IDCenso: req.body.idCensoAluno || "",
+        sexo: req.body.sexoAluno || "",
+        cor: req.body.corAluno || "",
+        situacao: req.body.situacaoAluno || "",
+        emailAluno: req.body.emailAluno || "",        
+        deficiencas : defsAluno || "",
+        escolaAnterior : req.body.escolaAnterior || "",
+        matriculaEscolaAnterior : req.body.matricAntAluno || "",
+        matriculaAtual : req.body.matricAluno || "",
+        nacionalidade : req.body.nacionalidadeAluno || "",
+        paisOrigem : req.body.paisAluno || "",
+        uf : req.body.ufAluno || "",
+        naturalidade : req.body.naturalidadeAluno || "",
+        cpf : req.body.cpfAluno || "",
+        tipoCertidao : req.body.tipoDoc || "",
+        numeroCertidao : req.body.numeroDoc || "",
+        ufCertidao : req.body.ufDoc || "",
+        dataExp : req.body.dataDoc || "",
+        municipioCertidao : req.body.municipioDoc || "",
+        cartorio : req.body.cartorioDoc || "",
+        rg : req.body.rgDoc || "",
+        orgEmissor : req.body.emissorRg || "",
+        ufRg : req.body.ufRg || "",
+        dataEmissaoRg : req.body.dataEmissaoRg || "",
+        certidaoReservista : req.body.certReserv || "",
+        justificativa : req.body.justifDoc || "",
+        eResponsavel : req.body.eResp || false,
+        endereco: {
+          cep: req.body.cepEnd || "",
+          endereco: req.body.endereco || "",
+          numero: req.body.numEnd || "",
+          bairro: req.body.bairroEnd || "",
+          complemento: req.body.complementoEnd || "",
+          uf: req.body.ufEnd || "",
+          municipio: req.body.municipioEnd || "",
+          distrito: req.body.distritoEnd || "",
+          telResidencial: req.body.telresEnd || "",
+          telCelular: req.body.celEnd || "",
+          nucleoHabitacional: req.body.nucleohab || "",
+          tipoMoradia: req.body.tipomoradia || "",
+          moraCompanhia: req.body.companhiaMoradia || ""
+        },
+        transporte: {
+          transportePublico: req.body.transPub || "",
+          poderPubResp: req.body.transResp || "",
+          transp1: req.body.trans1 || "",
+          transp2: req.body.trans2 || "",
+          transp3: req.body.trans3 || "",
+          recebeEscOutroLugar: req.body.escoutroLocal || ""
+        },
+        pai:{
+          nome: req.body.nomePai || "",
+          rg: req.body.rgPai || "",
+          orgEmissor: req.body.emissorRgPai || "",
+          ufRG: req.body.ufrgPai || "",
+          dataEmissao: req.body.dataEmissRgPai || "",
+          cpf: req.body.cpfPai || "",
+          NIS: req.body.nisPai || "",
+          rendaFamilia: req.body.rendaPai || "",
+          nacionalidade: req.body.nacionalidadePai || "",
+          paisOrigem: req.body.paisPai || "",        
+          ufNasc: req.body.ufnascPai || "",
+          naturalidade: req.body.naturalidadePai || "",        
+          escolaridade: req.body.escolaridadePai || "",
+          profissao: req.body.profPai || "",
+          localTrabalho: req.body.localtrabPai || "",
+          telefone: req.body.telPai || "",
+          cep: req.body.cepPai || "",
+          endereco: req.body.enderecoPai || "",
+          numero: req.body.numPai || "",
+          bairro: req.body.bairroPai || "",
+          complemento: req.body.complementoPai || "",
+          uf: req.body.ufPai || "",
+          municipio: req.body.municipioPai || "",
+          distrito: req.body.distritoPai || "",
+          estadoCivil: req.body.estadocivilPai || ""
+        },
+        mae:{
+          nome: req.body.nomeMae || "",
+          rg: req.body.rgMae || "",
+          orgEmissor: req.body.emissorRgMae || "",
+          ufRG: req.body.ufrgMae || "",
+          dataEmissao: req.body.dataEmissRgMae || "",
+          cpf: req.body.cpfMae || "",
+          NIS: req.body.nisMae || "",
+          rendaFamilia: req.body.rendaMae || "",
+          nacionalidade: req.body.nacionalidadeMae || "",
+          paisOrigem: req.body.paisMae || "",        
+          ufNasc: req.body.ufnascMae || "",
+          naturalidade: req.body.naturalidadeMae || "",
+          escolaridade: req.body.escolaridadeMae || "",
+          profissao: req.body.profMae || "",
+          localTrabalho: req.body.localtrabMae || "",
+          telefone: req.body.telMae || "",
+          cep: req.body.cepMae || "",
+          endereco: req.body.enderecoMae || "",
+          numero: req.body.numMae || "",
+          bairro: req.body.bairroMae || "",
+          complemento: req.body.complementoMae || "",
+          uf: req.body.ufMae || "",
+          municipio: req.body.municipioMae || "",
+          distrito: req.body.distritoMae || "",
+          estadoCivil: req.body.estadocivilMae || ""
+        },
+        responsavel:{
+          nome: req.body.nomeResp || "",
+          nascimento: req.body.nascResp || "",
+          parentesco: req.body.parentescoResp || "",
+          rg: req.body.rgResp || "",
+          orgEmissor: req.body.emissorRgResp || "",
+          ufRG: req.body.ufrgResp || "",
+          dataEmissao: req.body.dataEmissRgResp || "",
+          cpf: req.body.cpfResp || "",
+          NIS: req.body.nisResp || "",
+          rendaFamilia: req.body.rendaResp || "",
+          nacionalidade: req.body.nacionalidadeResp || "",
+          paisOrigem: req.body.paisResp || "",        
+          ufNasc: req.body.ufnascResp || "",
+          naturalidade: req.body.naturalidadeResp || "",        
+          escolaridade: req.body.escolaridadeResp || "",
+          profissao: req.body.profResp || "",
+          localTrabalho: req.body.localtrabResp || "",
+          telefone: req.body.telResp || "",
+          cep: req.body.cepResp || "",
+          endereco: req.body.enderecoResp || "",
+          numero: req.body.numResp || "",
+          bairro: req.body.bairroResp || "",
+          complemento: req.body.complementoResp || "",
+          uf: req.body.ufResp || "",
+          municipio: req.body.municipioResp || "",
+          distrito: req.body.distritoResp || "",
+          estadoCivil: req.body.estadocivilResp || "",
+          nomePai: req.body.nomePaiResp || "",
+          nomeMae: req.body.nomeMaeResp || ""
+        }
     }
   new Aluno(novoAluno).save().then(() => {
-    req.flash("success_msg", "Aluno cadastrado com sucesso")
     res.send("Cadastro feito com sucesso")
-  }).catch((err) => {
-    req.flash("error_msg", "Houve um erro ao cadastrar o aluno, tente novamente")
+  }).catch((err) => {    
     res.send(err)
   })  
 })

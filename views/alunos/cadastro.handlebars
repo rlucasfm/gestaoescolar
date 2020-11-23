@@ -199,7 +199,7 @@
                         <select class="form-control" name="escolaAnterior" id="escolaAnterior">
                             <option value="0">Nenhuma</option>
                             {{#each escolas}}
-                                <option value="{{_id}}">{{apelido}}</option>
+                                <option value="{{_id}}">{{descricao}}</option>
                             {{/each}}
                         </select>
                     </div>
@@ -466,10 +466,16 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-2">
                     <div class="form-group">
                         <label for="numeroDoc">Número do documento</label>
                         <input type="text" class="form-control" id="numeroDoc" name="numeroDoc" placeholder="Número do documento" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="dataDoc">Data emissão</label>
+                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" required>
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -576,8 +582,8 @@
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
-                        <label for="dataDoc">Data emissão</label>
-                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" required>
+                        <label for="dataEmissaoRg">Data emissão</label>
+                        <input type="date" class="form-control" id="dataEmissaoRg" name="dataEmissaoRg" required>
                     </div>
                 </div>
             </div>
@@ -600,7 +606,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
-                        <input type="checkbox" class="form-control-md" id="eResp" name="eResp">
+                        <input type="checkbox" class="form-control-md" id="eResp" name="eResp" value="true">
                         O aluno é responsável
                     </div>
                 </div>
@@ -1203,7 +1209,7 @@
                         <input type="text" class="form-control cep" id="cepPai" name="cepPai" placeholder="CEP do Pai">
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label for="enderecoPai">Endereço</label>
                         <input type="text" class="form-control" id="enderecoPai" name="enderecoPai" placeholder="Endereço">
@@ -1219,6 +1225,12 @@
                     <div class="form-group">
                         <label for="bairroPai">Bairro</label>
                         <input type="text" class="form-control" id="bairroPai" name="bairroPai" placeholder="Bairro">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="complementoPai">Complemento</label>
+                        <input type="text" class="form-control" id="complementoPai" name="complementoPai" placeholder="Complemento">
                     </div>
                 </div>                                
             </div>
@@ -1660,7 +1672,7 @@
                         <input type="text" class="form-control cep" id="cepMae" name="cepMae" placeholder="CEP da Mae" required>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label for="enderecoMae">Endereço</label>
                         <input type="text" class="form-control" id="enderecoMae" name="enderecoMae" placeholder="Endereço" required>
@@ -1677,7 +1689,13 @@
                         <label for="bairroMae">Bairro</label>
                         <input type="text" class="form-control" id="bairroMae" name="bairroMae" placeholder="Bairro" required>
                     </div>
-                </div>                                
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="complementoMae">Complemento</label>
+                        <input type="text" class="form-control" id="complementoMae" name="complementoMae" placeholder="Complemento">
+                    </div>
+                </div>                                 
             </div>
             <div class="row">
                 <div class="col-sm-2">
@@ -2123,7 +2141,7 @@
                         <input type="text" class="form-control cep" id="cepResp" name="cepResp" placeholder="CEP da Resp" required>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="form-group">
                         <label for="enderecoResp">Endereço</label>
                         <input type="text" class="form-control" id="enderecoResp" name="enderecoResp" placeholder="Endereço" required>
@@ -2139,6 +2157,12 @@
                     <div class="form-group">
                         <label for="bairroResp">Bairro</label>
                         <input type="text" class="form-control" id="bairroResp" name="bairroResp" placeholder="Bairro" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="complementoResp">Complemento</label>
+                        <input type="text" class="form-control" id="complementoResp" name="complementoResp" placeholder="Complemento" >
                     </div>
                 </div>                                
             </div>
@@ -2265,7 +2289,7 @@
                 type: "post",
                 url: "/alunos/cadastro/add",
                 data: $(this).serialize(),
-                success: function(data){                               
+                success: function(data){                                
                     $("#cadastroSucesso").modal('show')
                 }
             })
