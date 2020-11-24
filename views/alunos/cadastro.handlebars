@@ -2300,3 +2300,14 @@
         $("#formCadastro").trigger("reset")
     }) 
 </script>
+
+<script>
+    $('.phone').attr("onkeypress", "mascara(this, telefone)")
+    $('.phone').attr("maxlength", "15")
+
+    $('.cep').attr("onkeypress", "mascara(this, cep)")
+    $('.cep').attr("maxlength", "9")
+
+    $('.cpf').attr("onkeypress", "mascara(this, cpf)")
+    $('.cpf').attr("maxlength", "14")
+</script>
