@@ -5,19 +5,26 @@ require("../models/Alunos")
 const Aluno = mongoose.model("alunos")
 require("../models/Escolas")
 const Escola = mongoose.model("escolas")
+const {accessLevel} = require("../helpers/permissions")
 
 router.get('/cadastro', (req,res) => {
     Escola.find().sort({apelido: 'desc'}).lean().then((escolas) => {
       res.render('alunos/cadastro', {escolas: escolas})
     }).catch((err) => {
         req.flash("error_msg", "Houve um erro ao listar as escolas")
-        res.redirect("/")
+        res.redirect("/dashboard")
     })
     
 })
 
-router.get('/busca', (req,res) => {
-    res.render('alunos/busca')
+router.get('/busca', (req,res) => {    
+    accessLevel(req, res, 2)
+    Aluno.find().sort({nome: 'desc'}).lean().then((alunos) => {
+      res.render('alunos/busca', {alunos: alunos})    
+    }).catch((err) => {
+      req.flash("error_msg", "Houve um erro ao listar os alunos")
+      res.redirect("/dashboard")
+    })
 })
 
 router.get('/editar', (req,res) => {
