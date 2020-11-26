@@ -2301,13 +2301,14 @@
     }) 
 </script>
 
+<!-- CONFIGURAÇÃO DAS MÁSCARAS -->
 <script>
-    $('.phone').attr("onkeypress", "mascara(this, telefone)")
+    $('.phone').attr("onkeypress", "mascara(this, aplicarTelefone)")
     $('.phone').attr("maxlength", "15")
 
-    $('.cep').attr("onkeypress", "mascara(this, cep)")
+    $('.cep').attr("onkeypress", "mascara(this, aplicarCep)")
     $('.cep').attr("maxlength", "9")
 
-    $('.cpf').attr("onkeypress", "mascara(this, cpf)")
+    $('.cpf').attr("onkeypress", "mascara(this, aplicarCpf)")
     $('.cpf').attr("maxlength", "14")
 </script>

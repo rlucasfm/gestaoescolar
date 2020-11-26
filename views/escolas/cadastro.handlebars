@@ -1,8 +1,6 @@
-<form id="formCadastro">
-    <div class="card">        
-        <div class="card-body">
-            <div class="card">
-                <div class="card-body">
+<form id="formCadastro">   
+    <div class="card">
+        <div class="card-body mt-4">
             <h5 class="card-title" style="color:darkblue">INFORMAÇÕES DA UNIDADE ESCOLAR</h5>
             <hr>
             <div class="row">
@@ -140,7 +138,7 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cep">CEP do Endereço</label>
-                        <input type="text" class="form-control ceps" id="cep" name="cep" placeholder="00.000-000" required>
+                        <input type="text" class="form-control cep" id="cep" name="cep" placeholder="00.000-000" required>
                     </div>
                 </div>
                 <div class="col-sm-3">
@@ -269,13 +267,13 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="telefone">Fone Fixo</label>
-                        <input type="text" class="form-control" id="telefone" name="telefone" placeholder="(99)9999-9999">                                                      
+                        <input type="text" class="form-control phone" id="telefone" name="telefone" placeholder="(99)9999-9999">                                                      
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="celular">Fone Celular</label>
-                        <input type="text" class="form-control" id="celular" name="celular" placeholder="(99)9999-9999" required>                                                      
+                        <input type="text" class="form-control phone" id="celular" name="celular" placeholder="(99)9999-9999" required>                                                      
                     </div>
                 </div>
                 <div class="col-sm-5">
@@ -347,8 +345,8 @@
                     </div>
                 </div>
             </div>
-            </div>
         </div>
+    </div>
     <div class="card mt-4">
         <div class="card-body">
             <h5 class="card-title" style="color:darkblue">Outras Informações</h5>
@@ -495,7 +493,7 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cpfdiretor">CPF</label>
-                        <input type="text" class="form-control" id="cpfdiretor" name="cpfdiretor" placeholder="000.000.000-00">                                                      
+                        <input type="text" class="form-control cpf" id="cpfdiretor" name="cpfdiretor" placeholder="000.000.000-00">                                                      
                     </div>    
                 </div>
                 <div class="col-sm-4">
@@ -575,28 +573,26 @@
     <br>
     <div class="row d-flex justify-content-center">
         <button class="btn btn-success" align="center">Adicionar Escola</button>
-    </div>         
-</form>
-
+    </div>        
 
 <!-- Modal -->
 <div class="modal hide fade mx-auto" id="cadastroSucesso" tabindex="-1" aria-labelledby="cadastroSucessoLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="cadastroSucessoLabel">Sucesso!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        O cadastro da escola foi efetuada!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="modalOk" data-dismiss="modal">OK!</button>        
-      </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cadastroSucessoLabel">Sucesso!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                O cadastro da escola foi efetuada!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="modalOk" data-dismiss="modal">OK!</button>        
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 </form>
@@ -621,4 +617,17 @@
         $("#formCadastro").trigger("reset")
     }) 
 </script>
+
+<!-- CONFIGURAÇÃO DAS MÁSCARAS -->
+<script>
+    $('.phone').attr("onkeypress", "mascara(this, aplicarTelefone)")
+    $('.phone').attr("maxlength", "15")
+
+    $('.cep').attr("onkeypress", "mascara(this, aplicarCep)")
+    $('.cep').attr("maxlength", "9")
+
+    $('.cpf').attr("onkeypress", "mascara(this, aplicarCpf)")
+    $('.cpf').attr("maxlength", "14")
+</script>
+
 
