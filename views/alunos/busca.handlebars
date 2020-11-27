@@ -1,4 +1,75 @@
-<h4>Busca de alunos</h4>
-{{#each alunos}}
-    {{nome}}
-{{/each}}
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title" style="color: darkblue;">Busca de aluno</h5>
+        <hr>
+        <form id="formFiltro">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="nomeAluno">Nome do aluno</label>
+                        <input type="text" class="form-control" id="nomeAluno" name="nomeAluno" placeholder="Nome do aluno">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="cpfAluno">CPF do Aluno</label>
+                        <input type="text" class="form-control cpf" id="cpfAluno" name="cpfAluno" placeholder="CPF do aluno">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="nomeMae">Nome da mãe</label>
+                        <input type="text" class="form-control" id="nomeMae" name="nomeMae" placeholder="Nome da mãe">
+                    </div>
+                </div>                
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-2 text-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success form-control">Buscar aluno</button> 
+                    </div> 
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h4 style="color: darkblue;">Resultados da busca</h4>
+    <table id="tabBuscaAluno" class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Nascimento</th>
+                <th>Mãe</th> 
+                <th>CPF</th>                
+            </tr>                    
+        </thead>
+        <tbody id="resultadoBusca"></tbody>
+    </table>
+</div>
+
+<!-- ENVIO DO FORMULÁRIO -->
+<script>
+    $(document).ready(() => {
+        $("#formFiltro").submit(function(event){
+            event.preventDefault();            
+            $.ajax({
+                type: "post",
+                url: "/alunos/busca/filtro",
+                data: $(this).serialize(),
+                success: function(data){                     
+                    $("#resultadoBusca").html(data)                                                           
+                }
+            })
+        })
+    })   
+
+    $("#modalOk").click(() => {
+        $("#formCadastro").trigger("reset")
+    }) 
+</script>
+<script>
+    $('.cpf').attr("onkeypress", "mascara(this, aplicarCpf)")
+    $('.cpf').attr("maxlength", "14")
+</script>

@@ -197,7 +197,7 @@
                     <div class="form-group">
                         <label for="escolaAnterior">Escola anterior</label>
                         <select class="form-control" name="escolaAnterior" id="escolaAnterior">
-                            <option value="0">Nenhuma</option>
+                            <option value="5fc10c91ab20743361650f60">Nenhuma</option>
                             {{#each escolas}}
                                 <option value="{{_id}}">{{descricao}}</option>
                             {{/each}}
@@ -469,7 +469,7 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="numeroDoc">Número do documento</label>
-                        <input type="text" class="form-control" id="numeroDoc" name="numeroDoc" placeholder="Número do documento" required>
+                        <input type="text" class="form-control" id="numeroDoc" name="numeroDoc" placeholder="Número do documento">
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -534,7 +534,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="rgDoc">RG do aluno</label>
-                        <input type="text" class="form-control" id="rgDoc" name="rgDoc" placeholder="RG do Aluno" required>
+                        <input type="text" class="form-control rg" id="rgDoc" name="rgDoc" placeholder="RG do Aluno" required>
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -851,7 +851,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="rgPai">RG</label>
-                        <input type="text" class="form-control" id="rgPai" name="rgPai" placeholder="RG do pai">
+                        <input type="text" class="form-control rg" id="rgPai" name="rgPai" placeholder="RG do pai">
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -1314,7 +1314,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="rgMae">RG</label>
-                        <input type="text" class="form-control" id="rgMae" name="rgMae" placeholder="RG da Mae" required>
+                        <input type="text" class="form-control rg" id="rgMae" name="rgMae" placeholder="RG da Mae" required>
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -1783,7 +1783,7 @@
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="rgResp">RG</label>
-                        <input type="text" class="form-control" id="rgResp" name="rgResp" placeholder="RG da Resp" required>
+                        <input type="text" class="form-control rg" id="rgResp" name="rgResp" placeholder="RG da Resp" required>
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -2289,7 +2289,8 @@
                 type: "post",
                 url: "/alunos/cadastro/add",
                 data: $(this).serialize(),
-                success: function(data){                                
+                success: function(data){          
+                    console.log(data)                      
                     $("#cadastroSucesso").modal('show')
                 }
             })
@@ -2311,4 +2312,7 @@
 
     $('.cpf').attr("onkeypress", "mascara(this, aplicarCpf)")
     $('.cpf').attr("maxlength", "14")
+
+    $('.rg').attr("onkeypress", "mascara(this, aplicarRg)")
+    $('.rg').attr("maxlength", "13")
 </script>

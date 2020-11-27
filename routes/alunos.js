@@ -18,12 +18,8 @@ router.get('/cadastro', (req,res) => {
 })
 
 router.get('/busca', (req,res) => {    
-    accessLevel(req, res, 2)
-    Aluno.find().sort({nome: 'desc'}).lean().then((alunos) => {
-      res.render('alunos/busca', {alunos: alunos})    
-    }).catch((err) => {
-      req.flash("error_msg", "Houve um erro ao listar os alunos")
-      res.redirect("/dashboard")
+    accessLevel(req, res, 2, () => {       
+        res.render('alunos/busca')
     })
 })
 
@@ -33,6 +29,28 @@ router.get('/editar', (req,res) => {
 
 router.get('/deletar', (req,res) => {
     res.render('alunos/deletar')
+})
+
+router.post('/busca/filtro', (req, res) => {
+  const nomeAluno = req.body.nomeAluno || ""
+  const cpfAluno = req.body.cpfAluno || ""
+  const nomeMae = req.body.nomeMae || ""
+  if(!nomeAluno && !cpfAluno && !nomeMae){
+    res.send("Por favor, preencha um campo para buscar o aluno")
+  }else{
+    Aluno.find({'nome': {$regex: nomeAluno, $options: 'i'}, 'cpf': {$regex: cpfAluno, $options: 'i'}, 'mae.nome': {$regex: nomeMae, $options: 'i'}}).lean().then((alunos) => {
+      let stringResponse = ""
+      if(alunos.length){
+        for(let i=0; i<alunos.length; i++){
+          stringResponse += "<tr><td>"+alunos[i].nome+"</td><td>"+alunos[i].nascimento.getDate()+"/"+alunos[i].nascimento.getMonth()+"/"+alunos[i].nascimento.getFullYear()+"</td><td>"+alunos[i].mae.nome+"</td><td>"+alunos[i].cpf+"</td></tr>"
+        }
+      }else{
+        stringResponse = "Nenhum aluno encontrado"
+      }
+      
+      res.send(stringResponse)
+    })
+  }
 })
 
 router.post('/cadastro/add', (req,res)=> {
