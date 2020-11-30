@@ -42,7 +42,7 @@ router.post('/busca/filtro', (req, res) => {
       let stringResponse = ""
       if(alunos.length){
         for(let i=0; i<alunos.length; i++){
-          stringResponse += "<tr><td>"+alunos[i].nome+"</td><td>"+alunos[i].nascimento.getDate()+"/"+alunos[i].nascimento.getMonth()+"/"+alunos[i].nascimento.getFullYear()+"</td><td>"+alunos[i].mae.nome+"</td><td>"+alunos[i].cpf+"</td></tr>"
+          stringResponse += "<tr><td><a href='#'>"+alunos[i].nome+"</a></td><td>"+alunos[i].nascimento.getDate()+"/"+alunos[i].nascimento.getMonth()+"/"+alunos[i].nascimento.getFullYear()+"</td><td>"+alunos[i].mae.nome+"</td><td>"+alunos[i].cpf+"</td></tr>"
         }
       }else{
         stringResponse = "Nenhum aluno encontrado"
