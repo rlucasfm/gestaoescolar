@@ -7,6 +7,10 @@ require("../models/Escolas")
 const Escola = mongoose.model("escolas")
 const {accessLevel} = require("../helpers/permissions")
 
+router.get('/', (req,res) => {
+  res.send("Teste /")
+})
+
 router.get('/cadastro', (req,res) => {
     Escola.find().sort({apelido: 'desc'}).lean().then((escolas) => {
       res.render('alunos/cadastro', {escolas: escolas})
@@ -23,12 +27,8 @@ router.get('/busca', (req,res) => {
     })
 })
 
-router.get('/editar', (req,res) => {
-    res.render('alunos/editar')
-})
-
-router.get('/deletar', (req,res) => {
-    res.render('alunos/deletar')
+router.get('/editar/:id', (req,res) => {  
+  res.render('alunos/editar', {id: req.params.id})
 })
 
 router.post('/busca/filtro', (req, res) => {
@@ -42,7 +42,7 @@ router.post('/busca/filtro', (req, res) => {
       let stringResponse = ""
       if(alunos.length){
         for(let i=0; i<alunos.length; i++){
-          stringResponse += "<tr><td><a href='#'>"+alunos[i].nome+"</a></td><td>"+alunos[i].nascimento.getDate()+"/"+alunos[i].nascimento.getMonth()+"/"+alunos[i].nascimento.getFullYear()+"</td><td>"+alunos[i].mae.nome+"</td><td>"+alunos[i].cpf+"</td></tr>"
+          stringResponse += "<tr><td><a href='/alunos/editar/"+alunos[i]._id+"'>"+alunos[i].nome+"</a></td><td>"+alunos[i].nascimento.getDate()+"/"+alunos[i].nascimento.getMonth()+"/"+alunos[i].nascimento.getFullYear()+"</td><td>"+alunos[i].mae.nome+"</td><td>"+alunos[i].cpf+"</td></tr>"
         }
       }else{
         stringResponse = "Nenhum aluno encontrado"
