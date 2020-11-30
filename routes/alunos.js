@@ -27,8 +27,12 @@ router.get('/busca', (req,res) => {
     })
 })
 
-router.get('/editar/:id', (req,res) => {  
-  res.render('alunos/editar', {id: req.params.id})
+router.get('/editar/:id', (req,res) => {
+  Aluno.findOne({'_id': req.params.id}).lean().then((aluno) => {    
+    res.render('alunos/editar', {aluno: aluno})
+  }).catch((err) => {
+    res.send(err)
+  })  
 })
 
 router.post('/busca/filtro', (req, res) => {

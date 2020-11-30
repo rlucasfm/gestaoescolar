@@ -41,7 +41,7 @@
         app.use(bodyParser.urlencoded({extended: true}))
         app.use(bodyParser.json())
     // Handlebars
-        app.engine('handlebars', handlebars({defaultLayout: 'main', handlebars: allowInsecurePrototypeAccess(Handlebars)}))
+        app.engine('handlebars', handlebars({defaultLayout: 'main', handlebars: allowInsecurePrototypeAccess(Handlebars), helpers: require('./helpers/handlebars')}))
         app.set('view engine', 'handlebars')
     // Mongoose
         mongoose.set('useCreateIndex', true)
