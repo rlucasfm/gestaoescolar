@@ -9,8 +9,6 @@
     const session = require('express-session')
     const flash = require('connect-flash')
     const db = require("./config/db")
-    require("./models/Escolas")
-    const Escola = mongoose.model("escolas")
     const dashboard = require("./routes/dashboard")
     const alunos = require("./routes/alunos")
     const escolas = require("./routes/escolas")
@@ -70,16 +68,6 @@ app.get('/', (req,res) => {
     }else{
         res.render('index', {layout: false})
     }
-})
-
-app.get("/escolas", (req, res) => {
-
-    Escola.find().lean().then((escolas) => {
-        res.render("escolas/index", {escolas: escolas})
-    }).catch((err) => {
-        req.flash("error_msg", "Houve um erro interno ao listar as escolas")
-        res.redirect("/")
-    })
 })
 
 app.post('/login', (req, res, next) => {
