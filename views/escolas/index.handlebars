@@ -7,11 +7,15 @@
             <h4>{{descricao}}</h4>
             <small>Bairro: {{bairro}}</small><br>
             <small>Diretor: {{diretor}}</small><br>
+            <div>
+            <table>
             <a href="/escolas/edit/{{_id}}"><button class="btn btn-success mt-4">Editar escola</button></a>
             <form action="/escolas/deletar/" method="POST">
                 <input type="hidden" name="id" value="{{_id}}">
-                <button type="submit" class="btn btn-danger mt-2">Deletar escola</button>  
+                <button type="submit" class="btn btn-danger mt-4" style="margin: 0 15px">Deletar escola</button>  
             </form>
+            </table>
+            </div>
         </div>
     </div>
 {{else}}
