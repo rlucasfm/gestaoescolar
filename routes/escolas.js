@@ -9,11 +9,21 @@ router.get('/cadastro', (req,res) => {
 })
 
 router.get('/busca', (req,res) => {
-    res.render('escolas/cadastro')
+    res.render('escolas/index')
 })
 
 router.get('/editar', (req,res) => {
     res.render('escolas/cadastro')
+})
+
+router.get("/index", (req, res) => {
+
+    Escola.find().lean().sort({descricao: "asc"}).then((escolas) => {
+        res.render("escolas/index", {escolas: escolas})
+    }).catch((err) => {
+        req.flash("error_msg", "Houve um erro interno ao listar as escolas")
+        res.redirect("/")
+    })
 })
 
 router.get("/edit/:id", (req, res) => {
@@ -116,10 +126,10 @@ router.post("/escolas/edit", (req, res) => {
 router.post("/deletar", (req, res) => {
   Escola.remove({_id: req.body.id}).then(() => {
       req.flash("success_msg", "Escola deletada com sucesso!")
-      res.redirect("/escolas")
+      res.redirect("/escolas/index")
   }).catch((err) =>{
       req.flash("error_msg", "Houve um erro ao deletar a escola!")
-      res.redirect("/escolas")
+      res.redirect("/escolas/index")
   })
 })
 
