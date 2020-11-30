@@ -1,0 +1,19 @@
+<h2>Lista de Escolas: </h2>
+<hr>
+
+{{#each escolas}}
+    <div class="card mt-4">
+        <div class="card-body">
+            <h4>{{descricao}}</h4>
+            <small>Bairro: {{bairro}}</small><br>
+            <small>Diretor: {{diretor}}</small><br>
+            <a href="/escolas/edit/{{_id}}"><button class="btn btn-success mt-4">Editar escola</button></a>
+            <form action="/escolas/deletar/" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <button type="submit" class="btn btn-danger mt-2">Deletar escola</button>  
+            </form>
+        </div>
+    </div>
+{{else}}
+<h4 class="mt-3">Nenhuma escola registrada!</h4>
+{{/each}}
