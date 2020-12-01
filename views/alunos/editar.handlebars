@@ -1925,86 +1925,15 @@
     })   
 </script>
 
-<!-- TRATAMENTO DO RECEBIMENTO DAS DATAS -->
+<!-- TRATAMENTO DAS DATAS -->
 <script>
-
-// Data de nascimento do aluno
-    let dataNasc = new Date("{{aluno.nascimento}}");
-    let nascmonth = dataNasc.getMonth()
-    let nascdate = dataNasc.getDate()
-    if(parseInt(nascmonth) < 10){
-        nascmonth = "0"+nascmonth;
-    }
-    if(parseInt(nascdate) < 10){
-        nascdate = "0"+nascdate;
-    } 
-    dataNasc = dataNasc.getFullYear()+"-"+nascmonth+"-"+nascdate;                     
-    $('#dataNascAluno').val(dataNasc);
-
-// Data de emissão do documento
-    let dataDoc = new Date("{{aluno.dataExp}}");
-    let docmonth = dataDoc.getMonth()
-    let docdate = dataDoc.getDate()
-    if(parseInt(docmonth) < 10){
-        docmonth = "0"+docmonth;
-    }
-    if(parseInt(docdate) < 10){
-        docdate = "0"+docdate;
-    } 
-    dataDoc = dataDoc.getFullYear()+"-"+docmonth+"-"+docdate;                 
-    $('#dataDoc').val(dataDoc);
-
-// Data de Emissão do RG
-    let dataEmissaoRg = new Date("{{aluno.dataEmissaoRg}}");
-    let rgmonth = dataEmissaoRg.getMonth()
-    let rgdate = dataEmissaoRg.getDate()
-    if(parseInt(rgmonth) < 10){
-        rgmonth = "0"+rgmonth;
-    }
-    if(parseInt(rgdate) < 10){
-        rgdate = "0"+rgdate;
-    } 
-    dataEmissaoRg = dataEmissaoRg.getFullYear()+"-"+rgmonth+"-"+rgdate;                
-    $('#dataEmissaoRg').val(dataEmissaoRg);
-
-// Data de emissão do rg do pai
-    let dataEmissRgPai = new Date("{{aluno.pai.dataEmissao}}");
-    let paimonth = dataEmissRgPai.getMonth()
-    let paidate = dataEmissRgPai.getDate()
-    if(parseInt(paimonth) < 10){
-        paimonth = "0"+paimonth;
-    }
-    if(parseInt(paidate) < 10){
-        paidate = "0"+paidate;
-    } 
-    dataEmissRgPai = dataEmissRgPai.getFullYear()+"-"+paimonth+"-"+paidate;                
-    $('#dataEmissRgPai').val(dataEmissRgPai);
-
-// Data de Emissão do RG da mãe
-    let dataEmissRgMae = new Date("{{aluno.mae.dataEmissao}}");
-    let maemonth = dataEmissRgMae.getMonth()
-    let maedate = dataEmissRgMae.getDate()
-    if(parseInt(maemonth) < 10){
-        maemonth = "0"+maemonth;
-    }
-    if(parseInt(maedate) < 10){
-        maedate = "0"+maedate;
-    } 
-    dataEmissRgMae = dataEmissRgMae.getFullYear()+"-"+maemonth+"-"+maedate;                 
-    $('#dataEmissRgMae').val(dataEmissRgMae);  
-
-// Data de Emissão do RG do responsável
-    let dataEmissRgResp = new Date("{{aluno.responsavel.dataEmissao}}");
-    let respmonth = dataEmissRgResp.getMonth()
-    let respdate = dataEmissRgResp.getDate()
-    if(parseInt(respmonth) < 10){
-        respmonth = "0"+respmonth;
-    }
-    if(parseInt(respdate) < 10){
-        respdate = "0"+respdate;
-    } 
-    dataEmissRgResp = dataEmissRgResp.getFullYear()+"-"+respmonth+"-"+respdate;                  
-    $('#dataEmissRgResp').val(dataEmissRgResp);         
+    insertFormatedDate("dataNascAluno", "{{aluno.nascimento}}")
+    insertFormatedDate("dataDoc", "{{aluno.dataExp}}")
+    insertFormatedDate("dataEmissaoRg", "{{aluno.dataEmissaoRg}}")
+    insertFormatedDate("dataEmissRgPai", "{{aluno.pai.dataEmissao}}")
+    insertFormatedDate("dataEmissRgMae", "{{aluno.mae.dataEmissao}}")
+    insertFormatedDate("nascResp", "{{aluno.responsavel.nascimento}}")
+    insertFormatedDate("dataEmissRgResp", "{{aluno.responsavel.dataEmissao}}")
 </script>
 
 <!-- CONFIGURAÇÃO DAS MÁSCARAS -->
