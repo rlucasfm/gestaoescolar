@@ -1,6 +1,7 @@
 <h3 style="color: darkblue;" class="mb-4">Edição de aluno</h3>
 
-<form id="formCadastro">
+<form id="formEditar">
+    <input type="hidden" name="idAluno" id="idAluno" value="{{aluno._id}}">
     <div class="card">        
         <div class="card-body">
             <h5 class="card-title" style="color: darkblue;">Informações do aluno</h5>
@@ -15,9 +16,9 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="dataNascAluno">Nascimento</label>
-                        <input type="date" class="form-control" id="dataNascAluno" name="dataNascAluno" value="{{aluno.nascimento}}" required>
+                        <input type="date" class="form-control" id="dataNascAluno" name="dataNascAluno">
                     </div>
-                </div>
+                </div>                
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="NISAluno">NIS</label>
@@ -84,376 +85,26 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="form-group">
-                        <label for="deficienciaAluno">Deficiências do aluno</label>
-                        <select class="form-control" id="deficienciaAluno" name="deficienciaAluno">
-                            <option value="SEM NECESSIDADES ESPECIAIS">Sem necessidades especiais</option>
-                            <option value="ALTAS HABILIDADES/SUPERDOTAÇÃO">Altas Habilidades/Superdotação</option>
-                            <option value="BAIXA VISÃO">Baixa visão</option>
-                            <option value="CEGUEIRA">Cegueira</option>
-                            <option value="CONDUTAS TÍPICAS">Condutas Típicas</option>
-                            <option value="DEFICIÊNCIA AUDITIVA">Deficiência Auditiva</option>
-                            <option value="DEFICIÊNCIA FÍSICA">Deficiência física</option>
-                            <option value="DEFICIÊNCIA INTELECTUAL">Deficiência Intelectual</option>                            
-                            <option value="DEFICIÊNCIA MULTIPLA">Deficiência multipla</option>
-                            <option value="DEFICIÊNCIA VISUAL">Deficiência visual</option>
-                            <option value="DISLEXIA">Dislexia</option>
-                            <option value="DISTÚRBIOS ALIMENTARES">Distúrbios alimentares</option>
-                            <option value="OUTRAS">Outras</option>
-                            <option value="PARALISIA CEREBRAL">Paralisia Cerebral</option>
-                            <option value="SINDROME ASPERGER">Sindrome Asperger</option>
-                            <option value="CROUZON">Crouzon</option>
-                            <option value="MOEBIUS">Moebius</option>
-                            <option value="RETT">Rett</option>
-                            <option value="DOWN">Down</option>
-                            <option value="WILLIAMS">Williams</option>                            
-                            <option value="SURDEZ">Surdez</option>
-                            <option value="SURDOCEGUEIRA">Surdocegueira</option>
-                            <option value="TDAH">TDAH</option>
-                            <option value="TEA/AUTISMO">TEA/Autismo</option>
-                            <option value="TRANSTORNO DESINTEGRATIVO DA INFÂNCIA">Transtorno Desintegrativo da Infância</option>
-                            <option value="TRANSTORNO HIPERCINÉTICO">Transtorno Hipercinético</option>
-                            <option value="TRANSTORNOS ESPECÍFICOS DO DESENVOLVIMENTO DE HAB">Transtornos Específicos do desenvolvimento de hab</option>
-                            <option value="TRANSTORNOS GLOBAIS DE DESENVOLVIMENTO">Transtornos globais de desenvolvimento</option>                            
-                        </select>                        
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <label for="deficienciaAluno2"> 2</label>
-                        <select class="form-control" id="deficienciaAluno2" name="deficienciaAluno2">
-                            <option value="SEM NECESSIDADES ESPECIAIS">Sem necessidades especiais</option>
-                            <option value="ALTAS HABILIDADES/SUPERDOTAÇÃO">Altas Habilidades/Superdotação</option>
-                            <option value="BAIXA VISÃO">Baixa visão</option>
-                            <option value="CEGUEIRA">Cegueira</option>
-                            <option value="CONDUTAS TÍPICAS">Condutas Típicas</option>
-                            <option value="DEFICIÊNCIA AUDITIVA">Deficiência Auditiva</option>
-                            <option value="DEFICIÊNCIA FÍSICA">Deficiência física</option>
-                            <option value="DEFICIÊNCIA INTELECTUAL">Deficiência Intelectual</option>                            
-                            <option value="DEFICIÊNCIA MULTIPLA">Deficiência multipla</option>
-                            <option value="DEFICIÊNCIA VISUAL">Deficiência visual</option>
-                            <option value="DISLEXIA">Dislexia</option>
-                            <option value="DISTÚRBIOS ALIMENTARES">Distúrbios alimentares</option>
-                            <option value="OUTRAS">Outras</option>
-                            <option value="PARALISIA CEREBRAL">Paralisia Cerebral</option>
-                            <option value="SINDROME ASPERGER">Sindrome Asperger</option>
-                            <option value="CROUZON">Crouzon</option>
-                            <option value="MOEBIUS">Moebius</option>
-                            <option value="RETT">Rett</option>
-                            <option value="DOWN">Down</option>
-                            <option value="WILLIAMS">Williams</option>                            
-                            <option value="SURDEZ">Surdez</option>
-                            <option value="SURDOCEGUEIRA">Surdocegueira</option>
-                            <option value="TDAH">TDAH</option>
-                            <option value="TEA/AUTISMO">TEA/Autismo</option>
-                            <option value="TRANSTORNO DESINTEGRATIVO DA INFÂNCIA">Transtorno Desintegrativo da Infância</option>
-                            <option value="TRANSTORNO HIPERCINÉTICO">Transtorno Hipercinético</option>
-                            <option value="TRANSTORNOS ESPECÍFICOS DO DESENVOLVIMENTO DE HAB">Transtornos Específicos do desenvolvimento de hab</option>
-                            <option value="TRANSTORNOS GLOBAIS DE DESENVOLVIMENTO">Transtornos globais de desenvolvimento</option>                            
-                        </select>                        
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group"> 
-                        <label for="deficienciaAluno3"> 3</label>                       
-                        <select class="form-control" id="deficienciaAluno3" name="deficienciaAluno3">
-                            <option value="SEM NECESSIDADES ESPECIAIS">Sem necessidades especiais</option>
-                            <option value="ALTAS HABILIDADES/SUPERDOTAÇÃO">Altas Habilidades/Superdotação</option>
-                            <option value="BAIXA VISÃO">Baixa visão</option>
-                            <option value="CEGUEIRA">Cegueira</option>
-                            <option value="CONDUTAS TÍPICAS">Condutas Típicas</option>
-                            <option value="DEFICIÊNCIA AUDITIVA">Deficiência Auditiva</option>
-                            <option value="DEFICIÊNCIA FÍSICA">Deficiência física</option>
-                            <option value="DEFICIÊNCIA INTELECTUAL">Deficiência Intelectual</option>                            
-                            <option value="DEFICIÊNCIA MULTIPLA">Deficiência multipla</option>
-                            <option value="DEFICIÊNCIA VISUAL">Deficiência visual</option>
-                            <option value="DISLEXIA">Dislexia</option>
-                            <option value="DISTÚRBIOS ALIMENTARES">Distúrbios alimentares</option>
-                            <option value="OUTRAS">Outras</option>
-                            <option value="PARALISIA CEREBRAL">Paralisia Cerebral</option>
-                            <option value="SINDROME ASPERGER">Sindrome Asperger</option>
-                            <option value="CROUZON">Crouzon</option>
-                            <option value="MOEBIUS">Moebius</option>
-                            <option value="RETT">Rett</option>
-                            <option value="DOWN">Down</option>
-                            <option value="WILLIAMS">Williams</option>                            
-                            <option value="SURDEZ">Surdez</option>
-                            <option value="SURDOCEGUEIRA">Surdocegueira</option>
-                            <option value="TDAH">TDAH</option>
-                            <option value="TEA/AUTISMO">TEA/Autismo</option>
-                            <option value="TRANSTORNO DESINTEGRATIVO DA INFÂNCIA">Transtorno Desintegrativo da Infância</option>
-                            <option value="TRANSTORNO HIPERCINÉTICO">Transtorno Hipercinético</option>
-                            <option value="TRANSTORNOS ESPECÍFICOS DO DESENVOLVIMENTO DE HAB">Transtornos Específicos do desenvolvimento de hab</option>
-                            <option value="TRANSTORNOS GLOBAIS DE DESENVOLVIMENTO">Transtornos globais de desenvolvimento</option>                          
-                        </select>                        
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
                         <label for="matricAluno">Matricula do aluno</label>
-                        <input type="text" class="form-control" id="matricAluno" name="matricAluno" placeholder="Matricula do aluno">
+                        <input type="text" class="form-control" id="matricAluno" name="matricAluno" value="{{aluno.matriculaAtual}}">
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <label for="escolaAnterior">Escola anterior</label>
-                        <select class="form-control" name="escolaAnterior" id="escolaAnterior">
-                            <option value="5fc10c91ab20743361650f60">Nenhuma</option>
-                            {{#each escolas}}
-                                <option value="{{_id}}">{{descricao}}</option>
-                            {{/each}}
-                        </select>
-                    </div>
-                </div>
+            <div class="row">                
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="matricAntAluno">Matricula anterior do aluno</label>
-                        <input type="text" class="form-control" id="matricAntAluno" name="matricAntAluno" placeholder="Matricula anterior do aluno">
+                        <input type="text" class="form-control" id="matricAntAluno" name="matricAntAluno" value="{{aluno.matriculaEscolaAnterior}}">
                     </div>
                 </div>
             </div>
             <h5 class="card-title mt-4" style="color: darkblue;">Documentação do aluno</h5>
             <hr>
-            <div class="row">
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label for="nacionalidadeAluno">Nacionalidade</label>
-                        <select class="form-control" id="nacionalidadeAluno" name="nacionalidadeAluno">
-                            <option value="BRASILEIRA">Brasileira</option>
-                            <option value="BRASILEIRA NATURALIZADO">Brasileira naturalizado</option>
-                            <option value="ESTRANGEIRO">Estrangeiro</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label for="paisAluno">País de origem</label>
-                        <select class="form-control" id="paisAluno" name="paisAluno">                            
-                            <option value="África do Sul">África do Sul</option>
-                            <option value="Albânia">Albânia</option>
-                            <option value="Alemanha">Alemanha</option>
-                            <option value="Andorra">Andorra</option>
-                            <option value="Angola">Angola</option>
-                            <option value="Anguilla">Anguilla</option>
-                            <option value="Antigua">Antigua</option>
-                            <option value="Arábia Saudita">Arábia Saudita</option>
-                            <option value="Argentina">Argentina</option>
-                            <option value="Armênia">Armênia</option>
-                            <option value="Aruba">Aruba</option>
-                            <option value="Austrália">Austrália</option>
-                            <option value="Áustria">Áustria</option>
-                            <option value="Azerbaijão">Azerbaijão</option>
-                            <option value="Bahamas">Bahamas</option>
-                            <option value="Bahrein">Bahrein</option>
-                            <option value="Bangladesh">Bangladesh</option>
-                            <option value="Barbados">Barbados</option>
-                            <option value="Bélgica">Bélgica</option>
-                            <option value="Benin">Benin</option>
-                            <option value="Bermudas">Bermudas</option>
-                            <option value="Botsuana">Botsuana</option>
-                            <option value="Brasil" selected>Brasil</option>
-                            <option value="Brunei">Brunei</option>
-                            <option value="Bulgária">Bulgária</option>
-                            <option value="Burkina Fasso">Burkina Fasso</option>
-                            <option value="botão">botão</option>
-                            <option value="Cabo Verde">Cabo Verde</option>
-                            <option value="Camarões">Camarões</option>
-                            <option value="Camboja">Camboja</option>
-                            <option value="Canadá">Canadá</option>
-                            <option value="Cazaquistão">Cazaquistão</option>
-                            <option value="Chade">Chade</option>
-                            <option value="Chile">Chile</option>
-                            <option value="China">China</option>
-                            <option value="Cidade do Vaticano">Cidade do Vaticano</option>
-                            <option value="Colômbia">Colômbia</option>
-                            <option value="Congo">Congo</option>
-                            <option value="Coréia do Sul">Coréia do Sul</option>
-                            <option value="Costa do Marfim">Costa do Marfim</option>
-                            <option value="Costa Rica">Costa Rica</option>
-                            <option value="Croácia">Croácia</option>
-                            <option value="Dinamarca">Dinamarca</option>
-                            <option value="Djibuti">Djibuti</option>
-                            <option value="Dominica">Dominica</option>
-                            <option value="EUA">EUA</option>
-                            <option value="Egito">Egito</option>
-                            <option value="El Salvador">El Salvador</option>
-                            <option value="Emirados Árabes">Emirados Árabes</option>
-                            <option value="Equador">Equador</option>
-                            <option value="Eritréia">Eritréia</option>
-                            <option value="Escócia">Escócia</option>
-                            <option value="Eslováquia">Eslováquia</option>
-                            <option value="Eslovênia">Eslovênia</option>
-                            <option value="Espanha">Espanha</option>
-                            <option value="Estônia">Estônia</option>
-                            <option value="Etiópia">Etiópia</option>
-                            <option value="Fiji">Fiji</option>
-                            <option value="Filipinas">Filipinas</option>
-                            <option value="Finlândia">Finlândia</option>
-                            <option value="França">França</option>
-                            <option value="Gabão">Gabão</option>
-                            <option value="Gâmbia">Gâmbia</option>
-                            <option value="Gana">Gana</option>
-                            <option value="Geórgia">Geórgia</option>
-                            <option value="Gibraltar">Gibraltar</option>
-                            <option value="Granada">Granada</option>
-                            <option value="Grécia">Grécia</option>
-                            <option value="Guadalupe">Guadalupe</option>
-                            <option value="Guam">Guam</option>
-                            <option value="Guatemala">Guatemala</option>
-                            <option value="Guiana">Guiana</option>
-                            <option value="Guiana Francesa">Guiana Francesa</option>
-                            <option value="Guiné-bissau">Guiné-bissau</option>
-                            <option value="Haiti">Haiti</option>
-                            <option value="Holanda">Holanda</option>
-                            <option value="Honduras">Honduras</option>
-                            <option value="Hong Kong">Hong Kong</option>
-                            <option value="Hungria">Hungria</option>
-                            <option value="Iêmen">Iêmen</option>
-                            <option value="Ilhas Cayman">Ilhas Cayman</option>
-                            <option value="Ilhas Cook">Ilhas Cook</option>
-                            <option value="Ilhas Curaçao">Ilhas Curaçao</option>
-                            <option value="Ilhas Marshall">Ilhas Marshall</option>
-                            <option value="Ilhas Turks & Caicos">Ilhas Turks e Caicos</option>
-                            <option value="Ilhas Virgens (brit.)">Ilhas Virgens (brit.)</option>
-                            <option value="Ilhas Virgens(amer.)">Ilhas Virgens(amer.)</option>
-                            <option value="Ilhas Wallis e Futuna">Ilhas Wallis e Futuna</option>
-                            <option value="Índia">Índia</option>
-                            <option value="Indonésia">Indonésia</option>
-                            <option value="Inglaterra">Inglaterra</option>
-                            <option value="Irlanda">Irlanda</option>
-                            <option value="Islândia">Islândia</option>
-                            <option value="Israel">Israel</option>
-                            <option value="Itália">Itália</option>
-                            <option value="Jamaica">Jamaica</option>
-                            <option value="Japão">Japão</option>
-                            <option value="Jordânia">Jordânia</option>
-                            <option value="Kuwait">Kuwait</option>
-                            <option value="Latvia">Latvia</option>
-                            <option value="Líbano">Líbano</option>
-                            <option value="Liechtenstein">Liechtenstein</option>
-                            <option value="Lituânia">Lituânia</option>
-                            <option value="Luxemburgo">Luxemburgo</option>
-                            <option value="Macau">Macau</option>
-                            <option value="Macedônia">Macedônia</option>
-                            <option value="Madagascar">Madagascar</option>
-                            <option value="Malásia">Malásia</option>
-                            <option value="Malaui">Malaui</option>
-                            <option value="Mali">Mali</option>
-                            <option value="Malta">Malta</option>
-                            <option value="Marrocos">Marrocos</option>
-                            <option value="Martinica">Martinica</option>
-                            <option value="Mauritânia">Mauritânia</option>
-                            <option value="Mauritius">Mauritius</option>
-                            <option value="México">México</option>
-                            <option value="Moldova">Moldova</option>
-                            <option value="Mônaco">Mônaco</option>
-                            <option value="Montserrat">Montserrat</option>
-                            <option value="Nepal">Nepal</option>
-                            <option value="Nicarágua">Nicarágua</option>
-                            <option value="Niger">Niger</option>
-                            <option value="Nigéria">Nigéria</option>
-                            <option value="Noruega">Noruega</option>
-                            <option value="Nova Caledônia">Nova Caledônia</option>
-                            <option value="Nova Zelândia">Nova Zelândia</option>
-                            <option value="Omã">Omã</option>
-                            <option value="Palau">Palau</option>
-                            <option value="Panamá">Panamá</option>
-                            <option value="Papua-nova Guiné">Papua-nova Guiné</option>
-                            <option value="Paquistão">Paquistão</option>
-                            <option value="Peru">Peru</option>
-                            <option value="Polinésia Francesa">Polinésia Francesa</option>
-                            <option value="Polônia">Polônia</option>
-                            <option value="Porto Rico">Porto Rico</option>
-                            <option value="Portugal">Portugal</option>
-                            <option value="Qatar">Qatar</option>
-                            <option value="Quênia">Quênia</option>
-                            <option value="Rep. Dominicana">Rep. Dominicana</option>
-                            <option value="Rep. Tcheca">Rep. Tcheca</option>
-                            <option value="Reunion">Reunion</option>
-                            <option value="Romênia">Romênia</option>
-                            <option value="Ruanda">Ruanda</option>
-                            <option value="Rússia">Rússia</option>
-                            <option value="Saipan">Saipan</option>
-                            <option value="Samoa Americana">Samoa Americana</option>
-                            <option value="Senegal">Senegal</option>
-                            <option value="Serra Leone">Serra Leone</option>
-                            <option value="Seychelles">Seychelles</option>
-                            <option value="Singapura">Singapura</option>
-                            <option value="Síria">Síria</option>
-                            <option value="Sri Lanka">Sri Lanka</option>
-                            <option value="St. Kitts & Nevis">St. Kitts e Nevis</option>
-                            <option value="St. Lúcia">St. Lúcia</option>
-                            <option value="St. Vincent">St. Vincent</option>
-                            <option value="Sudão">Sudão</option>
-                            <option value="Suécia">Suécia</option>
-                            <option value="Suiça">Suiça</option>
-                            <option value="Suriname">Suriname</option>
-                            <option value="Tailândia">Tailândia</option>
-                            <option value="Taiwan">Taiwan</option>
-                            <option value="Tanzânia">Tanzânia</option>
-                            <option value="Togo">Togo</option>
-                            <option value="Trinidad & Tobago">Trinidad e Tobago</option>
-                            <option value="Tunísia">Tunísia</option>
-                            <option value="Turquia">Turquia</option>
-                            <option value="Ucrânia">Ucrânia</option>
-                            <option value="Uganda">Uganda</option>
-                            <option value="Uruguai">Uruguai</option>
-                            <option value="Venezuela">Venezuela</option>
-                            <option value="Vietnã">Vietnã</option>
-                            <option value="Zaire">Zaire</option>
-                            <option value="Zâmbia">Zâmbia</option>
-                            <option value="Zimbábue">Zimbábue</option>                            
-                        </select>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <label for="ufAluno">UF</label>
-                        <select class="form-control" id="ufAluno" name="ufAluno">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="form-group">
-                        <label for="naturalidadeAluno">Naturalidade</label>
-                        <select class="form-control" id="naturalidadeAluno" name="naturalidadeAluno">
-                            <option value="0">Municipio 1</option>
-                        </select>                            
-                    </div>
-                </div>
-                <div class="col-sm-3">
+            <div class="row">                
+                <div class="col-sm-4">
                     <div class="form-group">
                         <label for="cpfAluno">CPF do Aluno</label>
-                        <input type="text" class="form-control cpf" id="cpfAluno" name="cpfAluno" placeholder="CPF do aluno" required>
+                        <input type="text" class="form-control cpf" id="cpfAluno" name="cpfAluno" value="{{aluno.cpf}}" required>
                     </div>
                 </div>
             </div>
@@ -462,65 +113,63 @@
                     <div class="form-group">
                         <label for="tipoDoc">Tipo de Documento</label>
                         <select class="form-control" id="tipoDoc" name="tipoDoc">
-                            <option value="NÃO CONSTA">Não consta</option>
-                            <option value="NASCIMENTO">Nascimento</option>
-                            <option value="CASAMENTO">Casamento</option>                            
+                            <option value="NÃO CONSTA" {{#if_equal aluno.tipoCertidao "NÃO CONSTA"}}selected{{/if_equal}}>Não consta</option>
+                            <option value="NASCIMENTO" {{#if_equal aluno.tipoCertidao "NASCIMENTO"}}selected{{/if_equal}}>Nascimento</option>
+                            <option value="CASAMENTO" {{#if_equal aluno.tipoCertidao "CASAMENTO"}}selected{{/if_equal}}>Casamento</option>                            
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="numeroDoc">Número do documento</label>
-                        <input type="text" class="form-control" id="numeroDoc" name="numeroDoc" placeholder="Número do documento">
+                        <input type="text" class="form-control" id="numeroDoc" name="numeroDoc" value="{{aluno.numeroCertidao}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="dataDoc">Data emissão</label>
-                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" required>
+                        <input type="date" class="form-control" id="dataDoc" name="dataDoc">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="ufDoc">UF</label>
                         <select class="form-control" id="ufDoc" name="ufDoc">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.ufCertidao "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.ufCertidao "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.ufCertidao "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.ufCertidao "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.ufCertidao "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.ufCertidao "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.ufCertidao "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.ufCertidao "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.ufCertidao "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.ufCertidao "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.ufCertidao "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.ufCertidao "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.ufCertidao "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.ufCertidao "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.ufCertidao "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.ufCertidao "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.ufCertidao "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.ufCertidao "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.ufCertidao "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.ufCertidao "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.ufCertidao "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.ufCertidao "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.ufCertidao "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.ufCertidao "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.ufCertidao "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.ufCertidao "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.ufCertidao "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.ufCertidao "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="municipioDoc">Município Registro</label>
-                        <select class="form-control" id="municipioDoc" name="municipioDoc">
-                            <option value="0">Município 1</option>
-                        </select>
+                        <input type="text" class="form-control" id="municipioDoc" name="municipioDoc" value="{{aluno.municipioCertidao}}">
                     </div>
                 </div>
             </div>
@@ -528,64 +177,60 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="cartorioDoc">Cartório</label>
-                        <select class="form-control" id="cartorioDoc" name="cartorioDoc">
-                            <option value="0">Cartório 1</option>
-                        </select>
+                        <input type="text" class="form-control" id="cartorioDoc" name="cartorioDoc" value="{{aluno.cartorio}}">
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="rgDoc">RG do aluno</label>
-                        <input type="text" class="form-control rg" id="rgDoc" name="rgDoc" placeholder="RG do Aluno" required>
+                        <input type="text" class="form-control rg" id="rgDoc" name="rgDoc" value="{{aluno.rg}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="emissorRg">Orgão emissor</label>
-                        <select class="form-control" id="emissorRg" name="emissorRg">
-                            <option value="0">Emissor 1</option>
-                        </select>
+                        <input type="text" class="form-control" id="emissorRg" name="emissorRg" value="{{aluno.orgEmissor}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="ufRg">UF</label>
                         <select class="form-control" id="ufRg" name="ufRg">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.ufRg "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.ufRg "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.ufRg "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.ufRg "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.ufRg "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.ufRg "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.ufRg "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.ufRg "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.ufRg "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.ufRg "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.ufRg "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.ufRg "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.ufRg "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.ufRg "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.ufRg "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.ufRg "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.ufRg "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.ufRg "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.ufRg "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.ufRg "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.ufRg "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.ufRg "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.ufRg "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.ufRg "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.ufRg "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.ufRg "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.ufRg "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.ufRg "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="dataEmissaoRg">Data emissão</label>
-                        <input type="date" class="form-control" id="dataEmissaoRg" name="dataEmissaoRg" required>
+                        <input type="date" class="form-control" id="dataEmissaoRg" name="dataEmissaoRg" value="{{aluno.dataEmissaoRg}}">
                     </div>
                 </div>
             </div>
@@ -593,16 +238,16 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="certReserv">Certidão de Reservista</label>
-                        <input type="text" class="form-control" id="certReserv" name="certReserv" placeholder="Certidão de reservista">
+                        <input type="text" class="form-control" id="certReserv" name="certReserv" value="{{aluno.certidaoReservista}}">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="justifDoc">Justificativa para falta de documentação do aluno</label>
                         <select class="form-control" id="justifDoc" name="justifDoc">
-                            <option value="DOCUMENTO OK">Documento OK</option>
-                            <option value="NÃO POSSUI">Não possui os documentos pessoais solicitados</option>
-                            <option value="ESCOLA NÃO RECEBEU">A escola não dispõe ou não recebeu os documentos</option>
+                            <option value="DOCUMENTO OK" {{#if_equal aluno.justificativa "DOCUMENTO OK"}}selected{{/if_equal}}>Documento OK</option>
+                            <option value="NÃO POSSUI" {{#if_equal aluno.justificativa "NÃO POSSUI"}}selected{{/if_equal}}>Não possui os documentos pessoais solicitados</option>
+                            <option value="ESCOLA NÃO RECEBEU" {{#if_equal aluno.justificativa "ESCOLA NÃO RECEBEU"}}selected{{/if_equal}}>A escola não dispõe ou não recebeu os documentos</option>
                         </select>
                     </div>
                 </div>
@@ -619,31 +264,31 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cepEnd">CEP do Endereço</label>
-                        <input type="text" class="form-control cep" id="cepEnd" name="cepEnd" placeholder="CEP do Endereço" required>
+                        <input type="text" class="form-control cep" id="cepEnd" name="cepEnd" value="{{aluno.endereco.cep}}">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="endereco">Endereço</label>
-                        <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Endereço" required>
+                        <input type="text" class="form-control" id="endereco" name="endereco" value="{{aluno.endereco.endereco}}">
                     </div>
                 </div>
                 <div class="col-sm-1">
                     <div class="form-group">
                         <label for="numEnd">Número</label>
-                        <input type="text" class="form-control" id="numEnd" name="numEnd" placeholder="Nº" required>
+                        <input type="text" class="form-control" id="numEnd" name="numEnd" value="{{aluno.endereco.numero}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="bairroEnd">Bairro</label>
-                        <input type="text" class="form-control" id="bairroEnd" name="bairroEnd" placeholder="Bairro" required>
+                        <input type="text" class="form-control" id="bairroEnd" name="bairroEnd" value="{{aluno.endereco.bairro}}">
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="complementoEnd">Complemento</label>
-                        <input type="text" class="form-control" id="complementoEnd" name="complementoEnd" placeholder="Complemento">
+                        <input type="text" class="form-control" id="complementoEnd" name="complementoEnd" value="{{aluno.endereco.complemento}}">
                     </div>
                 </div>                  
             </div>
@@ -652,61 +297,59 @@
                     <div class="form-group">
                         <label for="ufEnd">UF</label>
                         <select class="form-control" id="ufEnd" name="ufEnd">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.endereco.uf "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.endereco.uf "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.endereco.uf "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.endereco.uf "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.endereco.uf "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.endereco.uf "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.endereco.uf "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.endereco.uf "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.endereco.uf "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.endereco.uf "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.endereco.uf "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.endereco.uf "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.endereco.uf "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.endereco.uf "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.endereco.uf "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.endereco.uf "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.endereco.uf "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.endereco.uf "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.endereco.uf "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.endereco.uf "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.endereco.uf "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.endereco.uf "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.endereco.uf "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.endereco.uf "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.endereco.uf "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.endereco.uf "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.endereco.uf "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.endereco.uf "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="municipioEnd">Municipio</label>
-                        <select class="form-control" id="municipioEnd" name="municipioEnd">
-                            <option value="0">Municipio 1</option>
-                        </select>                            
+                        <input type="text" class="form-control" id="municipioEnd" name="municipioEnd" value="{{aluno.endereco.municipio}}">                            
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="distritoEnd">Distrito</label>
-                        <input type="text" class="form-control" id="distritoEnd" name="distritoEnd" placeholder="Distrito do Endereço">                                                      
+                        <input type="text" class="form-control" id="distritoEnd" name="distritoEnd" value="{{aluno.endereco.distrito}}">                                                      
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="telresEnd">Tel. Residencial</label>
-                        <input type="text" class="form-control phone" id="telresEnd" name="telresEnd">                                                      
+                        <input type="text" class="form-control phone" id="telresEnd" name="telresEnd" value="{{aluno.endereco.telResidencial}}">                                                      
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="celEnd">Tel. Celular</label>
-                        <input type="text" class="form-control phone" id="celEnd" name="celEnd">                                                      
+                        <input type="text" class="form-control phone" id="celEnd" name="celEnd" value="{{aluno.endereco.telCelular}}">                                                      
                     </div>
                 </div>
             </div>
@@ -715,8 +358,8 @@
                     <div class="form-group">
                         <label for="nucleohab">Núcleo habitacional</label>
                         <select class="form-control" id="nucleohab" name="nucleohab">
-                            <option value="ZONA URBANA">Zona urbana</option>
-                            <option value="ZONA RURAL">Zona rural</option>
+                            <option value="ZONA URBANA" {{#if_equal aluno.endereco.nucleoHabitacional "ZONA URBANA"}}selected{{/if_equal}}>Zona urbana</option>
+                            <option value="ZONA RURAL" {{#if_equal aluno.endereco.nucleoHabitacional "ZONA RURAL"}}selected{{/if_equal}}>Zona rural</option>
                         </select>                            
                     </div>
                 </div>
@@ -724,10 +367,10 @@
                     <div class="form-group">
                         <label for="tipomoradia">Tipo de moradia</label>
                         <select class="form-control" id="tipomoradia" name="tipomoradia">
-                            <option value="ALUGUEL">Aluguel</option>
-                            <option value="CEDIDA">Cedida</option>
-                            <option value="PRÓPRIA">Própria</option>
-                            <option value="COMPARTILHADO">Compartilhado</option>
+                            <option value="ALUGUEL" {{#if_equal aluno.endereco.tipoMoradia "ALUGUEL"}}selected{{/if_equal}}>Aluguel</option>
+                            <option value="CEDIDA" {{#if_equal aluno.endereco.tipoMoradia "CEDIDA"}}selected{{/if_equal}}>Cedida</option>
+                            <option value="PRÓPRIA" {{#if_equal aluno.endereco.tipoMoradia "PRÓPRIA"}}selected{{/if_equal}}>Própria</option>
+                            <option value="COMPARTILHADO" {{#if_equal aluno.endereco.tipoMoradia "COMPARTILHADO"}}selected{{/if_equal}}>Compartilhado</option>
                         </select>                            
                     </div>
                 </div>
@@ -735,11 +378,11 @@
                     <div class="form-group">
                         <label for="companhiaMoradia">Mora em companhia de quem</label>
                         <select class="form-control" id="companhiaMoradia" name="companhiaMoradia">
-                            <option value="SOMENTE COM O PAI">Somente com o pai</option>
-                            <option value="SOMENTE COM A MÃE">Somente com a mãe</option>
-                            <option value="FAMILIARES">Familiares</option>
-                            <option value="OUTRAS PESSOAS">Outras pessoas</option>
-                            <option value="COM PAI E MÃE">Com pai e mãe</option>
+                            <option value="SOMENTE COM O PAI" {{#if_equal aluno.endereco.moraCompanhia "SOMENTE COM O PAI"}}selected{{/if_equal}}>Somente com o pai</option>
+                            <option value="SOMENTE COM A MÃE" {{#if_equal aluno.endereco.moraCompanhia "SOMENTE COM A MÃE"}}selected{{/if_equal}}>Somente com a mãe</option>
+                            <option value="FAMILIARES" {{#if_equal aluno.endereco.moraCompanhia "FAMILIARES"}}selected{{/if_equal}}>Familiares</option>
+                            <option value="OUTRAS PESSOAS" {{#if_equal aluno.endereco.moraCompanhia "OUTRAS PESSOAS"}}selected{{/if_equal}}>Outras pessoas</option>
+                            <option value="COM PAI E MÃE" {{#if_equal aluno.endereco.moraCompanhia "COM PAI E MÃE"}}selected{{/if_equal}}>Com pai e mãe</option>
                         </select>                            
                     </div>
                 </div>
@@ -755,8 +398,8 @@
                     <div class="form-group">
                         <label for="transPub">Transporte escolar público</label>
                         <select class="form-control" id="transPub" name="transPub">
-                            <option value="NÃO UTILIZA">Não utiliza</option>
-                            <option value="UTILIZA">Utiliza</option>                            
+                            <option value="NÃO UTILIZA" {{#if_equal aluno.transporte.transportePublico "NÃO UTILIZA"}}selected{{/if_equal}}>Não utiliza</option>
+                            <option value="UTILIZA" {{#if_equal aluno.transporte.transportePublico "UTILIZA"}}selected{{/if_equal}}>Utiliza</option>                            
                         </select>                            
                     </div>
                 </div>
@@ -764,9 +407,9 @@
                     <div class="form-group">
                         <label for="transResp">Poder público responsável pelo transporte</label>
                         <select class="form-control" id="transResp" name="transResp">
-                            <option value="ESTADUAL">Estadual</option>
-                            <option value="MUNICIPAL">Municipal</option>  
-                            <option value="NENHUM">Nenhum</option>                          
+                            <option value="ESTADUAL" {{#if_equal aluno.transporte.poderPubResp "ESTADUAL"}}selected{{/if_equal}}>Estadual</option>
+                            <option value="MUNICIPAL" {{#if_equal aluno.transporte.poderPubResp "MUNICIPAL"}}selected{{/if_equal}}>Municipal</option>  
+                            <option value="NENHUM" {{#if_equal aluno.transporte.poderPubResp "NENHUM"}}selected{{/if_equal}}>Nenhum</option>                          
                         </select>                            
                     </div>
                 </div>
@@ -774,17 +417,17 @@
                     <div class="form-group">
                         <label for="trans1">Transporte 1</label>
                         <select class="form-control" id="trans1" name="trans1">
-                            <option value="NENHUM">Nenhum</option>
-                            <option value="RODOVIÁRIO - ONIBUS">Rodoviário - Onibus</option>  
-                            <option value="RODOVIÁRIO - MICROONIBUS">Rodoviário - Microonibus</option>  
-                            <option value="RODOVIÁRIO - VANS/KOMBI">Rodoviário - Vans/Kombi</option>
-                            <option value="RODOVIÁRIO - BICICLETA">Rodoviário - Bicicleta</option>
-                            <option value="RODOVIÁRIO - TRAÇÃO ANIMAL">Rodoviário - Tração Animal</option>
-                            <option value="RODOVIÁRIO - OUTROS">Rodoviário - Outros</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE ATÉ 5">Aquaviário - Capacidade até 5</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE DE 5 A 15">Aquaviário - Capacidade de 5 a 15</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE DE 15 A 35">Aquaviário - Capacidade de 15 a 35</option>
-                            <option value="AQUAVIÁRIO - MAIS QUE 35">Aquaviário - Mais que 35</option>                             
+                            <option value="NENHUM" {{#if_equal aluno.transporte.transp1 "NENHUM"}}selected{{/if_equal}}>Nenhum</option>
+                            <option value="RODOVIÁRIO - ONIBUS" {{#if_equal aluno.transporte.transp1 "RODOVIÁRIO - ONIBUS"}}selected{{/if_equal}}>Rodoviário - Onibus</option>  
+                            <option value="RODOVIÁRIO - MICROONIBUS" {{#if_equal aluno.transporte.transp1 "RODOVIÁRIO - MICROONIBUS"}}selected{{/if_equal}}>Rodoviário - Microonibus</option>  
+                            <option value="RODOVIÁRIO - VANS/KOMBI" {{#if_equal aluno.transporte.transp1 "RODOVIÁRIO - VANS/KOMBI"}}selected{{/if_equal}}>Rodoviário - Vans/Kombi</option>
+                            <option value="RODOVIÁRIO - BICICLETA" {{#if_equal aluno.transporte.transp1 "RODOVIÁRIO - BICICLETA"}}selected{{/if_equal}}>Rodoviário - Bicicleta</option>
+                            <option value="RODOVIÁRIO - TRAÇÃO ANIMAL" {{#if_equal aluno.transporte.transp1 "RODOVIÁRIO - TRAÇÃO ANIMAL"}}selected{{/if_equal}}>Rodoviário - Tração Animal</option>
+                            <option value="RODOVIÁRIO - OUTROS" {{#if_equal aluno.transporte.transp1 "RODOVIÁRIO - OUTROS"}}selected{{/if_equal}}>Rodoviário - Outros</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE ATÉ 5" {{#if_equal aluno.transporte.transp1 "AQUAVIÁRIO - CAPACIDADE ATÉ 5"}}selected{{/if_equal}}>Aquaviário - Capacidade até 5</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE DE 5 A 15" {{#if_equal aluno.transporte.transp1 "AQUAVIÁRIO - CAPACIDADE DE 5 A 15"}}selected{{/if_equal}}>Aquaviário - Capacidade de 5 a 15</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE DE 15 A 35" {{#if_equal aluno.transporte.transp1 "AQUAVIÁRIO - CAPACIDADE DE 15 A 35"}}selected{{/if_equal}}>Aquaviário - Capacidade de 15 a 35</option>
+                            <option value="AQUAVIÁRIO - MAIS QUE 35" {{#if_equal aluno.transporte.transp1 "AQUAVIÁRIO - MAIS QUE 35"}}selected{{/if_equal}}>Aquaviário - Mais que 35</option>                             
                         </select>                            
                     </div>
                 </div>
@@ -792,17 +435,17 @@
                     <div class="form-group">
                         <label for="trans2">Transporte 2</label>
                         <select class="form-control" id="trans2" name="trans2">
-                            <option value="NENHUM">Nenhum</option>
-                            <option value="RODOVIÁRIO - ONIBUS">Rodoviário - Onibus</option>  
-                            <option value="RODOVIÁRIO - MICROONIBUS">Rodoviário - Microonibus</option>  
-                            <option value="RODOVIÁRIO - VANS/KOMBI">Rodoviário - Vans/Kombi</option>
-                            <option value="RODOVIÁRIO - BICICLETA">Rodoviário - Bicicleta</option>
-                            <option value="RODOVIÁRIO - TRAÇÃO ANIMAL">Rodoviário - Tração Animal</option>
-                            <option value="RODOVIÁRIO - OUTROS">Rodoviário - Outros</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE ATÉ 5">Aquaviário - Capacidade até 5</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE DE 5 A 15">Aquaviário - Capacidade de 5 a 15</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE DE 15 A 35">Aquaviário - Capacidade de 15 a 35</option>
-                            <option value="AQUAVIÁRIO - MAIS QUE 35">Aquaviário - Mais que 35</option>                          
+                            <option value="NENHUM" {{#if_equal aluno.transporte.transp2 "NENHUM"}}selected{{/if_equal}}>Nenhum</option>
+                            <option value="RODOVIÁRIO - ONIBUS" {{#if_equal aluno.transporte.transp2 "RODOVIÁRIO - ONIBUS"}}selected{{/if_equal}}>Rodoviário - Onibus</option>  
+                            <option value="RODOVIÁRIO - MICROONIBUS" {{#if_equal aluno.transporte.transp2 "RODOVIÁRIO - MICROONIBUS"}}selected{{/if_equal}}>Rodoviário - Microonibus</option>  
+                            <option value="RODOVIÁRIO - VANS/KOMBI" {{#if_equal aluno.transporte.transp2 "RODOVIÁRIO - VANS/KOMBI"}}selected{{/if_equal}}>Rodoviário - Vans/Kombi</option>
+                            <option value="RODOVIÁRIO - BICICLETA" {{#if_equal aluno.transporte.transp2 "RODOVIÁRIO - BICICLETA"}}selected{{/if_equal}}>Rodoviário - Bicicleta</option>
+                            <option value="RODOVIÁRIO - TRAÇÃO ANIMAL" {{#if_equal aluno.transporte.transp2 "RODOVIÁRIO - TRAÇÃO ANIMAL"}}selected{{/if_equal}}>Rodoviário - Tração Animal</option>
+                            <option value="RODOVIÁRIO - OUTROS" {{#if_equal aluno.transporte.transp2 "RODOVIÁRIO - OUTROS"}}selected{{/if_equal}}>Rodoviário - Outros</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE ATÉ 5" {{#if_equal aluno.transporte.transp2 "AQUAVIÁRIO - CAPACIDADE ATÉ 5"}}selected{{/if_equal}}>Aquaviário - Capacidade até 5</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE DE 5 A 15" {{#if_equal aluno.transporte.transp2 "AQUAVIÁRIO - CAPACIDADE DE 5 A 15"}}selected{{/if_equal}}>Aquaviário - Capacidade de 5 a 15</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE DE 15 A 35" {{#if_equal aluno.transporte.transp2 "AQUAVIÁRIO - CAPACIDADE DE 15 A 35"}}selected{{/if_equal}}>Aquaviário - Capacidade de 15 a 35</option>
+                            <option value="AQUAVIÁRIO - MAIS QUE 35" {{#if_equal aluno.transporte.transp2 "AQUAVIÁRIO - MAIS QUE 35"}}selected{{/if_equal}}>Aquaviário - Mais que 35</option>                          
                         </select>                            
                     </div>
                 </div>                
@@ -812,17 +455,17 @@
                     <div class="form-group">
                         <label for="trans3">Transporte 3</label>
                         <select class="form-control" id="trans3" name="trans3">
-                            <option value="NENHUM">Nenhum</option>
-                            <option value="RODOVIÁRIO - ONIBUS">Rodoviário - Onibus</option>  
-                            <option value="RODOVIÁRIO - MICROONIBUS">Rodoviário - Microonibus</option>  
-                            <option value="RODOVIÁRIO - VANS/KOMBI">Rodoviário - Vans/Kombi</option>
-                            <option value="RODOVIÁRIO - BICICLETA">Rodoviário - Bicicleta</option>
-                            <option value="RODOVIÁRIO - TRAÇÃO ANIMAL">Rodoviário - Tração Animal</option>
-                            <option value="RODOVIÁRIO - OUTROS">Rodoviário - Outros</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE ATÉ 5">Aquaviário - Capacidade até 5</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE DE 5 A 15">Aquaviário - Capacidade de 5 a 15</option>
-                            <option value="AQUAVIÁRIO - CAPACIDADE DE 15 A 35">Aquaviário - Capacidade de 15 a 35</option>
-                            <option value="AQUAVIÁRIO - MAIS QUE 35">Aquaviário - Mais que 35</option>                            
+                            <option value="NENHUM" {{#if_equal aluno.transporte.transp3 "NENHUM"}}selected{{/if_equal}}>Nenhum</option>
+                            <option value="RODOVIÁRIO - ONIBUS" {{#if_equal aluno.transporte.transp3 "RODOVIÁRIO - ONIBUS"}}selected{{/if_equal}}>Rodoviário - Onibus</option>  
+                            <option value="RODOVIÁRIO - MICROONIBUS" {{#if_equal aluno.transporte.transp3 "RODOVIÁRIO - MICROONIBUS"}}selected{{/if_equal}}>Rodoviário - Microonibus</option>  
+                            <option value="RODOVIÁRIO - VANS/KOMBI" {{#if_equal aluno.transporte.transp3 "RODOVIÁRIO - VANS/KOMBI"}}selected{{/if_equal}}>Rodoviário - Vans/Kombi</option>
+                            <option value="RODOVIÁRIO - BICICLETA" {{#if_equal aluno.transporte.transp3 "RODOVIÁRIO - BICICLETA"}}selected{{/if_equal}}>Rodoviário - Bicicleta</option>
+                            <option value="RODOVIÁRIO - TRAÇÃO ANIMAL" {{#if_equal aluno.transporte.transp3 "RODOVIÁRIO - TRAÇÃO ANIMAL"}}selected{{/if_equal}}>Rodoviário - Tração Animal</option>
+                            <option value="RODOVIÁRIO - OUTROS" {{#if_equal aluno.transporte.transp3 "RODOVIÁRIO - OUTROS"}}selected{{/if_equal}}>Rodoviário - Outros</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE ATÉ 5" {{#if_equal aluno.transporte.transp3 "AQUAVIÁRIO - CAPACIDADE ATÉ 5"}}selected{{/if_equal}}>Aquaviário - Capacidade até 5</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE DE 5 A 15" {{#if_equal aluno.transporte.transp3 "AQUAVIÁRIO - CAPACIDADE DE 5 A 15"}}selected{{/if_equal}}>Aquaviário - Capacidade de 5 a 15</option>
+                            <option value="AQUAVIÁRIO - CAPACIDADE DE 15 A 35" {{#if_equal aluno.transporte.transp3 "AQUAVIÁRIO - CAPACIDADE DE 15 A 35"}}selected{{/if_equal}}>Aquaviário - Capacidade de 15 a 35</option>
+                            <option value="AQUAVIÁRIO - MAIS QUE 35" {{#if_equal aluno.transporte.transp3 "AQUAVIÁRIO - MAIS QUE 35"}}selected{{/if_equal}}>Aquaviário - Mais que 35</option>                           
                         </select>                            
                     </div>
                 </div>
@@ -830,9 +473,9 @@
                     <div class="form-group">
                         <label for="escoutroLocal">Recebe escolarização em outro local?</label>
                         <select class="form-control" id="escoutroLocal" name="escoutroLocal">
-                            <option value="NÃO RECEBE">Não recebe</option>
-                            <option value="EM HOSPITAL">Em hospital</option>  
-                            <option value="EM DOMICÍLIO">Em domicílio</option>                                                           
+                            <option value="NÃO RECEBE" {{#if_equal aluno.transporte.recebeEscOutroLugar "NÃO RECEBE"}}selected{{/if_equal}}>Não recebe</option>
+                            <option value="EM HOSPITAL" {{#if_equal aluno.transporte.recebeEscOutroLugar "EM HOSPITAL"}}selected{{/if_equal}}>Em hospital</option>  
+                            <option value="EM DOMICÍLIO" {{#if_equal aluno.transporte.recebeEscOutroLugar "EM DOMICÍLIO"}}selected{{/if_equal}}>Em domicílio</option>                                                           
                         </select>                            
                     </div>
                 </div>
@@ -847,55 +490,53 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="nomePai">Nome</label>
-                        <input type="text" class="form-control" id="nomePai" name="nomePai" placeholder="Nome do pai">
+                        <input type="text" class="form-control" id="nomePai" name="nomePai" value="{{aluno.pai.nome}}">
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="rgPai">RG</label>
-                        <input type="text" class="form-control rg" id="rgPai" name="rgPai" placeholder="RG do pai">
+                        <input type="text" class="form-control rg" id="rgPai" name="rgPai" value="{{aluno.pai.rg}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="emissorRgPai">Orgão emissor</label>
-                        <select class="form-control" id="emissorRgPai" name="emissorRgPai">
-                            <option value="0">Emissor 1</option>
-                        </select>
+                        <input type="text" class="form-control" id="emissorRgPai" name="emissorRgPai" value="{{aluno.pai.orgEmissor}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="ufrgPai">UF</label>
                         <select class="form-control" id="ufrgPai" name="ufrgPai">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.pai.ufRG "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.pai.ufRG "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.pai.ufRG "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.pai.ufRG "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.pai.ufRG "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.pai.ufRG "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.pai.ufRG "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.pai.ufRG "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.pai.ufRG "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.pai.ufRG "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.pai.ufRG "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.pai.ufRG "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.pai.ufRG "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.pai.ufRG "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.pai.ufRG "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.pai.ufRG "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.pai.ufRG "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.pai.ufRG "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.pai.ufRG "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.pai.ufRG "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.pai.ufRG "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.pai.ufRG "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.pai.ufRG "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.pai.ufRG "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.pai.ufRG "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.pai.ufRG "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.pai.ufRG "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.pai.ufRG "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>                                
@@ -910,28 +551,28 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cpfPai">CPF do Pai</label>
-                        <input type="text" class="form-control cpf" id="cpfPai" name="cpfPai">
+                        <input type="text" class="form-control cpf" id="cpfPai" name="cpfPai" value="{{aluno.pai.cpf}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="nisPai">NIS do Pai</label>
-                        <input type="text" class="form-control" id="nisPai" name="nisPai">
+                        <input type="text" class="form-control" id="nisPai" name="nisPai" value="{{aluno.pai.NIS}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="rendaPai">Renda familiar</label>
-                        <input type="number " class="form-control" id="rendaPai" name="rendaPai">
+                        <input type="number " class="form-control" id="rendaPai" name="rendaPai" value="{{aluno.pai.rendaFamilia}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="nacionalidadePai">Nacionalidade</label>
                         <select class="form-control" id="nacionalidadePai" name="nacionalidadePai">
-                            <option value="BRASILEIRA">Brasileira</option>
-                            <option value="BRASILEIRA NATURALIZADO">Brasileira naturalizado</option>
-                            <option value="ESTRANGEIRO">Estrangeiro</option>
+                            <option value="BRASILEIRA" {{#if_equal aluno.pai.nacionalidade "BRASILEIRA"}}selected{{/if_equal}}>Brasileira</option>
+                            <option value="BRASILEIRA NATURALIZADO" {{#if_equal aluno.pai.nacionalidade "BRASILEIRA NATURALIZADO"}}selected{{/if_equal}}>Brasileira naturalizado</option>
+                            <option value="ESTRANGEIRO" {{#if_equal aluno.pai.nacionalidade "ESTRANGEIRO"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
@@ -1122,79 +763,77 @@
                     <div class="form-group">
                         <label for="ufnascPai">UF</label>
                         <select class="form-control" id="ufnascPai" name="ufnascPai">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.pai.ufNasc "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.pai.ufNasc "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.pai.ufNasc "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.pai.ufNasc "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.pai.ufNasc "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.pai.ufNasc "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.pai.ufNasc "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.pai.ufNasc "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.pai.ufNasc "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.pai.ufNasc "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.pai.ufNasc "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.pai.ufNasc "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.pai.ufNasc "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.pai.ufNasc "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.pai.ufNasc "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.pai.ufNasc "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.pai.ufNasc "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.pai.ufNasc "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.pai.ufNasc "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.pai.ufNasc "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.pai.ufNasc "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.pai.ufNasc "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.pai.ufNasc "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.pai.ufNasc "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.pai.ufNasc "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.pai.ufNasc "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.pai.ufNasc "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.pai.ufNasc "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="naturalidadePai">Naturalidade</label>
-                        <select class="form-control" id="naturalidadePai" name="naturalidadePai">
-                            <option value="0">Municipio 1</option>
-                        </select>                            
+                        <input type="text" class="form-control" id="naturalidadePai" name="naturalidadePai" value="{{aluno.pai.naturalidade}}">                           
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="escolaridadePai">Escolaridade</label>
                         <select class="form-control" id="escolaridadePai" name="escolaridadePai">
-                            <option value="FUNDAMENTAL COMPLETO">FUNDAMENTAL COMPLETO</option>
-                            <option value="FUNDAMENTAL INCOMPLETO">FUNDAMENTAL INCOMPLETO</option>
-                            <option value="MEDIO COM MAGISTERIO COMPLETO">MEDIO COM MAGISTERIO COMPLETO</option>
-                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA">MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
-                            <option value="SUPERIOR COM LICENCIATURA COMPLETO">SUPERIOR COM LICENCIATURA COMPLETO</option>
-                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
-                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
-                            <option value="OUTRA FORMACAO">OUTRA FORMAÇÃO</option>
-                            <option value="POS GRADUADO ESPECIALIZACAO">PÓS-GRADUADO ESPECIALIZAÇÃO</option>
-                            <option value="MESTRADO">MESTRADO</option>
-                            <option value="DOUTORADO">DOUTORADO</option>
-                            <option value="ANALFABETO">ANALFABETO</option>
-                            <option value="ENSINO MEDIO INCOMPLETO">ENSINO MÉDIO INCOMPLETO</option>
-                            <option value="ENSINO SUPERIOR INCOMPLETO">ENSINO SUPERIOR INCOMPLETO</option>
-                            <option value="ENSINO MEDIO">ENSINO MÉDIO</option>
-                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA">ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
-                            <option value="SUPERIOR">SUPERIOR</option>
+                            <option value="FUNDAMENTAL COMPLETO" {{#if_equal aluno.pai.escolaridade "FUNDAMENTAL COMPLETO"}}selected{{/if_equal}}>FUNDAMENTAL COMPLETO</option>
+                            <option value="FUNDAMENTAL INCOMPLETO" {{#if_equal aluno.pai.escolaridade "FUNDAMENTAL INCOMPLETO"}}selected{{/if_equal}}>FUNDAMENTAL INCOMPLETO</option>
+                            <option value="MEDIO COM MAGISTERIO COMPLETO" {{#if_equal aluno.pai.escolaridade "MEDIO COM MAGISTERIO COMPLETO"}}selected{{/if_equal}}>MEDIO COM MAGISTERIO COMPLETO</option>
+                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA" {{#if_equal aluno.pai.escolaridade "MEDIA COM OUTRA FORMAÇAO COMPLETA"}}selected{{/if_equal}}>MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
+                            <option value="SUPERIOR COM LICENCIATURA COMPLETO" {{#if_equal aluno.pai.escolaridade "SUPERIOR COM LICENCIATURA COMPLETO"}}selected{{/if_equal}}>SUPERIOR COM LICENCIATURA COMPLETO</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)" {{#if_equal aluno.pai.escolaridade "SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)"}}selected{{/if_equal}}>SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)" {{#if_equal aluno.pai.escolaridade "SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)"}}selected{{/if_equal}}>SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
+                            <option value="OUTRA FORMACAO" {{#if_equal aluno.pai.escolaridade "OUTRA FORMACAO"}}selected{{/if_equal}}>OUTRA FORMAÇÃO</option>
+                            <option value="POS GRADUADO ESPECIALIZACAO" {{#if_equal aluno.pai.escolaridade "POS GRADUADO ESPECIALIZACAO"}}selected{{/if_equal}}>PÓS-GRADUADO ESPECIALIZAÇÃO</option>
+                            <option value="MESTRADO" {{#if_equal aluno.pai.escolaridade "MESTRADO"}}selected{{/if_equal}}>MESTRADO</option>
+                            <option value="DOUTORADO" {{#if_equal aluno.pai.escolaridade "DOUTORADO"}}selected{{/if_equal}}>DOUTORADO</option>
+                            <option value="ANALFABETO" {{#if_equal aluno.pai.escolaridade "ANALFABETO"}}selected{{/if_equal}}>ANALFABETO</option>
+                            <option value="ENSINO MEDIO INCOMPLETO" {{#if_equal aluno.pai.escolaridade "ENSINO MEDIO INCOMPLETO"}}selected{{/if_equal}}>ENSINO MÉDIO INCOMPLETO</option>
+                            <option value="ENSINO SUPERIOR INCOMPLETO" {{#if_equal aluno.pai.escolaridade "ENSINO SUPERIOR INCOMPLETO"}}selected{{/if_equal}}>ENSINO SUPERIOR INCOMPLETO</option>
+                            <option value="ENSINO MEDIO" {{#if_equal aluno.pai.escolaridade "ENSINO MEDIO"}}selected{{/if_equal}}>ENSINO MÉDIO</option>
+                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA" {{#if_equal aluno.pai.escolaridade "ENSINO MEDIO MAGISTERIO INDIGENA"}}selected{{/if_equal}}>ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
+                            <option value="SUPERIOR" {{#if_equal aluno.pai.escolaridade "SUPERIOR"}}selected{{/if_equal}}>SUPERIOR</option>
                         </select>                            
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="profPai">Profissão do pai</label>
-                        <input type="text" class="form-control" id="profPai" name="profPai" placeholder="Profissão do pai">
+                        <input type="text" class="form-control" id="profPai" name="profPai" value="{{aluno.pai.profissao}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="localtrabPai">Local de trabalho</label>
-                        <input type="text" class="form-control" id="localtrabPai" name="localtrabPai" placeholder="Local de trabalho">
+                        <input type="text" class="form-control" id="localtrabPai" name="localtrabPai" value="{{aluno.pai.localTrabalho}}">
                     </div>
                 </div>
             </div>
@@ -1202,37 +841,37 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="telPai">Telefone</label>
-                        <input type="text" class="form-control phone" id="telPai" name="telPai" placeholder="Telefone do pai">
+                        <input type="text" class="form-control phone" id="telPai" name="telPai" value="{{aluno.pai.telefone}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cepPai">CEP</label>
-                        <input type="text" class="form-control cep" id="cepPai" name="cepPai" placeholder="CEP do Pai">
+                        <input type="text" class="form-control cep" id="cepPai" name="cepPai" value="{{aluno.pai.cep}}">
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="enderecoPai">Endereço</label>
-                        <input type="text" class="form-control" id="enderecoPai" name="enderecoPai" placeholder="Endereço">
+                        <input type="text" class="form-control" id="enderecoPai" name="enderecoPai" value="{{aluno.pai.endereco}}">
                     </div>
                 </div>
                 <div class="col-sm-1">
                     <div class="form-group">
                         <label for="numPai">Número</label>
-                        <input type="text" class="form-control" id="numPai" name="numPai" placeholder="Nº">
+                        <input type="text" class="form-control" id="numPai" name="numPai" value="{{aluno.pai.numero}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="bairroPai">Bairro</label>
-                        <input type="text" class="form-control" id="bairroPai" name="bairroPai" placeholder="Bairro">
+                        <input type="text" class="form-control" id="bairroPai" name="bairroPai" value="{{aluno.pai.bairro}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="complementoPai">Complemento</label>
-                        <input type="text" class="form-control" id="complementoPai" name="complementoPai" placeholder="Complemento">
+                        <input type="text" class="form-control" id="complementoPai" name="complementoPai" value="{{aluno.pai.complemento}}">
                     </div>
                 </div>                                
             </div>
@@ -1241,61 +880,59 @@
                     <div class="form-group">
                         <label for="ufPai">UF</label>
                         <select class="form-control" id="ufPai" name="ufPai">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.pai.uf "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.pai.uf "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.pai.uf "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.pai.uf "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.pai.uf "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.pai.uf "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.pai.uf "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.pai.uf "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.pai.uf "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.pai.uf "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.pai.uf "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.pai.uf "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.pai.uf "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.pai.uf "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.pai.uf "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.pai.uf "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.pai.uf "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.pai.uf "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.pai.uf "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.pai.uf "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.pai.uf "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.pai.uf "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.pai.uf "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.pai.uf "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.pai.uf "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.pai.uf "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.pai.uf "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.pai.uf "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="municipioPai">Municipio</label>
-                        <select class="form-control" id="municipioPai" name="municipioPai">
-                            <option value="0">Municipio 1</option>
-                        </select>                            
+                        <input type="text" class="form-control" id="municipioPai" name="municipioPai" value="{{aluno.pai.municipio}}">                    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="distritoPai">Distrito</label>
-                        <input type="text" class="form-control" id="distritoPai" name="distritoPai" placeholder="Distrito do Endereço">                                                      
+                        <input type="text" class="form-control" id="distritoPai" name="distritoPai" value="{{aluno.pai.distrito}}">                                                      
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="estadocivilPai">Estado civil</label>
                         <select name="estadocivilPai" id="estadocivilPai" class="form-control">
-                            <option value="CASADO">Casado</option>
-                            <option value="SEPARADO">Separado</option>
-                            <option value="SOLTEIRO">Solteiro</option>
-                            <option value="JUNTOS">Juntos</option>
-                            <option value="VIUVO">Viuvo</option>
-                            <option value="OUTROS">Outros</option>                            
+                            <option value="CASADO" {{#if_equal aluno.pai.estadoCivil "CASADO"}}selected{{/if_equal}}>Casado</option>
+                            <option value="SEPARADO" {{#if_equal aluno.pai.estadoCivil "SEPARADO"}}selected{{/if_equal}}>Separado</option>
+                            <option value="SOLTEIRO" {{#if_equal aluno.pai.estadoCivil "SOLTEIRO"}}selected{{/if_equal}}>Solteiro</option>
+                            <option value="JUNTOS" {{#if_equal aluno.pai.estadoCivil "JUNTOS"}}selected{{/if_equal}}>Juntos</option>
+                            <option value="VIUVO" {{#if_equal aluno.pai.estadoCivil "VIUVO"}}selected{{/if_equal}}>Viuvo</option>
+                            <option value="OUTROS" {{#if_equal aluno.pai.estadoCivil "OUTROS"}}selected{{/if_equal}}>Outros</option>                            
                         </select>
                     </div>
                 </div>
@@ -1310,55 +947,53 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="nomeMae">Nome</label>
-                        <input type="text" class="form-control" id="nomeMae" name="nomeMae" placeholder="Nome da Mae" required>
+                        <input type="text" class="form-control" id="nomeMae" name="nomeMae" value="{{aluno.mae.nome}}">
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="rgMae">RG</label>
-                        <input type="text" class="form-control rg" id="rgMae" name="rgMae" placeholder="RG da Mae" required>
+                        <input type="text" class="form-control rg" id="rgMae" name="rgMae" value="{{aluno.mae.rg}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="emissorRgMae">Orgão emissor</label>
-                        <select class="form-control" id="emissorRgMae" name="emissorRgMae">
-                            <option value="0">Emissor 1</option>
-                        </select>
+                        <input type="text" class="form-control" id="emissorRgMae" name="emissorRgMae" value="{{aluno.mae.orgEmissor}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="ufrgMae">UF</label>
                         <select class="form-control" id="ufrgMae" name="ufrgMae">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.mae.ufRG "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.mae.ufRG "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.mae.ufRG "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.mae.ufRG "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.mae.ufRG "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.mae.ufRG "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.mae.ufRG "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.mae.ufRG "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.mae.ufRG "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.mae.ufRG "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.mae.ufRG "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.mae.ufRG "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.mae.ufRG "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.mae.ufRG "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.mae.ufRG "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.mae.ufRG "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.mae.ufRG "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.mae.ufRG "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.mae.ufRG "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.mae.ufRG "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.mae.ufRG "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.mae.ufRG "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.mae.ufRG "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.mae.ufRG "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.mae.ufRG "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.mae.ufRG "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.mae.ufRG "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.mae.ufRG "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>                                
@@ -1367,34 +1002,34 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="dataEmissRgMae">Data de Emissão</label>
-                        <input type="date" class="form-control" id="dataEmissRgMae" name="dataEmissRgMae" required>
+                        <input type="date" class="form-control" id="dataEmissRgMae" name="dataEmissRgMae">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
-                        <label for="cpfMae">CPF da Mae</label>
-                        <input type="text" class="form-control cpf" id="cpfMae" name="cpfMae" required>
+                        <label for="cpfMae">CPF do Mae</label>
+                        <input type="text" class="form-control cpf" id="cpfMae" name="cpfMae" value="{{aluno.mae.cpf}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
-                        <label for="nisMae">NIS da Mae</label>
-                        <input type="text" class="form-control" id="nisMae" name="nisMae">
+                        <label for="nisMae">NIS do Mae</label>
+                        <input type="text" class="form-control" id="nisMae" name="nisMae" value="{{aluno.mae.NIS}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="rendaMae">Renda familiar</label>
-                        <input type="number " class="form-control" id="rendaMae" name="rendaMae">
+                        <input type="number " class="form-control" id="rendaMae" name="rendaMae" value="{{aluno.mae.rendaFamilia}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="nacionalidadeMae">Nacionalidade</label>
                         <select class="form-control" id="nacionalidadeMae" name="nacionalidadeMae">
-                            <option value="BRASILEIRA">Brasileira</option>
-                            <option value="BRASILEIRA NATURALIZADO">Brasileira naturalizado</option>
-                            <option value="ESTRANGEIRO">Estrangeiro</option>
+                            <option value="BRASILEIRA" {{#if_equal aluno.mae.nacionalidade "BRASILEIRA"}}selected{{/if_equal}}>Brasileira</option>
+                            <option value="BRASILEIRA NATURALIZADO" {{#if_equal aluno.mae.nacionalidade "BRASILEIRA NATURALIZADO"}}selected{{/if_equal}}>Brasileira naturalizado</option>
+                            <option value="ESTRANGEIRO" {{#if_equal aluno.mae.nacionalidade "ESTRANGEIRO"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
@@ -1575,7 +1210,7 @@
                             <option value="Vietnã">Vietnã</option>
                             <option value="Zaire">Zaire</option>
                             <option value="Zâmbia">Zâmbia</option>
-                            <option value="Zimbábue">Zimbábue</option>
+                            <option value="Zimbábue">Zimbábue</option> 
                         </select>
                     </div>
                 </div>                
@@ -1585,79 +1220,77 @@
                     <div class="form-group">
                         <label for="ufnascMae">UF</label>
                         <select class="form-control" id="ufnascMae" name="ufnascMae">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.mae.ufNasc "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.mae.ufNasc "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.mae.ufNasc "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.mae.ufNasc "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.mae.ufNasc "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.mae.ufNasc "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.mae.ufNasc "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.mae.ufNasc "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.mae.ufNasc "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.mae.ufNasc "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.mae.ufNasc "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.mae.ufNasc "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.mae.ufNasc "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.mae.ufNasc "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.mae.ufNasc "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.mae.ufNasc "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.mae.ufNasc "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.mae.ufNasc "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.mae.ufNasc "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.mae.ufNasc "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.mae.ufNasc "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.mae.ufNasc "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.mae.ufNasc "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.mae.ufNasc "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.mae.ufNasc "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.mae.ufNasc "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.mae.ufNasc "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.mae.ufNasc "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="naturalidadeMae">Naturalidade</label>
-                        <select class="form-control" id="naturalidadeMae" name="naturalidadeMae">
-                            <option value="0">Municipio 1</option>
-                        </select>                            
+                        <input type="text" class="form-control" id="naturalidadeMae" name="naturalidadeMae" value="{{aluno.mae.naturalidade}}">                           
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="escolaridadeMae">Escolaridade</label>
                         <select class="form-control" id="escolaridadeMae" name="escolaridadeMae">
-                            <option value="FUNDAMENTAL COMPLETO">FUNDAMENTAL COMPLETO</option>
-                            <option value="FUNDAMENTAL INCOMPLETO">FUNDAMENTAL INCOMPLETO</option>
-                            <option value="MEDIO COM MAGISTERIO COMPLETO">MEDIO COM MAGISTERIO COMPLETO</option>
-                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA">MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
-                            <option value="SUPERIOR COM LICENCIATURA COMPLETO">SUPERIOR COM LICENCIATURA COMPLETO</option>
-                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
-                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
-                            <option value="OUTRA FORMACAO">OUTRA FORMAÇÃO</option>
-                            <option value="POS GRADUADO ESPECIALIZACAO">PÓS-GRADUADO ESPECIALIZAÇÃO</option>
-                            <option value="MESTRADO">MESTRADO</option>
-                            <option value="DOUTORADO">DOUTORADO</option>
-                            <option value="ANALFABETO">ANALFABETO</option>
-                            <option value="ENSINO MEDIO INCOMPLETO">ENSINO MÉDIO INCOMPLETO</option>
-                            <option value="ENSINO SUPERIOR INCOMPLETO">ENSINO SUPERIOR INCOMPLETO</option>
-                            <option value="ENSINO MEDIO">ENSINO MÉDIO</option>
-                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA">ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
-                            <option value="SUPERIOR">SUPERIOR</option>
+                            <option value="FUNDAMENTAL COMPLETO" {{#if_equal aluno.mae.escolaridade "FUNDAMENTAL COMPLETO"}}selected{{/if_equal}}>FUNDAMENTAL COMPLETO</option>
+                            <option value="FUNDAMENTAL INCOMPLETO" {{#if_equal aluno.mae.escolaridade "FUNDAMENTAL INCOMPLETO"}}selected{{/if_equal}}>FUNDAMENTAL INCOMPLETO</option>
+                            <option value="MEDIO COM MAGISTERIO COMPLETO" {{#if_equal aluno.mae.escolaridade "MEDIO COM MAGISTERIO COMPLETO"}}selected{{/if_equal}}>MEDIO COM MAGISTERIO COMPLETO</option>
+                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA" {{#if_equal aluno.mae.escolaridade "MEDIA COM OUTRA FORMAÇAO COMPLETA"}}selected{{/if_equal}}>MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
+                            <option value="SUPERIOR COM LICENCIATURA COMPLETO" {{#if_equal aluno.mae.escolaridade "SUPERIOR COM LICENCIATURA COMPLETO"}}selected{{/if_equal}}>SUPERIOR COM LICENCIATURA COMPLETO</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)" {{#if_equal aluno.mae.escolaridade "SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)"}}selected{{/if_equal}}>SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)" {{#if_equal aluno.mae.escolaridade "SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)"}}selected{{/if_equal}}>SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
+                            <option value="OUTRA FORMACAO" {{#if_equal aluno.mae.escolaridade "OUTRA FORMACAO"}}selected{{/if_equal}}>OUTRA FORMAÇÃO</option>
+                            <option value="POS GRADUADO ESPECIALIZACAO" {{#if_equal aluno.mae.escolaridade "POS GRADUADO ESPECIALIZACAO"}}selected{{/if_equal}}>PÓS-GRADUADO ESPECIALIZAÇÃO</option>
+                            <option value="MESTRADO" {{#if_equal aluno.mae.escolaridade "MESTRADO"}}selected{{/if_equal}}>MESTRADO</option>
+                            <option value="DOUTORADO" {{#if_equal aluno.mae.escolaridade "DOUTORADO"}}selected{{/if_equal}}>DOUTORADO</option>
+                            <option value="ANALFABETO" {{#if_equal aluno.mae.escolaridade "ANALFABETO"}}selected{{/if_equal}}>ANALFABETO</option>
+                            <option value="ENSINO MEDIO INCOMPLETO" {{#if_equal aluno.mae.escolaridade "ENSINO MEDIO INCOMPLETO"}}selected{{/if_equal}}>ENSINO MÉDIO INCOMPLETO</option>
+                            <option value="ENSINO SUPERIOR INCOMPLETO" {{#if_equal aluno.mae.escolaridade "ENSINO SUPERIOR INCOMPLETO"}}selected{{/if_equal}}>ENSINO SUPERIOR INCOMPLETO</option>
+                            <option value="ENSINO MEDIO" {{#if_equal aluno.mae.escolaridade "ENSINO MEDIO"}}selected{{/if_equal}}>ENSINO MÉDIO</option>
+                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA" {{#if_equal aluno.mae.escolaridade "ENSINO MEDIO MAGISTERIO INDIGENA"}}selected{{/if_equal}}>ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
+                            <option value="SUPERIOR" {{#if_equal aluno.mae.escolaridade "SUPERIOR"}}selected{{/if_equal}}>SUPERIOR</option>
                         </select>                            
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
-                        <label for="profMae">Profissão da Mae</label>
-                        <input type="text" class="form-control" id="profMae" name="profMae" placeholder="Profissão da Mae">
+                        <label for="profMae">Profissão do Mae</label>
+                        <input type="text" class="form-control" id="profMae" name="profMae" value="{{aluno.mae.profissao}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="localtrabMae">Local de trabalho</label>
-                        <input type="text" class="form-control" id="localtrabMae" name="localtrabMae" placeholder="Local de trabalho">
+                        <input type="text" class="form-control" id="localtrabMae" name="localtrabMae" value="{{aluno.mae.localTrabalho}}">
                     </div>
                 </div>
             </div>
@@ -1665,100 +1298,98 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="telMae">Telefone</label>
-                        <input type="text" class="form-control phone" id="telMae" name="telMae" placeholder="Telefone da Mae">
+                        <input type="text" class="form-control phone" id="telMae" name="telMae" value="{{aluno.mae.telefone}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cepMae">CEP</label>
-                        <input type="text" class="form-control cep" id="cepMae" name="cepMae" placeholder="CEP da Mae" required>
+                        <input type="text" class="form-control cep" id="cepMae" name="cepMae" value="{{aluno.mae.cep}}">
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="enderecoMae">Endereço</label>
-                        <input type="text" class="form-control" id="enderecoMae" name="enderecoMae" placeholder="Endereço" required>
+                        <input type="text" class="form-control" id="enderecoMae" name="enderecoMae" value="{{aluno.mae.endereco}}">
                     </div>
                 </div>
                 <div class="col-sm-1">
                     <div class="form-group">
                         <label for="numMae">Número</label>
-                        <input type="text" class="form-control" id="numMae" name="numMae" placeholder="Nº" required>
+                        <input type="text" class="form-control" id="numMae" name="numMae" value="{{aluno.mae.numero}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="bairroMae">Bairro</label>
-                        <input type="text" class="form-control" id="bairroMae" name="bairroMae" placeholder="Bairro" required>
+                        <input type="text" class="form-control" id="bairroMae" name="bairroMae" value="{{aluno.mae.bairro}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="complementoMae">Complemento</label>
-                        <input type="text" class="form-control" id="complementoMae" name="complementoMae" placeholder="Complemento">
+                        <input type="text" class="form-control" id="complementoMae" name="complementoMae" value="{{aluno.mae.complemento}}">
                     </div>
-                </div>                                 
+                </div>                                
             </div>
             <div class="row">
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="ufMae">UF</label>
                         <select class="form-control" id="ufMae" name="ufMae">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.mae.uf "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.mae.uf "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.mae.uf "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.mae.uf "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.mae.uf "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.mae.uf "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.mae.uf "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.mae.uf "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.mae.uf "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.mae.uf "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.mae.uf "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.mae.uf "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.mae.uf "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.mae.uf "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.mae.uf "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.mae.uf "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.mae.uf "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.mae.uf "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.mae.uf "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.mae.uf "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.mae.uf "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.mae.uf "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.mae.uf "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.mae.uf "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.mae.uf "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.mae.uf "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.mae.uf "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.mae.uf "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="municipioMae">Municipio</label>
-                        <select class="form-control" id="municipioMae" name="municipioMae">
-                            <option value="0">Municipio 1</option>
-                        </select>                            
+                        <input type="text" class="form-control" id="municipioMae" name="municipioMae" value="{{aluno.mae.municipio}}">                    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="distritoMae">Distrito</label>
-                        <input type="text" class="form-control" id="distritoMae" name="distritoMae" placeholder="Distrito do Endereço">                                                      
+                        <input type="text" class="form-control" id="distritoMae" name="distritoMae" value="{{aluno.mae.distrito}}">                                                      
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="estadocivilMae">Estado civil</label>
                         <select name="estadocivilMae" id="estadocivilMae" class="form-control">
-                            <option value="CASADO">Casado</option>
-                            <option value="SEPARADO">Separado</option>
-                            <option value="SOLTEIRO">Solteiro</option>
-                            <option value="JUNTOS">Juntos</option>
-                            <option value="VIUVO">Viuvo</option>
-                            <option value="OUTROS">Outros</option>                           
+                            <option value="CASADO" {{#if_equal aluno.mae.estadoCivil "CASADO"}}selected{{/if_equal}}>Casado</option>
+                            <option value="SEPARADO" {{#if_equal aluno.mae.estadoCivil "SEPARADO"}}selected{{/if_equal}}>Separado</option>
+                            <option value="SOLTEIRO" {{#if_equal aluno.mae.estadoCivil "SOLTEIRO"}}selected{{/if_equal}}>Solteiro</option>
+                            <option value="JUNTOS" {{#if_equal aluno.mae.estadoCivil "JUNTOS"}}selected{{/if_equal}}>Juntos</option>
+                            <option value="VIUVO" {{#if_equal aluno.mae.estadoCivil "VIUVO"}}selected{{/if_equal}}>Viuvo</option>
+                            <option value="OUTROS" {{#if_equal aluno.mae.estadoCivil "OUTROS"}}selected{{/if_equal}}>Outros</option>                            
                         </select>
                     </div>
                 </div>
@@ -1773,61 +1404,59 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="nomeResp">Nome</label>
-                        <input type="text" class="form-control" id="nomeResp" name="nomeResp" placeholder="Nome da Resp" required>
+                        <input type="text" class="form-control" id="nomeResp" name="nomeResp" value="{{aluno.responsavel.nome}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="nascResp">Data do Nascimento</label>
-                        <input type="date" class="form-control" id="nascResp" name="nascResp" required>
+                        <input type="date" class="form-control" id="nascResp" name="nascResp">
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="rgResp">RG</label>
-                        <input type="text" class="form-control rg" id="rgResp" name="rgResp" placeholder="RG da Resp" required>
+                        <input type="text" class="form-control rg" id="rgResp" name="rgResp" value="{{aluno.responsavel.rg}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="emissorRgResp">Orgão emissor</label>
-                        <select class="form-control" id="emissorRgResp" name="emissorRgResp">
-                            <option value="0">Emissor 1</option>
-                        </select>
+                        <input type="text" class="form-control" id="emissorRgResp" name="emissorRgResp" value="{{aluno.responsavel.orgEmissor}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="ufrgResp">UF</label>
                         <select class="form-control" id="ufrgResp" name="ufrgResp">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.responsavel.ufRG "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.responsavel.ufRG "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.responsavel.ufRG "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.responsavel.ufRG "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.responsavel.ufRG "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.responsavel.ufRG "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.responsavel.ufRG "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.responsavel.ufRG "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.responsavel.ufRG "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.responsavel.ufRG "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.responsavel.ufRG "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.responsavel.ufRG "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.responsavel.ufRG "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.responsavel.ufRG "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.responsavel.ufRG "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.responsavel.ufRG "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.responsavel.ufRG "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.responsavel.ufRG "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.responsavel.ufRG "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.responsavel.ufRG "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.responsavel.ufRG "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.responsavel.ufRG "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.responsavel.ufRG "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.responsavel.ufRG "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.responsavel.ufRG "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.responsavel.ufRG "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.responsavel.ufRG "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.responsavel.ufRG "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>                                
@@ -1836,34 +1465,34 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="dataEmissRgResp">Data de Emissão</label>
-                        <input type="date" class="form-control" id="dataEmissRgResp" name="dataEmissRgResp" required>
+                        <input type="date" class="form-control" id="dataEmissRgResp" name="dataEmissRgResp">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cpfResp">CPF do Responsável</label>
-                        <input type="text" class="form-control cpf" id="cpfResp" name="cpfResp" required>
+                        <input type="text" class="form-control cpf" id="cpfResp" name="cpfResp" value="{{aluno.responsavel.cpf}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="nisResp">NIS do Responsável</label>
-                        <input type="text" class="form-control" id="nisResp" name="nisResp">
+                        <input type="text" class="form-control" id="nisResp" name="nisResp" value="{{aluno.responsavel.NIS}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="rendaResp">Renda familiar</label>
-                        <input type="number " class="form-control" id="rendaResp" name="rendaResp">
+                        <input type="number " class="form-control" id="rendaResp" name="rendaResp" value="{{aluno.responsavel.rendaFamilia}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="nacionalidadeResp">Nacionalidade</label>
                         <select class="form-control" id="nacionalidadeResp" name="nacionalidadeResp">
-                            <option value="BRASILEIRA">Brasileira</option>
-                            <option value="BRASILEIRA NATURALIZADO">Brasileira naturalizado</option>
-                            <option value="ESTRANGEIRO">Estrangeiro</option>
+                            <option value="BRASILEIRA" {{#if_equal aluno.responsavel.nacionalidade "BRASILEIRA"}}selected{{/if_equal}}>Brasileira</option>
+                            <option value="BRASILEIRA NATURALIZADO" {{#if_equal aluno.responsavel.nacionalidade "BRASILEIRA NATURALIZADO"}}selected{{/if_equal}}>Brasileira naturalizado</option>
+                            <option value="ESTRANGEIRO" {{#if_equal aluno.responsavel.nacionalidade "ESTRANGEIRO"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
@@ -2054,79 +1683,77 @@
                     <div class="form-group">
                         <label for="ufnascResp">UF</label>
                         <select class="form-control" id="ufnascResp" name="ufnascResp">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.responsavel.ufNasc "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.responsavel.ufNasc "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.responsavel.ufNasc "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.responsavel.ufNasc "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.responsavel.ufNasc "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.responsavel.ufNasc "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.responsavel.ufNasc "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.responsavel.ufNasc "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.responsavel.ufNasc "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.responsavel.ufNasc "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.responsavel.ufNasc "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.responsavel.ufNasc "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.responsavel.ufNasc "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.responsavel.ufNasc "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.responsavel.ufNasc "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.responsavel.ufNasc "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.responsavel.ufNasc "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.responsavel.ufNasc "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.responsavel.ufNasc "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.responsavel.ufNasc "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.responsavel.ufNasc "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.responsavel.ufNasc "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.responsavel.ufNasc "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.responsavel.ufNasc "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.responsavel.ufNasc "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.responsavel.ufNasc "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.responsavel.ufNasc "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.responsavel.ufNasc "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="naturalidadeResp">Naturalidade</label>
-                        <select class="form-control" id="naturalidadeResp" name="naturalidadeResp">
-                            <option value="0">Municipio 1</option>
-                        </select>                            
+                        <input type="text" class="form-control" id="naturalidadeResp" name="naturalidadeResp" value="{{aluno.responsavel.naturalidade}}">                          
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="escolaridadeResp">Escolaridade</label>
                         <select class="form-control" id="escolaridadeResp" name="escolaridadeResp">
-                            <option value="FUNDAMENTAL COMPLETO">FUNDAMENTAL COMPLETO</option>
-                            <option value="FUNDAMENTAL INCOMPLETO">FUNDAMENTAL INCOMPLETO</option>
-                            <option value="MEDIO COM MAGISTERIO COMPLETO">MEDIO COM MAGISTERIO COMPLETO</option>
-                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA">MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
-                            <option value="SUPERIOR COM LICENCIATURA COMPLETO">SUPERIOR COM LICENCIATURA COMPLETO</option>
-                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
-                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)">SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
-                            <option value="OUTRA FORMACAO">OUTRA FORMAÇÃO</option>
-                            <option value="POS GRADUADO ESPECIALIZACAO">PÓS-GRADUADO ESPECIALIZAÇÃO</option>
-                            <option value="MESTRADO">MESTRADO</option>
-                            <option value="DOUTORADO">DOUTORADO</option>
-                            <option value="ANALFABETO">ANALFABETO</option>
-                            <option value="ENSINO MEDIO INCOMPLETO">ENSINO MÉDIO INCOMPLETO</option>
-                            <option value="ENSINO SUPERIOR INCOMPLETO">ENSINO SUPERIOR INCOMPLETO</option>
-                            <option value="ENSINO MEDIO">ENSINO MÉDIO</option>
-                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA">ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
-                            <option value="SUPERIOR">SUPERIOR</option>
+                            <option value="FUNDAMENTAL COMPLETO" {{#if_equal aluno.responsavel.escolaridade "FUNDAMENTAL COMPLETO"}}selected{{/if_equal}}>FUNDAMENTAL COMPLETO</option>
+                            <option value="FUNDAMENTAL INCOMPLETO" {{#if_equal aluno.responsavel.escolaridade "FUNDAMENTAL INCOMPLETO"}}selected{{/if_equal}}>FUNDAMENTAL INCOMPLETO</option>
+                            <option value="MEDIO COM MAGISTERIO COMPLETO" {{#if_equal aluno.responsavel.escolaridade "MEDIO COM MAGISTERIO COMPLETO"}}selected{{/if_equal}}>MEDIO COM MAGISTERIO COMPLETO</option>
+                            <option value="MEDIA COM OUTRA FORMAÇAO COMPLETA" {{#if_equal aluno.responsavel.escolaridade "MEDIA COM OUTRA FORMAÇAO COMPLETA"}}selected{{/if_equal}}>MEDIA COM OUTRA FORMAÇAO COMPLETA</option>
+                            <option value="SUPERIOR COM LICENCIATURA COMPLETO" {{#if_equal aluno.responsavel.escolaridade "SUPERIOR COM LICENCIATURA COMPLETO"}}selected{{/if_equal}}>SUPERIOR COM LICENCIATURA COMPLETO</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)" {{#if_equal aluno.responsavel.escolaridade "SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)"}}selected{{/if_equal}}>SUPERIOR COMPLETO SEM LICENCIATURA (MAGISTERIO)</option>
+                            <option value="SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)" {{#if_equal aluno.responsavel.escolaridade "SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)"}}selected{{/if_equal}}>SUPERIOR COMPLETO SEM LICENCIATURA (SEM MAGISTERIO)</option>
+                            <option value="OUTRA FORMACAO" {{#if_equal aluno.responsavel.escolaridade "OUTRA FORMACAO"}}selected{{/if_equal}}>OUTRA FORMAÇÃO</option>
+                            <option value="POS GRADUADO ESPECIALIZACAO" {{#if_equal aluno.responsavel.escolaridade "POS GRADUADO ESPECIALIZACAO"}}selected{{/if_equal}}>PÓS-GRADUADO ESPECIALIZAÇÃO</option>
+                            <option value="MESTRADO" {{#if_equal aluno.responsavel.escolaridade "MESTRADO"}}selected{{/if_equal}}>MESTRADO</option>
+                            <option value="DOUTORADO" {{#if_equal aluno.responsavel.escolaridade "DOUTORADO"}}selected{{/if_equal}}>DOUTORADO</option>
+                            <option value="ANALFABETO" {{#if_equal aluno.responsavel.escolaridade "ANALFABETO"}}selected{{/if_equal}}>ANALFABETO</option>
+                            <option value="ENSINO MEDIO INCOMPLETO" {{#if_equal aluno.responsavel.escolaridade "ENSINO MEDIO INCOMPLETO"}}selected{{/if_equal}}>ENSINO MÉDIO INCOMPLETO</option>
+                            <option value="ENSINO SUPERIOR INCOMPLETO" {{#if_equal aluno.responsavel.escolaridade "ENSINO SUPERIOR INCOMPLETO"}}selected{{/if_equal}}>ENSINO SUPERIOR INCOMPLETO</option>
+                            <option value="ENSINO MEDIO" {{#if_equal aluno.responsavel.escolaridade "ENSINO MEDIO"}}selected{{/if_equal}}>ENSINO MÉDIO</option>
+                            <option value="ENSINO MEDIO MAGISTERIO INDIGENA" {{#if_equal aluno.responsavel.escolaridade "ENSINO MEDIO MAGISTERIO INDIGENA"}}selected{{/if_equal}}>ENSINO MÉDIO - MAGISTÉRIO INDIGENA</option>
+                            <option value="SUPERIOR" {{#if_equal aluno.responsavel.escolaridade "SUPERIOR"}}selected{{/if_equal}}>SUPERIOR</option>
                         </select>                            
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="profResp">Profissão do Responsável</label>
-                        <input type="text" class="form-control" id="profResp" name="profResp" placeholder="Profissão da Resp">
+                        <input type="text" class="form-control" id="profResp" name="profResp" value="{{aluno.responsavel.profissao}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="localtrabResp">Local de trabalho</label>
-                        <input type="text" class="form-control" id="localtrabResp" name="localtrabResp" placeholder="Local de trabalho">
+                        <input type="text" class="form-control" id="localtrabResp" name="localtrabResp" value="{{aluno.responsavel.localTrabalho}}">
                     </div>
                 </div>
             </div>
@@ -2134,37 +1761,37 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="telResp">Telefone</label>
-                        <input type="text" class="form-control phone" id="telResp" name="telResp" placeholder="Telefone da Resp">
+                        <input type="text" class="form-control phone" id="telResp" name="telResp" value="{{aluno.responsavel.telefone}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cepResp">CEP</label>
-                        <input type="text" class="form-control cep" id="cepResp" name="cepResp" placeholder="CEP da Resp" required>
+                        <input type="text" class="form-control cep" id="cepResp" name="cepResp" value="{{aluno.responsavel.cep}}">
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="enderecoResp">Endereço</label>
-                        <input type="text" class="form-control" id="enderecoResp" name="enderecoResp" placeholder="Endereço" required>
+                        <input type="text" class="form-control" id="enderecoResp" name="enderecoResp" value="{{aluno.responsavel.endereco}}">
                     </div>
                 </div>
                 <div class="col-sm-1">
                     <div class="form-group">
                         <label for="numResp">Número</label>
-                        <input type="text" class="form-control" id="numResp" name="numResp" placeholder="Nº" required>
+                        <input type="text" class="form-control" id="numResp" name="numResp" value="{{aluno.responsavel.numero}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="bairroResp">Bairro</label>
-                        <input type="text" class="form-control" id="bairroResp" name="bairroResp" placeholder="Bairro" required>
+                        <input type="text" class="form-control" id="bairroResp" name="bairroResp" value="{{aluno.responsavel.bairro}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="complementoResp">Complemento</label>
-                        <input type="text" class="form-control" id="complementoResp" name="complementoResp" placeholder="Complemento" >
+                        <input type="text" class="form-control" id="complementoResp" name="complementoResp" value="{{aluno.responsavel.complemento}}">
                     </div>
                 </div>                                
             </div>
@@ -2173,61 +1800,59 @@
                     <div class="form-group">
                         <label for="ufResp">UF</label>
                         <select class="form-control" id="ufResp" name="ufResp">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="AC" {{#if_equal aluno.responsavel.uf "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal aluno.responsavel.uf "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal aluno.responsavel.uf "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal aluno.responsavel.uf "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal aluno.responsavel.uf "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal aluno.responsavel.uf "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal aluno.responsavel.uf "DF"}}selected{{/if_equal}}>Distrito Federal</option>
+                            <option value="ES" {{#if_equal aluno.responsavel.uf "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal aluno.responsavel.uf "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MA" {{#if_equal aluno.responsavel.uf "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="MT" {{#if_equal aluno.responsavel.uf "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal aluno.responsavel.uf "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal aluno.responsavel.uf "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal aluno.responsavel.uf "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal aluno.responsavel.uf "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal aluno.responsavel.uf "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal aluno.responsavel.uf "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal aluno.responsavel.uf "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal aluno.responsavel.uf "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal aluno.responsavel.uf "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal aluno.responsavel.uf "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal aluno.responsavel.uf "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal aluno.responsavel.uf "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal aluno.responsavel.uf "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal aluno.responsavel.uf "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal aluno.responsavel.uf "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal aluno.responsavel.uf "TO"}}selected{{/if_equal}}>Tocantins</option>
+                            <option value="EX" {{#if_equal aluno.responsavel.uf "EX"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="municipioResp">Municipio</label>
-                        <select class="form-control" id="municipioResp" name="municipioResp">
-                            <option value="0">Municipio 1</option>
-                        </select>                            
+                        <input type="text" class="form-control" id="municipioResp" name="municipioResp" value="{{aluno.responsavel.municipio}}">                       
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="distritoResp">Distrito</label>
-                        <input type="text" class="form-control" id="distritoResp" name="distritoResp" placeholder="Distrito do Endereço">                                                      
+                        <input type="text" class="form-control" id="distritoResp" name="distritoResp" value="{{aluno.responsavel.distrito}}">                                                      
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="estadocivilResp">Estado civil</label>
                         <select name="estadocivilResp" id="estadocivilResp" class="form-control">
-                            <option value="CASADO">Casado</option>
-                            <option value="SEPARADO">Separado</option>
-                            <option value="SOLTEIRO">Solteiro</option>
-                            <option value="JUNTOS">Juntos</option>
-                            <option value="VIUVO">Viuvo</option>
-                            <option value="OUTROS">Outros</option>                            
+                            <option value="CASADO" {{#if_equal aluno.responsavel.estadoCivil "CASADO"}}selected{{/if_equal}}>Casado</option>
+                            <option value="SEPARADO" {{#if_equal aluno.responsavel.estadoCivil "SEPARADO"}}selected{{/if_equal}}>Separado</option>
+                            <option value="SOLTEIRO" {{#if_equal aluno.responsavel.estadoCivil "SOLTEIRO"}}selected{{/if_equal}}>Solteiro</option>
+                            <option value="JUNTOS" {{#if_equal aluno.responsavel.estadoCivil "JUNTOS"}}selected{{/if_equal}}>Juntos</option>
+                            <option value="VIUVO" {{#if_equal aluno.responsavel.estadoCivil "VIUVO"}}selected{{/if_equal}}>Viuvo</option>
+                            <option value="OUTROS" {{#if_equal aluno.responsavel.estadoCivil "OUTROS"}}selected{{/if_equal}}>Outros</option>                            
                         </select>
                     </div>
                 </div>
@@ -2236,19 +1861,19 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="parentescoResp">Grau de parentesco</label>
-                        <input type="text" class="form-control" id="parentescoResp" name="parentescoResp" placeholder="Grau Parentesco do responsável">                                                      
+                        <input type="text" class="form-control" id="parentescoResp" name="parentescoResp" value="{{aluno.responsavel.parentesco}}">                                                      
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="nomePaiResp">Nome do pai do responsável</label>
-                        <input type="text" class="form-control" id="nomePaiResp" name="nomePaiResp" placeholder="Nome do pai do responsável">                                                      
+                        <input type="text" class="form-control" id="nomePaiResp" name="nomePaiResp" value="{{aluno.responsavel.nomePai}}">                                                      
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="nomeMaeResp">Nome da mãe do responsável</label>
-                        <input type="text" class="form-control" id="nomeMaeResp" name="nomeMaeResp" placeholder="Nome da mãe do responsável">                                                      
+                        <input type="text" class="form-control" id="nomeMaeResp" name="nomeMaeResp" value="{{aluno.responsavel.nomeMae}}">                                                      
                     </div>
                 </div>
             </div>
@@ -2256,7 +1881,7 @@
     </div>   
     <div class="row">
         <div class="col-12 mb-4 mt-4 text-center">
-            <button type="submit" class="btn btn-success">Cadastrar aluno</button> 
+            <button type="submit" class="btn btn-success">Editar aluno</button> 
         </div>
     </div> 
 
@@ -2271,7 +1896,7 @@
         </button>
       </div>
       <div class="modal-body">
-        A edição do aluno foi efetuado!
+        A edição do aluno foi efetuada!
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" id="modalOk" data-dismiss="modal">OK!</button>        
@@ -2281,6 +1906,106 @@
 </div>
 
 </form>
+
+<!-- ENVIO DO FORMULÁRIO -->
+<script>
+    $(document).ready(() => {
+        $("#formEditar").submit(function(event){
+            event.preventDefault();            
+            $.ajax({
+                type: "post",
+                url: "/alunos/cadastro/edit",
+                data: $(this).serialize(),
+                success: function(data){          
+                    console.log(data)                      
+                    $("#cadastroSucesso").modal('show')
+                }
+            })
+        })
+    })   
+</script>
+
+<!-- TRATAMENTO DO RECEBIMENTO DAS DATAS -->
+<script>
+
+// Data de nascimento do aluno
+    let dataNasc = new Date("{{aluno.nascimento}}");
+    let nascmonth = dataNasc.getMonth()
+    let nascdate = dataNasc.getDate()
+    if(parseInt(nascmonth) < 10){
+        nascmonth = "0"+nascmonth;
+    }
+    if(parseInt(nascdate) < 10){
+        nascdate = "0"+nascdate;
+    } 
+    dataNasc = dataNasc.getFullYear()+"-"+nascmonth+"-"+nascdate;                     
+    $('#dataNascAluno').val(dataNasc);
+
+// Data de emissão do documento
+    let dataDoc = new Date("{{aluno.dataExp}}");
+    let docmonth = dataDoc.getMonth()
+    let docdate = dataDoc.getDate()
+    if(parseInt(docmonth) < 10){
+        docmonth = "0"+docmonth;
+    }
+    if(parseInt(docdate) < 10){
+        docdate = "0"+docdate;
+    } 
+    dataDoc = dataDoc.getFullYear()+"-"+docmonth+"-"+docdate;                 
+    $('#dataDoc').val(dataDoc);
+
+// Data de Emissão do RG
+    let dataEmissaoRg = new Date("{{aluno.dataEmissaoRg}}");
+    let rgmonth = dataEmissaoRg.getMonth()
+    let rgdate = dataEmissaoRg.getDate()
+    if(parseInt(rgmonth) < 10){
+        rgmonth = "0"+rgmonth;
+    }
+    if(parseInt(rgdate) < 10){
+        rgdate = "0"+rgdate;
+    } 
+    dataEmissaoRg = dataEmissaoRg.getFullYear()+"-"+rgmonth+"-"+rgdate;                
+    $('#dataEmissaoRg').val(dataEmissaoRg);
+
+// Data de emissão do rg do pai
+    let dataEmissRgPai = new Date("{{aluno.pai.dataEmissao}}");
+    let paimonth = dataEmissRgPai.getMonth()
+    let paidate = dataEmissRgPai.getDate()
+    if(parseInt(paimonth) < 10){
+        paimonth = "0"+paimonth;
+    }
+    if(parseInt(paidate) < 10){
+        paidate = "0"+paidate;
+    } 
+    dataEmissRgPai = dataEmissRgPai.getFullYear()+"-"+paimonth+"-"+paidate;                
+    $('#dataEmissRgPai').val(dataEmissRgPai);
+
+// Data de Emissão do RG da mãe
+    let dataEmissRgMae = new Date("{{aluno.mae.dataEmissao}}");
+    let maemonth = dataEmissRgMae.getMonth()
+    let maedate = dataEmissRgMae.getDate()
+    if(parseInt(maemonth) < 10){
+        maemonth = "0"+maemonth;
+    }
+    if(parseInt(maedate) < 10){
+        maedate = "0"+maedate;
+    } 
+    dataEmissRgMae = dataEmissRgMae.getFullYear()+"-"+maemonth+"-"+maedate;                 
+    $('#dataEmissRgMae').val(dataEmissRgMae);  
+
+// Data de Emissão do RG do responsável
+    let dataEmissRgResp = new Date("{{aluno.responsavel.dataEmissao}}");
+    let respmonth = dataEmissRgResp.getMonth()
+    let respdate = dataEmissRgResp.getDate()
+    if(parseInt(respmonth) < 10){
+        respmonth = "0"+respmonth;
+    }
+    if(parseInt(respdate) < 10){
+        respdate = "0"+respdate;
+    } 
+    dataEmissRgResp = dataEmissRgResp.getFullYear()+"-"+respmonth+"-"+respdate;                  
+    $('#dataEmissRgResp').val(dataEmissRgResp);         
+</script>
 
 <!-- CONFIGURAÇÃO DAS MÁSCARAS -->
 <script>
