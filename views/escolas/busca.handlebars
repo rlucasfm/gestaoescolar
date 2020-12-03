@@ -1,0 +1,71 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title" style="color: darkblue;">Busca de escola</h5>
+        <hr>
+        <form id="formFiltro">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="descricao">Nome da escola</label>
+                        <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Nome da escola">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="CNPJ da escola">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="apelido">Apelido</label>
+                        <input type="text" class="form-control" id="apelido" name="apelido" placeholder="Apelido da escola">
+                    </div>
+                </div>                
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-4 text-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success form-control">Buscar escola</button> 
+                    </div> 
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h4 style="color: darkblue;">Resultados da busca</h4>
+    <table id="tabBuscaEscola" class="table">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Bairro</th>
+                <th>CNPJ</th> 
+                <th>Diretor</th>                
+            </tr>                    
+        </thead>
+        <tbody id="resultadoBusca"></tbody>
+    </table>
+</div>
+
+<!-- ENVIO DO FORMULÁRIO -->
+<script>
+    $(document).ready(() => {
+        $("#formFiltro").submit(function(event){
+            event.preventDefault();            
+            $.ajax({
+                type: "post",
+                url: "/escolas/busca/filtro",
+                data: $(this).serialize(),
+                success: function(data){                     
+                    $("#resultadoBusca").html(data)                                                           
+                }
+            })
+        })
+    })   
+
+    $("#modalOk").click(() => {
+        $("#formCadastro").trigger("reset")
+    }) 
+</script>
