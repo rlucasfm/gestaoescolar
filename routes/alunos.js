@@ -8,7 +8,7 @@ const Escola = mongoose.model("escolas")
 const {accessLevel} = require("../helpers/permissions")
 
 router.get('/', (req,res) => {
-  res.send("Teste /")
+  res.redirect("/dashboard")
 })
 
 router.get('/cadastro', (req,res) => {
