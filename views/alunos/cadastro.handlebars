@@ -2222,6 +2222,14 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-2 text-center">
+                    <button type="button" id="butPai" class="btn btn-primary mt-4">Copiar Informações do pai</button>                    
+                </div>
+                <div class="col-sm-2 text-center mt-4">
+                    <button type="button" id="butMae" class="btn btn-primary">Copiar Informações da mãe</button>
+                </div>
+            </div>
         </div>
     </div>   
     <div class="row">
@@ -2272,6 +2280,63 @@
     $("#modalOk").click(() => {
         $("#formCadastro").trigger("reset")
     }) 
+</script>
+
+<!-- BOTÕES RESPONSÁVEIS -->
+<script>
+    $('#butPai').click(() => {
+        $('#nomeResp').val($('#nomePai').val())
+        $('#rgResp').val($('#rgPai').val())
+        $('#emissorRgResp').val($('#emissorRgPai').val())
+        $('#ufrgResp').val($('#ufrgPai').val())
+        $('#dataEmissRgResp').val($('#dataEmissRgPai').val())
+        $('#cpfResp').val($('#cpfPai').val())
+        $('#nacionalidadeResp').val($('#nacionalidadePai').val())
+        $('#paisResp').val($('#paisPai').val())
+        $('#ufnascResp').val($('#ufnascPai').val())
+        $('#naturalidadeResp').val($('#naturalidadePai').val())
+        $('#escolaridadeResp').val($('#escolaridadePai').val())
+        $('#profResp').val($('#profPai').val())
+        $('#localtrabResp').val($('#localtrabPai').val())
+        $('#telResp').val($('#telPai').val())
+        $('#cepResp').val($('#cepPai').val())
+        $('#enderecoResp').val($('#enderecoPai').val())
+        $('#numResp').val($('#numPai').val())
+        $('#bairroResp').val($('#bairroPai').val())
+        $('#complementoResp').val($('#complementoPai').val())
+        $('#ufResp').val($('#ufPai').val())
+        $('#municipioResp').val($('#municipioPai').val())
+        $('#distritoResp').val($('#distritoPai').val())
+        $('#estadocivilResp').val($('#estadocivilPai').val())
+        $('#parentescoResp').val("Pai")
+    })
+
+    $('#butMae').click(() => {
+        $('#nomeResp').val($('#nomeMae').val())
+        $('#rgResp').val($('#rgMae').val())
+        $('#emissorRgResp').val($('#emissorRgMae').val())
+        $('#ufrgResp').val($('#ufrgMae').val())
+        $('#dataEmissRgResp').val($('#dataEmissRgMae').val())
+        $('#cpfResp').val($('#cpfMae').val())
+        $('#nacionalidadeResp').val($('#nacionalidadeMae').val())
+        $('#paisResp').val($('#paisMae').val())
+        $('#ufnascResp').val($('#ufnascMae').val())
+        $('#naturalidadeResp').val($('#naturalidadeMae').val())
+        $('#escolaridadeResp').val($('#escolaridadeMae').val())
+        $('#profResp').val($('#profMae').val())
+        $('#localtrabResp').val($('#localtrabMae').val())
+        $('#telResp').val($('#telMae').val())
+        $('#cepResp').val($('#cepMae').val())
+        $('#enderecoResp').val($('#enderecoMae').val())
+        $('#numResp').val($('#numMae').val())
+        $('#bairroResp').val($('#bairroMae').val())
+        $('#complementoResp').val($('#complementoMae').val())
+        $('#ufResp').val($('#ufMae').val())
+        $('#municipioResp').val($('#municipioMae').val())
+        $('#distritoResp').val($('#distritoMae').val())
+        $('#estadocivilResp').val($('#estadocivilMae').val())
+        $('#parentescoResp').val("Mae")
+    })
 </script>
 
 <!-- CONFIGURAÇÃO DAS MÁSCARAS -->
