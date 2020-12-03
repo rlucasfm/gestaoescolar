@@ -3,27 +3,18 @@ const router = express.Router()
 const mongoose = require("mongoose")
 require("../models/Escolas")
 const Escola = mongoose.model("escolas")
+const {accessLevel} = require("../helpers/permissions")
 
 router.get('/cadastro', (req,res) => {
     res.render('escolas/cadastro')
 })
 
 router.get('/busca', (req,res) => {
-    res.render('escolas/index')
+    res.render('escolas/busca')
 })
 
 router.get('/editar', (req,res) => {
     res.render('escolas/cadastro')
-})
-
-router.get("/index", (req, res) => {
-
-    Escola.find().lean().sort({descricao: "asc"}).then((escolas) => {
-        res.render("escolas/index", {escolas: escolas})
-    }).catch((err) => {
-        req.flash("error_msg", "Houve um erro interno ao listar as escolas")
-        res.redirect("/")
-    })
 })
 
 router.get("/edit/:id", (req, res) => {
@@ -34,6 +25,28 @@ router.get("/edit/:id", (req, res) => {
       res.redirect("/escolas/index")
   })
 })
+
+router.post('/busca/filtro', (req, res) => {
+    const descricao = req.body.descricao || ""
+    const cnpj = req.body.cnpj || ""
+    const apelido = req.body.apelido || ""
+    if(!descricao && !cnpj && !apelido){
+      res.send("Por favor, preencha um campo para buscar a escola")
+    }else{
+      Escola.find({'descricao': {$regex: descricao, $options: 'i'}, 'cnpj': {$regex: cnpj, $options: 'i'}, 'apelido': {$regex: apelido, $options: 'i'}}).lean().then((escolas) => {
+        let stringResponse = ""
+        if(escolas.length){
+          for(let i=0; i<escolas.length; i++){
+            stringResponse += "<tr><td><a href='/escolas/editescola/"+escolas[i]._id+"'>"+escolas[i].descricao+"</a></td><td>"+escolas[i].cnpj+"</td><td>"+escolas[i].apelido+"</td></tr>"
+          }
+        }else{
+          stringResponse = "Nenhuma escola encontrada"
+        }
+        
+        res.send(stringResponse)
+      })
+    }
+  })
 
 router.post("/escolas/edit", (req, res) => {
 
