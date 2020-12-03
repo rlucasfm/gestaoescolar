@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const Turma = new Schema({
+const Curso = new Schema({
     nome: {
         type: String,
         required: true
     }
 })
 
-mongoose.model('turmas', Turma)
+mongoose.model('cursos', Curso)
