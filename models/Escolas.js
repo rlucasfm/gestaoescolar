@@ -91,7 +91,7 @@ const Escola = new Schema({
         type: String,
     },
     cnpj:{
-        type: Number,
+        type: String,
     },
     atocriacao:{
         type: String,

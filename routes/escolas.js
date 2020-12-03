@@ -33,7 +33,7 @@ router.post('/busca/filtro', (req, res) => {
     if(!descricao && !cnpj && !apelido){
       res.send("Por favor, preencha um campo para buscar a escola")
     }else{
-      Escola.find({'descricao': {$regex: descricao, $options: 'i'}, 'cnpj': {$regex: cnpj, $options: 'i'}, 'apelido': {$regex: apelido, $options: 'i'}}).lean().then((escolas) => {
+      Escola.find({'descricao': {$regex: descricao, $options: 'i'}, 'cnpj': {$regex: cnpj}, 'apelido': {$regex: apelido, $options: 'i'}}).lean().then((escolas) => {
         let stringResponse = ""
         if(escolas.length){
           for(let i=0; i<escolas.length; i++){
