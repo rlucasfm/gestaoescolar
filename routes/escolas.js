@@ -3,6 +3,8 @@ const router = express.Router()
 const mongoose = require("mongoose")
 require("../models/Escolas")
 const Escola = mongoose.model("escolas")
+require("../models/Cursos")
+const Cursos = mongoose.model("cursos")
 const {accessLevel} = require("../helpers/permissions")
 
 router.get('/cadastro', (req,res) => {
@@ -15,6 +17,10 @@ router.get('/busca', (req,res) => {
 
 router.get('/editar', (req,res) => {
     res.render('escolas/cadastro')
+})
+
+router.get('/cursos', (req, res) => {
+  res.render('escolas/cursos')
 })
 
 router.get("/edit/:id", (req, res) => {
