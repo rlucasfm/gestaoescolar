@@ -1,0 +1,1042 @@
+<form id="formCadastro">
+    <div class="row">
+        <div class="mx-auto">
+            <button type="submit" class="btn btn-primary">Cursos Específicos</button> 
+            <button type="submit" class="btn btn-primary">Escolaridade</button> 
+            <button type="submit" class="btn btn-primary">Formação Superior</button> 
+            <button type="submit" class="btn btn-primary">Pós Graduação</button> 
+            <button type="submit" class="btn btn-primary">Ocorrencias</button> 
+            <button type="submit" class="btn btn-primary">Lotação de Profissionais</button>
+            <button type="submit" class="btn btn-primary">Perfil de Acesso</button>  
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">INFORMAÇÕES DO PROFISSIONAL</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <input type="checkbox" class="form-control-md" id="buscaescola" name="buscaescola" value="true">
+                        Buscar Somente profissional da escola atual (apenas com funções exercidas definidas!)
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" class="form-control cpf" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="matricula">Matricula</label>
+                        <input type="text" class="form-control" id="matricula" name="matricula">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="pasep">NIS/PIS/PASEP</label>
+                        <input type="text" class="form-control" id="pasep" name="pasep">
+                    </div>
+                </div>
+                <div class="col-sm-2 mt-4">
+                    <button type="submit" class="btn btn-success">Inserir Foto</button> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="rg">Rg</label>
+                        <input type="text" class="form-control" id="rg" name="rg" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="orgemissor">Org. Emissor</label>
+                        <input type="text" class="form-control" id="orgemissor" name="orgemissor" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="uf">UF</label>
+                        <select class="form-control" id="uf" name="uf">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="dataDoc">Data emissão</label>
+                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" required>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="sexo">Sexo</label>
+                        <select class="form-control" id="sexo" name="sexo">
+                            <option value="MASCULINO">MASCULINO</option>
+                            <option value="FEMININO">FEMININO</option>
+                        </select>
+                    </div>
+                </div>      
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="dataNasc">Data Nascimento</label>
+                        <input type="date" class="form-control" id="dataNasc" name="dataNasc" required>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="naturalidade">Naturalidade</label>
+                        <select class="form-control" id="naturalidade" name="naturalidade">
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="municipio">Município</label>
+                    <select class="form-control" id="municipio" name="municipio">
+                        <option value="AÇAILÂNDIA">AÇAILÂNDIA</option>
+                        <option value="ITINGA">ITINGA</option>
+                        <option value="SÃO FRANCISCO DO BREJÃO">SÃO FRANCISCO DO BREJÃO</option>
+                        <option value="BOM JESUS DA SELVA">BOM JESUS DA SELVA</option>
+                        <option value="CIDELÂNDIA">CIDELÂNDIA</option>
+                        <option value="VILA NOVA DOS MARTÍRIOS">VILA NOVA DOS MARTÍRIOS</option>
+                        <option value="SÃO PEDRO DA ÁGUA BRANCA">SÃO PEDRO DA ÁGUA BRANCA</option>
+                        <option value="BURITICUPU">BURITICUPU</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="nacionalidade">Nacionalidade</label>
+                        <select class="form-control" id="nacionalidade" name="nacionalidade">
+                            <option value="BRASILEIRA">Brasileira</option>
+                            <option value="BRASILEIRA NATURALIZADO">Brasileira naturalizado</option>
+                            <option value="ESTRANGEIRO">Estrangeiro</option>
+                        </select>
+                    </div>
+                </div>   
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="pais">País de origem</label>
+                        <select class="form-control" id="pais" name="pais">                            
+                            <option value="África do Sul">África do Sul</option>
+                            <option value="Albânia">Albânia</option>
+                            <option value="Alemanha">Alemanha</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Anguilla">Anguilla</option>
+                            <option value="Antigua">Antigua</option>
+                            <option value="Arábia Saudita">Arábia Saudita</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armênia">Armênia</option>
+                            <option value="Aruba">Aruba</option>
+                            <option value="Austrália">Austrália</option>
+                            <option value="Áustria">Áustria</option>
+                            <option value="Azerbaijão">Azerbaijão</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrein">Bahrein</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Bélgica">Bélgica</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bermudas">Bermudas</option>
+                            <option value="Botsuana">Botsuana</option>
+                            <option value="Brasil" selected>Brasil</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgária">Bulgária</option>
+                            <option value="Burkina Fasso">Burkina Fasso</option>
+                            <option value="botão">botão</option>
+                            <option value="Cabo Verde">Cabo Verde</option>
+                            <option value="Camarões">Camarões</option>
+                            <option value="Camboja">Camboja</option>
+                            <option value="Canadá">Canadá</option>
+                            <option value="Cazaquistão">Cazaquistão</option>
+                            <option value="Chade">Chade</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Cidade do Vaticano">Cidade do Vaticano</option>
+                            <option value="Colômbia">Colômbia</option>
+                            <option value="Congo">Congo</option>
+                            <option value="Coréia do Sul">Coréia do Sul</option>
+                            <option value="Costa do Marfim">Costa do Marfim</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Croácia">Croácia</option>
+                            <option value="Dinamarca">Dinamarca</option>
+                            <option value="Djibuti">Djibuti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="EUA">EUA</option>
+                            <option value="Egito">Egito</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Emirados Árabes">Emirados Árabes</option>
+                            <option value="Equador">Equador</option>
+                            <option value="Eritréia">Eritréia</option>
+                            <option value="Escócia">Escócia</option>
+                            <option value="Eslováquia">Eslováquia</option>
+                            <option value="Eslovênia">Eslovênia</option>
+                            <option value="Espanha">Espanha</option>
+                            <option value="Estônia">Estônia</option>
+                            <option value="Etiópia">Etiópia</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Filipinas">Filipinas</option>
+                            <option value="Finlândia">Finlândia</option>
+                            <option value="França">França</option>
+                            <option value="Gabão">Gabão</option>
+                            <option value="Gâmbia">Gâmbia</option>
+                            <option value="Gana">Gana</option>
+                            <option value="Geórgia">Geórgia</option>
+                            <option value="Gibraltar">Gibraltar</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Grécia">Grécia</option>
+                            <option value="Guadalupe">Guadalupe</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guiana">Guiana</option>
+                            <option value="Guiana Francesa">Guiana Francesa</option>
+                            <option value="Guiné-bissau">Guiné-bissau</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Holanda">Holanda</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="Hungria">Hungria</option>
+                            <option value="Iêmen">Iêmen</option>
+                            <option value="Ilhas Cayman">Ilhas Cayman</option>
+                            <option value="Ilhas Cook">Ilhas Cook</option>
+                            <option value="Ilhas Curaçao">Ilhas Curaçao</option>
+                            <option value="Ilhas Marshall">Ilhas Marshall</option>
+                            <option value="Ilhas Turks & Caicos">Ilhas Turks e Caicos</option>
+                            <option value="Ilhas Virgens (brit.)">Ilhas Virgens (brit.)</option>
+                            <option value="Ilhas Virgens(amer.)">Ilhas Virgens(amer.)</option>
+                            <option value="Ilhas Wallis e Futuna">Ilhas Wallis e Futuna</option>
+                            <option value="Índia">Índia</option>
+                            <option value="Indonésia">Indonésia</option>
+                            <option value="Inglaterra">Inglaterra</option>
+                            <option value="Irlanda">Irlanda</option>
+                            <option value="Islândia">Islândia</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Itália">Itália</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japão">Japão</option>
+                            <option value="Jordânia">Jordânia</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Líbano">Líbano</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lituânia">Lituânia</option>
+                            <option value="Luxemburgo">Luxemburgo</option>
+                            <option value="Macau">Macau</option>
+                            <option value="Macedônia">Macedônia</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malásia">Malásia</option>
+                            <option value="Malaui">Malaui</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marrocos">Marrocos</option>
+                            <option value="Martinica">Martinica</option>
+                            <option value="Mauritânia">Mauritânia</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="México">México</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Mônaco">Mônaco</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Nicarágua">Nicarágua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigéria">Nigéria</option>
+                            <option value="Noruega">Noruega</option>
+                            <option value="Nova Caledônia">Nova Caledônia</option>
+                            <option value="Nova Zelândia">Nova Zelândia</option>
+                            <option value="Omã">Omã</option>
+                            <option value="Palau">Palau</option>
+                            <option value="Panamá">Panamá</option>
+                            <option value="Papua-nova Guiné">Papua-nova Guiné</option>
+                            <option value="Paquistão">Paquistão</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Polinésia Francesa">Polinésia Francesa</option>
+                            <option value="Polônia">Polônia</option>
+                            <option value="Porto Rico">Porto Rico</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Quênia">Quênia</option>
+                            <option value="Rep. Dominicana">Rep. Dominicana</option>
+                            <option value="Rep. Tcheca">Rep. Tcheca</option>
+                            <option value="Reunion">Reunion</option>
+                            <option value="Romênia">Romênia</option>
+                            <option value="Ruanda">Ruanda</option>
+                            <option value="Rússia">Rússia</option>
+                            <option value="Saipan">Saipan</option>
+                            <option value="Samoa Americana">Samoa Americana</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Serra Leone">Serra Leone</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Singapura">Singapura</option>
+                            <option value="Síria">Síria</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="St. Kitts & Nevis">St. Kitts e Nevis</option>
+                            <option value="St. Lúcia">St. Lúcia</option>
+                            <option value="St. Vincent">St. Vincent</option>
+                            <option value="Sudão">Sudão</option>
+                            <option value="Suécia">Suécia</option>
+                            <option value="Suiça">Suiça</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Tailândia">Tailândia</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Tanzânia">Tanzânia</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Trinidad & Tobago">Trinidad e Tobago</option>
+                            <option value="Tunísia">Tunísia</option>
+                            <option value="Turquia">Turquia</option>
+                            <option value="Ucrânia">Ucrânia</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="Uruguai">Uruguai</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Vietnã">Vietnã</option>
+                            <option value="Zaire">Zaire</option>
+                            <option value="Zâmbia">Zâmbia</option>
+                            <option value="Zimbábue">Zimbábue</option>                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cor">Cor/Raça</label>
+                        <select class="form-control" id="cor" name="cor">
+                            <option value="BRANCA">BRANCA</option>
+                            <option value="PRETA">PRETA</option>
+                            <option value="PARDA">PARDA</option>
+                            <option value="AMARELA">AMARELA</option>
+                            <option value="INDÍGENA">INDÍGENA</option>
+                            <option value="QUILOMBOLA">QUILOMBOLA</option>
+                            <option value="NÃO DECLARADA">NÃO DECLARADA</option>                            
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="estadocivil">Estado Civil</label>
+                        <select class="form-control" id="estadocivil" name="estadocivil">
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                            <option value="separado">Separado(a)</option>
+                            <option value="divorciado">Divorciado(a)</option>                           
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="conjugue">Conjugue</label>
+                        <input type="text" class="form-control" id="conjugue" name="conjugue">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="mae">Nome da Mãe</label>
+                        <input type="text" class="form-control" id="mae" name="mae">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="pai">Nome do Pai</label>
+                        <input type="text" class="form-control" id="pai" name="pai">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="dataadmissao">Data Admissão</label>
+                        <input type="date" class="form-control" id="dataadmissao" name="dataadmissao">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="datademissao">Data Demissão</label>
+                        <input type="date" class="form-control" id="datademissao" name="datademissao">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cargo">Cargo</label>
+                        <input type="text" class="form-control" id="cargo" name="cargo">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="chsemanais">CH Semanais</label>
+                        <input type="text" class="form-control" id="chsemanais" name="chsemanais">
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="necessidade">Necessiadade Especial</label>
+                        <select class="form-control" id="necessidade" name="necessidade">
+                            <option value="Baixavisao">Baixa Visão</option>
+                            <option value="Cegueira">Cegueira</option>
+                            <option value="Deficienciaauditiva">Deficiência Auditiva</option>
+                            <option value="Deficienciafisica">Deficiência Física</option>
+                            <option value="Deficienciaintelectual">Deficiência Intelectual</option> 
+                            <option value="Deficienciamultipla">Deficiência Multipla</option> 
+                            <option value="Surdez">Surdez</option>
+                            <option value="surocegueira">Surdocegueira</option>                         
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="tipoendereco">Tipo de endereço</label>
+                        <select class="form-control" id="tipoendereco" name="tipoendereco">
+                            <option value="zonaurbana">Zona Urbana</option>
+                            <option value="zonarural">Zona Rural</option>                        
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group mt-4">
+                        <input type="checkbox" class="form-control-md" id="nees" name="nees" value="true">
+                        Possui NEES
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group mt-4">
+                        <input type="checkbox" class="form-control-md" id="inep" name="inep" value="true">
+                        Registro cadsatrado no INEP
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group mt-4">
+                        <input type="checkbox" class="form-control-md" id="financeiro" name="financeiro" value="true">
+                        Permitir Lançamento no Financeiro
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">INFORMAÇÕES DE LOGIN</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="email@email.com" required>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" class="form-control" id="senha" name="senha" required>
+                    </div>
+                </div>
+                <div class="col-sm-4 mt-4">
+                    <button type="submit" class="btn btn-success">Alterar Senha</button> 
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group mt-4">
+                        <input type="checkbox" class="form-control-md" id="bloqueio" name="bloqueio" value="true">
+                        Bloqueio Total
+                    </div>
+                </div>
+                <div class="col-sm-6 mt-4">
+                    <button type="submit" class="btn btn-success">Enviar senha para o email do profissinal</button> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <h7 class="card-title" style="color:black">Obs: você pode cadastrar o profissional sem nenhuma senha, quando for feito o primeiro
+                        acesso, uma senha temporária será enviada para o email indicado acima, após o primeiro
+                        acesso, o sistema irá solicitar ao profissional a alteração da senha temporária.</h7>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">ENDEREÇO</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cep">CEP</label>
+                    <inp    ut type="text" class="form-control cep" id="cep" name="cep">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" class="form-control" id="endereco" name="endereco">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" name="bairro">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="numero">Numero</label>
+                        <input type="text" class="form-control" id="numero" name="numero">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" class="form-control" id="complemento" name="complemento">
+                    </div>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufEndereco">UF</label>
+                        <select class="form-control" id="ufEndereco" name="ufEndereco">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                            <option value="EX">EX</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                    <label for="municipiomoradia">Município</label>
+                    <select class="form-control" id="municipiomoradia" name="municipiomoradia">
+                        <option value="AÇAILÂNDIA">AÇAILÂNDIA</option>
+                        <option value="ITINGA">ITINGA</option>
+                        <option value="SÃO FRANCISCO DO BREJÃO">SÃO FRANCISCO DO BREJÃO</option>
+                        <option value="BOM JESUS DA SELVA">BOM JESUS DA SELVA</option>
+                        <option value="CIDELÂNDIA">CIDELÂNDIA</option>
+                        <option value="VILA NOVA DOS MARTÍRIOS">VILA NOVA DOS MARTÍRIOS</option>
+                        <option value="SÃO PEDRO DA ÁGUA BRANCA">SÃO PEDRO DA ÁGUA BRANCA</option>
+                        <option value="BURITICUPU">BURITICUPU</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="telfixo">Tel. Fixo</label>
+                        <input type="text" class="form-control phone" id="telfixo" name="telfixo">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="telcelular">Tel. Celular</label>
+                        <input type="text" class="form-control phone" id="telcelular" name="telcelular">
+                    </div>
+                </div>    
+            </div>  
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">DOCUMENTAÇÃO</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="carteira">N. Carteira Profissional</label>
+                        <input type="text" class="form-control" id="carteira" name="carteira">    
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="serie">Série</label>
+                        <input type="text" class="form-control" id="serie" name="serie">    
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="emissaodoc">Emissão</label>
+                        <input type="date" class="form-control" id="emissaodoc" name="emissaodoc">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufdoc">UF</label>
+                        <select class="form-control" id="ufdoc" name="ufdoc">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                            <option value="EX">EX</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="titulo">Título de Eleitor</label>
+                        <input type="text" class="form-control" id="titulo" name="titulo">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="secao">Seção</label>
+                        <input type="text" class="form-control" id="secao" name="secao">    
+                    </div>
+                </div>   
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="zona">Zona</label>
+                        <input type="text" class="form-control" id="zona" name="zona">    
+                    </div>
+                </div>  
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="reservista">Certificado Reservista</label>
+                        <input type="text" class="form-control" id="reservista" name="reservista">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="passaporte">Passaporte:</label>
+                        <input type="text" class="form-control" id="passaporte" name="passaporte">    
+                    </div>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                    <label for="tipocertidao">Tipo de Certidão</label>
+                    <select class="form-control" id="tipocertidao" name="tipocertidao">
+                        <option value="naoconsta">Não Consta</option>
+                        <option value="Nascimento">Nascimento</option>
+                        <option value="Casamento">Casamento</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="matricula">Certião/Matricula:</label>
+                        <input type="text" class="form-control" id="matricula" name="matricula">    
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="livro">Livro:</label>
+                        <input type="text" class="form-control" id="livro" name="livro">    
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="folha">Folha:</label>
+                        <input type="text" class="form-control" id="folha" name="folha">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="datacertidao">Data Emissão:</label>
+                        <input type="date" class="form-control" id="datacertidao" name="datacertidao">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="ufcertidao">UF</label>
+                        <select class="form-control" id="ufcertidao" name="ufcertidao">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                            <option value="EX">EX</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cartorio">Cartório:</label>
+                        <input type="text" class="form-control" id="cartorio" name="cartorio">    
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">CARGA HORÁRIA</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="cargahoria">Carga Horária:</label>
+                        <input type="text" class="form-control" id="cargahoria" name="cargahoria">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="decreto">Decreto:</label>
+                        <input type="text" class="form-control" id="decreto" name="decreto">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="termo">Termo:</label>
+                        <input type="text" class="form-control" id="termo" name="termo">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="temposervico">Tempo de Serviço:</label>
+                        <input type="text" class="form-control" id="temposervico" name="temposervico">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="dataenquadramento">Data Enquadramento:</label>
+                        <input type="date" class="form-control" id="dataenquadramento" name="dataenquadramento">    
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="area">Área:</label>
+                        <input type="text" class="form-control" id="area" name="area">    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">Ficha de Saúde</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="peso">Peso:</label>
+                        <input type="text" class="form-control" id="peso" name="peso">    
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                    <div class="form-group">
+                        <label for="altura">Altura:</label>
+                        <input type="text" class="form-control" id="altura" name="altura">    
+                    </div>
+                </div> 
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="tiposanguineo">Tipo Sanguíneo:</label>
+                        <input type="text" class="form-control" id="tiposanguineo" name="tiposanguineo">    
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="alergia">Alergias:</label>
+                        <input type="text" class="form-control" id="alergia" name="alergia">    
+                    </div>
+                </div> 
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="tipomedicamento">Tipo Medicamento:</label>
+                        <input type="text" class="form-control" id="tipomedicamento" name="tipomedicamento">    
+                    </div>
+                </div>     
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group mt-4">
+                        <input type="checkbox" class="form-control-md" id="deficienciafisica" name="deficienciafisica" value="true">
+                        Deficiência Física
+                    </div>
+                </div>    
+                <div class="col-sm-3">
+                    <div class="form-group mt-4">
+                        <input type="checkbox" class="form-control-md" id="fumante" name="fumante" value="true">
+                        Fumante
+                    </div>
+                </div> 
+                <div class="col-sm-6">
+                    <div class="form-group mt-4">
+                        <input type="checkbox" class="form-control-md" id="tomamedicacao" name="tomamedicacao" value="true">
+                        Toma Medicação regularmente
+                    </div>
+                </div>  
+            </div>    
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">DADOS BANCÁRIOS</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="banco">Banco:</label>
+                        <input type="text" class="form-control" id="banco" name="banco">    
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="agencia">Agência:</label>
+                        <input type="text" class="form-control" id="agencia" name="agencia">    
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="conta">Conta:</label>
+                        <input type="text" class="form-control" id="conta" name="conta">    
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="tipoconta">Tipo</label>
+                    <select class="form-control" id="tipoconta" name="tipoconta">
+                        <option value="corrente">Conta Corrente</option>
+                        <option value="poupanca">Conta Poupança</option>
+                    </select>
+                    </div>
+                </div>    
+            </div>    
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="banco1">Banco:</label>
+                        <input type="text" class="form-control" id="banco1" name="banco1">    
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="agencia1">Agência:</label>
+                        <input type="text" class="form-control" id="agencia1" name="agencia1">    
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label for="conta1">Conta:</label>
+                        <input type="text" class="form-control" id="conta1" name="conta1">    
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label for="tipoconta1">Tipo</label>
+                    <select class="form-control" id="tipoconta1" name="tipoconta1">
+                        <option value="corrente">Conta Corrente</option>
+                        <option value="poupanca">Conta Poupança</option>
+                    </select>
+                    </div>
+                </div>    
+            </div>    
+        </div>
+    </div>
+    <div class="card mt-4">
+        <div class="card-body">
+            <h5 class="card-title" style="color:darkblue">OBSERVAÇÕES</h5>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="observacoes">Obs:</label>
+                        <textarea type="text" class="form-control" id="observacoes" name="observacoes"></textarea>    
+                    </div>
+                </div> 
+            </div>    
+        </div>   
+    </div>
+    <div class="row">
+        <div class="col-12 mb-4 mt-4 text-center">
+            <button type="submit" class="btn btn-success">Cadastrar Profissional</button> 
+        </div>
+    </div> 
+
+<!-- Modal -->
+<div class="modal hide fade mx-auto" id="cadastroSucesso" tabindex="-1" aria-labelledby="cadastroSucessoLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cadastroSucessoLabel">Sucesso!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        O cadastro do profissional foi efetuado!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modalOk" data-dismiss="modal">OK!</button>        
+      </div>
+    </div>
+  </div>
+</div>
+
+</form>
+
+<!-- ENVIO DO FORMULÁRIO -->
+<script>
+    $(document).ready(() => {
+        $("#formCadastro").submit(function(event){
+            event.preventDefault();            
+            $.ajax({
+                type: "post",
+                url: "/profissionais/cadastro/add",
+                data: $(this).serialize(),
+                success: function(data){          
+                    console.log(data)                      
+                    $("#cadastroSucesso").modal('show')
+                }
+            })
+        })
+    })   
+
+    $("#modalOk").click(() => {
+        $("#formCadastro").trigger("reset")
+    }) 
+</script>
+
+<!-- CONFIGURAÇÃO DAS MÁSCARAS -->
+<script>
+    $('.phone').attr("onkeypress", "mascara(this, aplicarTelefone)")
+    $('.phone').attr("maxlength", "15")
+
+    $('.cep').attr("onkeypress", "mascara(this, aplicarCep)")
+    $('.cep').attr("maxlength", "9")
+
+    $('.cpf').attr("onkeypress", "mascara(this, aplicarCpf)")
+    $('.cpf').attr("maxlength", "14")
+
+    $('.rg').attr("onkeypress", "mascara(this, aplicarRg)")
+    $('.rg').attr("maxlength", "13")
+</script>
