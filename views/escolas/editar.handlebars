@@ -155,7 +155,7 @@
                 <div class="col-sm-1">
                     <div class="form-group">
                     <label for="numero">N.</label>
-                    <input type="text" class="form-control" id="numero" name="numero" value="{{escolas.numero}}">
+                    <input type="text" class="form-control" id="numero" name="numero" value="{{escola.numero}}">
                     </div>
                 </div>
             </div>
@@ -185,33 +185,33 @@
                     <div class="form-group">
                         <label for="ufINEP">UF</label>
                         <select class="form-control" id="ufINEP" name="ufINEP" value="{{escola.ufINEP}}">
-                            <option value="MA" {{#if_equal escola.orgaoregional "MA"}}selected{{/if_equal}}>MA</option>
-                            <option value="AC" {{#if_equal escola.orgaoregional "AC"}}selected{{/if_equal}}>AC</option>
-                            <option value="AL" {{#if_equal escola.orgaoregional "AL"}}selected{{/if_equal}}>AL</option>
-                            <option value="AP" {{#if_equal escola.orgaoregional "AP"}}selected{{/if_equal}}>AP</option>
-                            <option value="AM" {{#if_equal escola.orgaoregional "AM"}}selected{{/if_equal}}>AM</option>
-                            <option value="BA" {{#if_equal escola.orgaoregional "BA"}}selected{{/if_equal}}>BA</option>
-                            <option value="CE" {{#if_equal escola.orgaoregional "CE"}}selected{{/if_equal}}>CE</option>
-                            <option value="DF" {{#if_equal escola.orgaoregional "DF"}}selected{{/if_equal}}>DF</option>
-                            <option value="ES" {{#if_equal escola.orgaoregional "ES"}}selected{{/if_equal}}>ES</option>
-                            <option value="GO" {{#if_equal escola.orgaoregional "GO"}}selected{{/if_equal}}>GO</option>
-                            <option value="MT" {{#if_equal escola.orgaoregional "MT"}}selected{{/if_equal}}>MT</option>
-                            <option value="MS" {{#if_equal escola.orgaoregional "MS"}}selected{{/if_equal}}>MS</option>
-                            <option value="MG" {{#if_equal escola.orgaoregional "MG"}}selected{{/if_equal}}>MG</option>
-                            <option value="PA" {{#if_equal escola.orgaoregional "PA"}}selected{{/if_equal}}>PA</option>
-                            <option value="PB" {{#if_equal escola.orgaoregional "PB"}}selected{{/if_equal}}>PB</option>
-                            <option value="PR" {{#if_equal escola.orgaoregional "PR"}}selected{{/if_equal}}>PR</option>
-                            <option value="PE" {{#if_equal escola.orgaoregional "PE"}}selected{{/if_equal}}>PE</option>
-                            <option value="PI" {{#if_equal escola.orgaoregional "PI"}}selected{{/if_equal}}>PI</option>
-                            <option value="RJ" {{#if_equal escola.orgaoregional "RJ"}}selected{{/if_equal}}>RJ</option>
-                            <option value="RN" {{#if_equal escola.orgaoregional "RN"}}selected{{/if_equal}}>RN</option>
-                            <option value="RS" {{#if_equal escola.orgaoregional "RS"}}selected{{/if_equal}}>RS</option>
-                            <option value="RO" {{#if_equal escola.orgaoregional "RO"}}selected{{/if_equal}}>RO</option>
-                            <option value="RR" {{#if_equal escola.orgaoregional "RR"}}selected{{/if_equal}}>RR</option>
-                            <option value="SC" {{#if_equal escola.orgaoregional "SC"}}selected{{/if_equal}}>SC</option>
-                            <option value="SP" {{#if_equal escola.orgaoregional "SP"}}selected{{/if_equal}}>SP</option>
-                            <option value="SE" {{#if_equal escola.orgaoregional "SE"}}selected{{/if_equal}}>SE</option>
-                            <option value="TO" {{#if_equal escola.orgaoregional "TO"}}selected{{/if_equal}}>TO</option>
+                            <option value="MA" {{#if_equal escola.ufINEP "MA"}}selected{{/if_equal}}>MA</option>
+                            <option value="AC" {{#if_equal escola.ufINEP "AC"}}selected{{/if_equal}}>AC</option>
+                            <option value="AL" {{#if_equal escola.ufINEP "AL"}}selected{{/if_equal}}>AL</option>
+                            <option value="AP" {{#if_equal escola.ufINEP "AP"}}selected{{/if_equal}}>AP</option>
+                            <option value="AM" {{#if_equal escola.ufINEP "AM"}}selected{{/if_equal}}>AM</option>
+                            <option value="BA" {{#if_equal escola.ufINEP "BA"}}selected{{/if_equal}}>BA</option>
+                            <option value="CE" {{#if_equal escola.ufINEP "CE"}}selected{{/if_equal}}>CE</option>
+                            <option value="DF" {{#if_equal escola.ufINEP "DF"}}selected{{/if_equal}}>DF</option>
+                            <option value="ES" {{#if_equal escola.ufINEP "ES"}}selected{{/if_equal}}>ES</option>
+                            <option value="GO" {{#if_equal escola.ufINEP "GO"}}selected{{/if_equal}}>GO</option>
+                            <option value="MT" {{#if_equal escola.ufINEP "MT"}}selected{{/if_equal}}>MT</option>
+                            <option value="MS" {{#if_equal escola.ufINEP "MS"}}selected{{/if_equal}}>MS</option>
+                            <option value="MG" {{#if_equal escola.ufINEP "MG"}}selected{{/if_equal}}>MG</option>
+                            <option value="PA" {{#if_equal escola.ufINEP "PA"}}selected{{/if_equal}}>PA</option>
+                            <option value="PB" {{#if_equal escola.ufINEP "PB"}}selected{{/if_equal}}>PB</option>
+                            <option value="PR" {{#if_equal escola.ufINEP "PR"}}selected{{/if_equal}}>PR</option>
+                            <option value="PE" {{#if_equal escola.ufINEP "PE"}}selected{{/if_equal}}>PE</option>
+                            <option value="PI" {{#if_equal escola.ufINEP "PI"}}selected{{/if_equal}}>PI</option>
+                            <option value="RJ" {{#if_equal escola.ufINEP "RJ"}}selected{{/if_equal}}>RJ</option>
+                            <option value="RN" {{#if_equal escola.ufINEP "RN"}}selected{{/if_equal}}>RN</option>
+                            <option value="RS" {{#if_equal escola.ufINEP "RS"}}selected{{/if_equal}}>RS</option>
+                            <option value="RO" {{#if_equal escola.ufINEP "RO"}}selected{{/if_equal}}>RO</option>
+                            <option value="RR" {{#if_equal escola.ufINEP "RR"}}selected{{/if_equal}}>RR</option>
+                            <option value="SC" {{#if_equal escola.ufINEP "SC"}}selected{{/if_equal}}>SC</option>
+                            <option value="SP" {{#if_equal escola.ufINEP "SP"}}selected{{/if_equal}}>SP</option>
+                            <option value="SE" {{#if_equal escola.ufINEP "SE"}}selected{{/if_equal}}>SE</option>
+                            <option value="TO" {{#if_equal escola.ufINEP "TO"}}selected{{/if_equal}}>TO</option>
                         </select>
                     </div>
                 </div>
@@ -219,25 +219,25 @@
                     <div class="form-group">
                     <label for="municipioINEP">Município - INEP</label>
                     <select class="form-control" id="municipioINEP" name="municipioINEP" value="{{escola.municipioINEP}}">
-                        <option value="AÇAILÂNDIA" {{#if_equal escola.orgaoregional "AÇAILÂNDIA"}}selected{{/if_equal}}>AÇAILÂNDIA</option>
-                        <option value="BACABAL" {{#if_equal escola.orgaoregional "BACABAL"}}selected{{/if_equal}}>BACABAL</option>
-                        <option value="BALSAS" {{#if_equal escola.orgaoregional "BALSAS"}}selected{{/if_equal}}>BALSAS</option>
-                        <option value="BARRA DO CORDA" {{#if_equal escola.orgaoregional "BARRA DO CORDA"}}selected{{/if_equal}}>BARRA DO CORDA</option>
-                        <option value="CAXIAS" {{#if_equal escola.orgaoregional "CAXIAS"}}selected{{/if_equal}}>CAXIAS</option>
-                        <option value="CHAPADINHA" {{#if_equal escola.orgaoregional "CHAPADINHA"}}selected{{/if_equal}}>CHAPADINHA</option>
-                        <option value="CODÓ" {{#if_equal escola.orgaoregional "CODÓ"}}selected{{/if_equal}}>CODÓ</option>
-                        <option value="IMPERATRIZ" {{#if_equal escola.orgaoregional "IMPERATRIZ"}}selected{{/if_equal}}>IMPERATRIZ</option>
-                        <option value="ITAPECURU-MIRIM" {{#if_equal escola.orgaoregional "ITAPECURU-MIRIM"}}selected{{/if_equal}}>ITAPECURU-MIRIM</option>
-                        <option value="PEDREIRAS" {{#if_equal escola.orgaoregional "PEDREIRAS"}}selected{{/if_equal}}>PEDREIRAS</option>
-                        <option value="PINHEIRO" {{#if_equal escola.orgaoregional "PINHEIRO"}}selected{{/if_equal}}>PINHEIRO</option>
-                        <option value="PRESIDENTE DUTRA" {{#if_equal escola.orgaoregional "PRESIDENTE DUTRA"}}selected{{/if_equal}}>PRESIDENTE DUTRA</option>
-                        <option value="ROSÁRIO" {{#if_equal escola.orgaoregional "ROSARIO"}}selected{{/if_equal}}>ROSÁRIO</option>
-                        <option value="SÃO JOÃO DOS PATOS" {{#if_equal escola.orgaoregional "SÃO JOÃO DOS PATOS"}}selected{{/if_equal}}>SÃO JOÃO DOS PATOS</option>
-                        <option value="SANTA ÍNES" {{#if_equal escola.orgaoregional "SANTA ÍNES"}}selected{{/if_equal}}>SANTA ÍNES</option>
-                        <option value="TIMON" {{#if_equal escola.orgaoregional "TIMON"}}selected{{/if_equal}}>TIMON</option>
-                        <option value="VIANA" {{#if_equal escola.orgaoregional "VIANA"}}selected{{/if_equal}}>VIANA</option>
-                        <option value="ZÉ DOCA" {{#if_equal escola.orgaoregional "ZÉ DOCA"}}selected{{/if_equal}}>ZÉ DOCA</option>
-                        <option value="SÃO LUÍS" {{#if_equal escola.orgaoregional "SÃO LUÍS"}}selected{{/if_equal}}>SÃO LUÍS</option>
+                        <option value="AÇAILÂNDIA" {{#if_equal escola.municipioINEP "AÇAILÂNDIA"}}selected{{/if_equal}}>AÇAILÂNDIA</option>
+                        <option value="BACABAL" {{#if_equal escola.municipioINEP "BACABAL"}}selected{{/if_equal}}>BACABAL</option>
+                        <option value="BALSAS" {{#if_equal escola.municipioINEP "BALSAS"}}selected{{/if_equal}}>BALSAS</option>
+                        <option value="BARRA DO CORDA" {{#if_equal escola.municipioINEP "BARRA DO CORDA"}}selected{{/if_equal}}>BARRA DO CORDA</option>
+                        <option value="CAXIAS" {{#if_equal escola.municipioINEP "CAXIAS"}}selected{{/if_equal}}>CAXIAS</option>
+                        <option value="CHAPADINHA" {{#if_equal escola.municipioINEP "CHAPADINHA"}}selected{{/if_equal}}>CHAPADINHA</option>
+                        <option value="CODÓ" {{#if_equal escola.municipioINEP "CODÓ"}}selected{{/if_equal}}>CODÓ</option>
+                        <option value="IMPERATRIZ" {{#if_equal escola.municipioINEP "IMPERATRIZ"}}selected{{/if_equal}}>IMPERATRIZ</option>
+                        <option value="ITAPECURU-MIRIM" {{#if_equal escola.municipioINEP "ITAPECURU-MIRIM"}}selected{{/if_equal}}>ITAPECURU-MIRIM</option>
+                        <option value="PEDREIRAS" {{#if_equal escola.municipioINEP "PEDREIRAS"}}selected{{/if_equal}}>PEDREIRAS</option>
+                        <option value="PINHEIRO" {{#if_equal escola.municipioINEP "PINHEIRO"}}selected{{/if_equal}}>PINHEIRO</option>
+                        <option value="PRESIDENTE DUTRA" {{#if_equal escola.municipioINEP "PRESIDENTE DUTRA"}}selected{{/if_equal}}>PRESIDENTE DUTRA</option>
+                        <option value="ROSÁRIO" {{#if_equal escola.municipioINEP "ROSARIO"}}selected{{/if_equal}}>ROSÁRIO</option>
+                        <option value="SÃO JOÃO DOS PATOS" {{#if_equal escola.municipioINEP "SÃO JOÃO DOS PATOS"}}selected{{/if_equal}}>SÃO JOÃO DOS PATOS</option>
+                        <option value="SANTA ÍNES" {{#if_equal escola.municipioINEP "SANTA ÍNES"}}selected{{/if_equal}}>SANTA ÍNES</option>
+                        <option value="TIMON" {{#if_equal escola.municipioINEP "TIMON"}}selected{{/if_equal}}>TIMON</option>
+                        <option value="VIANA" {{#if_equal escola.municipioINEP "VIANA"}}selected{{/if_equal}}>VIANA</option>
+                        <option value="ZÉ DOCA" {{#if_equal escola.municipioINEP "ZÉ DOCA"}}selected{{/if_equal}}>ZÉ DOCA</option>
+                        <option value="SÃO LUÍS" {{#if_equal escola.municipioINEP "SÃO LUÍS"}}selected{{/if_equal}}>SÃO LUÍS</option>
                     </select> 
                     </div>
                 </div>
@@ -247,25 +247,25 @@
                     <div class="form-group">
                     <label for="distritoINEP">Distrito - INEP</label>
                     <select class="form-control" id="distritoINEP" name="distritoINEP" value="{{escola.distritoINEP}}">
-                        <option value="AÇAILÂNDIA" {{#if_equal escola.orgaoregional "AÇAILÂNDIA"}}selected{{/if_equal}}>AÇAILÂNDIA</option>
-                        <option value="BACABAL" {{#if_equal escola.orgaoregional "BACABAL"}}selected{{/if_equal}}>BACABAL</option>
-                        <option value="BALSAS" {{#if_equal escola.orgaoregional "BALSAS"}}selected{{/if_equal}}>BALSAS</option>
-                        <option value="BARRA DO CORDA" {{#if_equal escola.orgaoregional "BARRA DO CORDA"}}selected{{/if_equal}}>BARRA DO CORDA</option>
-                        <option value="CAXIAS" {{#if_equal escola.orgaoregional "CAXIAS"}}selected{{/if_equal}}>CAXIAS</option>
-                        <option value="CHAPADINHA" {{#if_equal escola.orgaoregional "CHAPADINHA"}}selected{{/if_equal}}>CHAPADINHA</option>
-                        <option value="CODÓ" {{#if_equal escola.orgaoregional "CODÓ"}}selected{{/if_equal}}>CODÓ</option>
-                        <option value="IMPERATRIZ" {{#if_equal escola.orgaoregional "IMPERATRIZ"}}selected{{/if_equal}}>IMPERATRIZ</option>
-                        <option value="ITAPECURU-MIRIM" {{#if_equal escola.orgaoregional "ITAPECURU-MIRIM"}}selected{{/if_equal}}>ITAPECURU-MIRIM</option>
-                        <option value="PEDREIRAS" {{#if_equal escola.orgaoregional "PEDREIRAS"}}selected{{/if_equal}}>PEDREIRAS</option>
-                        <option value="PINHEIRO" {{#if_equal escola.orgaoregional "PINHEIRO"}}selected{{/if_equal}}>PINHEIRO</option>
-                        <option value="PRESIDENTE DUTRA" {{#if_equal escola.orgaoregional "PRESIDENTE DUTRA"}}selected{{/if_equal}}>PRESIDENTE DUTRA</option>
-                        <option value="ROSÁRIO" {{#if_equal escola.orgaoregional "ROSARIO"}}selected{{/if_equal}}>ROSÁRIO</option>
-                        <option value="SÃO JOÃO DOS PATOS" {{#if_equal escola.orgaoregional "SÃO JOÃO DOS PATOS"}}selected{{/if_equal}}>SÃO JOÃO DOS PATOS</option>
-                        <option value="SANTA ÍNES" {{#if_equal escola.orgaoregional "SANTA ÍNES"}}selected{{/if_equal}}>SANTA ÍNES</option>
-                        <option value="TIMON" {{#if_equal escola.orgaoregional "TIMON"}}selected{{/if_equal}}>TIMON</option>
-                        <option value="VIANA" {{#if_equal escola.orgaoregional "VIANA"}}selected{{/if_equal}}>VIANA</option>
-                        <option value="ZÉ DOCA" {{#if_equal escola.orgaoregional "ZÉ DOCA"}}selected{{/if_equal}}>ZÉ DOCA</option>
-                        <option value="SÃO LUÍS" {{#if_equal escola.orgaoregional "SÃO LUÍS"}}selected{{/if_equal}}>SÃO LUÍS</option>
+                        <option value="AÇAILÂNDIA" {{#if_equal escola.distritoINEP "AÇAILÂNDIA"}}selected{{/if_equal}}>AÇAILÂNDIA</option>
+                        <option value="BACABAL" {{#if_equal escola.distritoINEP "BACABAL"}}selected{{/if_equal}}>BACABAL</option>
+                        <option value="BALSAS" {{#if_equal escola.distritoINEP "BALSAS"}}selected{{/if_equal}}>BALSAS</option>
+                        <option value="BARRA DO CORDA" {{#if_equal escola.distritoINEP "BARRA DO CORDA"}}selected{{/if_equal}}>BARRA DO CORDA</option>
+                        <option value="CAXIAS" {{#if_equal escola.distritoINEP "CAXIAS"}}selected{{/if_equal}}>CAXIAS</option>
+                        <option value="CHAPADINHA" {{#if_equal escola.distritoINEP "CHAPADINHA"}}selected{{/if_equal}}>CHAPADINHA</option>
+                        <option value="CODÓ" {{#if_equal escola.distritoINEP "CODÓ"}}selected{{/if_equal}}>CODÓ</option>
+                        <option value="IMPERATRIZ" {{#if_equal escola.distritoINEP "IMPERATRIZ"}}selected{{/if_equal}}>IMPERATRIZ</option>
+                        <option value="ITAPECURU-MIRIM" {{#if_equal escola.distritoINEP "ITAPECURU-MIRIM"}}selected{{/if_equal}}>ITAPECURU-MIRIM</option>
+                        <option value="PEDREIRAS" {{#if_equal escola.distritoINEP "PEDREIRAS"}}selected{{/if_equal}}>PEDREIRAS</option>
+                        <option value="PINHEIRO" {{#if_equal escola.distritoINEP "PINHEIRO"}}selected{{/if_equal}}>PINHEIRO</option>
+                        <option value="PRESIDENTE DUTRA" {{#if_equal escola.distritoINEP "PRESIDENTE DUTRA"}}selected{{/if_equal}}>PRESIDENTE DUTRA</option>
+                        <option value="ROSÁRIO" {{#if_equal escola.distritoINEP "ROSARIO"}}selected{{/if_equal}}>ROSÁRIO</option>
+                        <option value="SÃO JOÃO DOS PATOS" {{#if_equal escola.distritoINEP "SÃO JOÃO DOS PATOS"}}selected{{/if_equal}}>SÃO JOÃO DOS PATOS</option>
+                        <option value="SANTA ÍNES" {{#if_equal escola.distritoINEP "SANTA ÍNES"}}selected{{/if_equal}}>SANTA ÍNES</option>
+                        <option value="TIMON" {{#if_equal escola.distritoINEP "TIMON"}}selected{{/if_equal}}>TIMON</option>
+                        <option value="VIANA" {{#if_equal escola.distritoINEP "VIANA"}}selected{{/if_equal}}>VIANA</option>
+                        <option value="ZÉ DOCA" {{#if_equal escola.distritoINEP "ZÉ DOCA"}}selected{{/if_equal}}>ZÉ DOCA</option>
+                        <option value="SÃO LUÍS" {{#if_equal escola.distritoINEP "SÃO LUÍS"}}selected{{/if_equal}}>SÃO LUÍS</option>
                     </select> 
                     </div>
                 </div>
@@ -293,9 +293,9 @@
                     <div class="form-group">
                         <label for="situacao">Situação</label>
                         <select class="form-control" id="situacao" name="situacao" value="{{escola.situacao}}">
-                            <option value="EM ATIVIDADE - 1" {{#if_equal escola.orgaoregional "EM ATIVIDADE - 1"}}selected{{/if_equal}}>EM ATIVIDADE - 1</option>
-                            <option value="PARALIZADA - 2" {{#if_equal escola.orgaoregional "PARALIZADA - 2"}}selected{{/if_equal}}>PARALIZADA - 2</option>
-                            <option value="EXTINTA - 3" {{#if_equal escola.orgaoregional "EXTINTA - 3"}}selected{{/if_equal}}>EXTINTA - 3</option>
+                            <option value="EM ATIVIDADE - 1" {{#if_equal escola.situacao "EM ATIVIDADE - 1"}}selected{{/if_equal}}>EM ATIVIDADE - 1</option>
+                            <option value="PARALIZADA - 2" {{#if_equal escola.situacao "PARALIZADA - 2"}}selected{{/if_equal}}>PARALIZADA - 2</option>
+                            <option value="EXTINTA - 3" {{#if_equal escola.situacao "EXTINTA - 3"}}selected{{/if_equal}}>EXTINTA - 3</option>
                         </select>                            
                     </div>
                 </div>
@@ -303,9 +303,9 @@
                     <div class="form-group">
                         <label for="formaocupacao">Forma de Ocupação</label>
                         <select class="form-control" id="formaocupacao" name="formaocupacao" value="{{escola.formaocupacao}}">
-                            <option value="PRÉDIO PRÓPRIO" {{#if_equal escola.orgaoregional "PRÉDIO PRÓPRIO"}}selected{{/if_equal}}>PRÉDIO PRÓPRIO</option>
-                            <option value="PRÉDIO ALUGADO" {{#if_equal escola.orgaoregional "PRÉDIO ALUGADO"}}selected{{/if_equal}}>PRÉDIO ALUGADO</option>
-                            <option value="PRÉDIO CEDIDO" {{#if_equal escola.orgaoregional "PRÉDIO CEDIDO"}}selected{{/if_equal}}>PRÉDIO CEDIDO</option>
+                            <option value="PRÉDIO PRÓPRIO" {{#if_equal escola.formaocupacao "PRÉDIO PRÓPRIO"}}selected{{/if_equal}}>PRÉDIO PRÓPRIO</option>
+                            <option value="PRÉDIO ALUGADO" {{#if_equal escola.formaocupacao "PRÉDIO ALUGADO"}}selected{{/if_equal}}>PRÉDIO ALUGADO</option>
+                            <option value="PRÉDIO CEDIDO" {{#if_equal escola.formaocupacao "PRÉDIO CEDIDO"}}selected{{/if_equal}}>PRÉDIO CEDIDO</option>
                         </select>                            
                     </div>
                 </div>
@@ -313,9 +313,9 @@
                     <div class="form-group">
                         <label for="regulamentacao">Regulamentação / Autorização no conselho</label>
                         <select class="form-control" id="regulamentacao" name="regulamentacao" value="{{escola.regulamentacao}}">
-                            <option value="Não" {{#if_equal escola.orgaoregional "Não"}}selected{{/if_equal}}>Não</option>
-                            <option value="Sim" {{#if_equal escola.orgaoregional "Sim"}}selected{{/if_equal}}>Sim</option>
-                            <option value="Em tramitação" {{#if_equal escola.orgaoregional "Em tramitação"}}selected{{/if_equal}}>Em tramitação</option>
+                            <option value="Não" {{#if_equal escola.regulamentacao "Não"}}selected{{/if_equal}}>Não</option>
+                            <option value="Sim" {{#if_equal escola.regulamentacao "Sim"}}selected{{/if_equal}}>Sim</option>
+                            <option value="Em tramitação" {{#if_equal escola.regulamentacao "Em tramitação"}}selected{{/if_equal}}>Em tramitação</option>
                         </select>                            
                     </div>
                 </div>
@@ -323,8 +323,8 @@
                     <div class="form-group">
                         <label for="sistemaimplantado">Sistema Implantado</label>
                         <select class="form-control" id="sistemaimplantado" name="sistemaimplantado" value="{{escola.sistemaimplantado}}">
-                            <option value="Não" {{#if_equal escola.orgaoregional "Não"}}selected{{/if_equal}}>Não</option>
-                            <option value="Sim" {{#if_equal escola.orgaoregional "Sim"}}selected{{/if_equal}}>Sim</option>
+                            <option value="Não" {{#if_equal escola.sistemaimplantado "Não"}}selected{{/if_equal}}>Não</option>
+                            <option value="Sim" {{#if_equal escola.sistemaimplantado "Sim"}}selected{{/if_equal}}>Sim</option>
                         </select>                            
                     </div>
                 </div>
@@ -334,10 +334,10 @@
                     <div class="form-group">
                         <label for="localarea">Local da Área</label>
                         <select class="form-control" id="localarea" name="localarea">
-                            <option value="Área de Assentamento" {{#if_equal escola.orgaoregional "Área de Assentamento"}}selected{{/if_equal}}>Área de Assentamento</option>
-                            <option value="Terra Indígena" {{#if_equal escola.orgaoregional "Terra Indígena"}}selected{{/if_equal}}>Terra Indígena</option>
-                            <option value="Área onde se localiza comunidade remanescente de quilombos" {{#if_equal escola.orgaoregional "Área onde se localiza comunidade remanescente de quilombos"}}selected{{/if_equal}}>Área onde se localiza comunidade remanescente de quilombos</option>
-                            <option value="A escola não está em área de localização diferenciada" {{#if_equal escola.orgaoregional "A escola não está em área de localização diferenciada"}}selected{{/if_equal}}>A escola não está em área de localização diferenciada</option>
+                            <option value="Área de Assentamento" {{#if_equal escola.localarea "Área de Assentamento"}}selected{{/if_equal}}>Área de Assentamento</option>
+                            <option value="Terra Indígena" {{#if_equal escola.localarea "Terra Indígena"}}selected{{/if_equal}}>Terra Indígena</option>
+                            <option value="Área onde se localiza comunidade remanescente de quilombos" {{#if_equal escola.localarea "Área onde se localiza comunidade remanescente de quilombos"}}selected{{/if_equal}}>Área onde se localiza comunidade remanescente de quilombos</option>
+                            <option value="A escola não está em área de localização diferenciada" {{#if_equal escola.localarea "A escola não está em área de localização diferenciada"}}selected{{/if_equal}}>A escola não está em área de localização diferenciada</option>
                         </select>    
                     </div>
                 </div>
@@ -361,12 +361,12 @@
                     <div class="form-group">
                         <label for="organizacaoescolar">Organização Escolar</label>
                         <select class="form-control" id="organizacaoescolar" name="organizacaoescolar" value="{{escola.organizacaoescolar}}">
-                            <option value="SERIADA" {{#if_equal escola.orgaoregional "SERIADA"}}selected{{/if_equal}}>SERIADA</option>
-                            <option value="MULTISERIADA"> {{#if_equal escola.orgaoregional "MULTISERIADA"}}selected{{/if_equal}}MULTISERIADA</option>
-                            <option value="SERIADA E MULTISERIADA" {{#if_equal escola.orgaoregional "SERIADA E MULTISERIADA"}}selected{{/if_equal}}>SERIADA E MULTISERIADA</option>
-                            <option value="ENSINO REGULAR" {{#if_equal escola.orgaoregional "ENSINO REGULAR"}}selected{{/if_equal}}>ENSINO REGULAR</option>
-                            <option value="CICLOS DE FORMAÇÃO HUMANA" {{#if_equal escola.orgaoregional "CICLOS DE FORMAÇÃO HUMANA"}}selected{{/if_equal}}>CICLOS DE FORMAÇÃO HUMANA</option>
-                            <option value="SER.\CICLO BÁSICO DE ALFABETIZAÇÃO" {{#if_equal escola.orgaoregional "SER.\CICLO BÁSICO DE ALFABETIZAÇÃO"}}selected{{/if_equal}}>SER.\CICLO BÁSICO DE ALFABETIZAÇÃO</option>
+                            <option value="SERIADA" {{#if_equal escola.organizacaoescolar "SERIADA"}}selected{{/if_equal}}>SERIADA</option>
+                            <option value="MULTISERIADA"> {{#if_equal escola.organizacaoescolar "MULTISERIADA"}}selected{{/if_equal}}MULTISERIADA</option>
+                            <option value="SERIADA E MULTISERIADA" {{#if_equal escola.organizacaoescolar "SERIADA E MULTISERIADA"}}selected{{/if_equal}}>SERIADA E MULTISERIADA</option>
+                            <option value="ENSINO REGULAR" {{#if_equal escola.organizacaoescolar "ENSINO REGULAR"}}selected{{/if_equal}}>ENSINO REGULAR</option>
+                            <option value="CICLOS DE FORMAÇÃO HUMANA" {{#if_equal escola.organizacaoescolar "CICLOS DE FORMAÇÃO HUMANA"}}selected{{/if_equal}}>CICLOS DE FORMAÇÃO HUMANA</option>
+                            <option value="SER.\CICLO BÁSICO DE ALFABETIZAÇÃO" {{#if_equal escola.organizacaoescolar "SER.\CICLO BÁSICO DE ALFABETIZAÇÃO"}}selected{{/if_equal}}>SER.\CICLO BÁSICO DE ALFABETIZAÇÃO</option>
                         </select>    
                     </div>
                 </div>
@@ -374,13 +374,13 @@
                     <div class="form-group">
                         <label for="dependenciaadm">Dependência Administrativa</label>
                         <select class="form-control" id="dependenciaadm" name="dependenciaadm" value="{{escola.dependenciaadm}}">
-                            <option value="REDE PÚBLICA MUNICIPAL" {{#if_equal escola.orgaoregional "REDE PÚBLICA MUNICIPAL"}}selected{{/if_equal}}>REDE PÚBLICA MUNICIPAL</option>
-                            <option value="REDE PÚBLICA ESTADUAL" {{#if_equal escola.orgaoregional "REDE PÚBLICA ESTADUAL"}}selected{{/if_equal}}>REDE PÚBLICA ESTADUAL</option>
-                            <option value="REDE PÚBLICA FEDERAL" {{#if_equal escola.orgaoregional "REDE PÚBLICA FEDERAL"}}selected{{/if_equal}}>REDE PÚBLICA FEDERAL</option>
-                            <option value="REDE PRIVADA PARTICULAR" {{#if_equal escola.orgaoregional "REDE PRIVADA PARTICULAR"}}selected{{/if_equal}}>REDE PRIVADA PARTICULAR</option>
-                            <option value="REDE PRIVADA COMUNITÁRIA" {{#if_equal escola.orgaoregional "REDE PRIVADA COMUNITÁRIA"}}selected{{/if_equal}}>REDE PRIVADA COMUNITÁRIA</option>
-                            <option value="REDE PRIVADA CONFESSIONAL" {{#if_equal escola.orgaoregional "REDE PRIVADA CONFESSIONAL"}}selected{{/if_equal}}>REDE PRIVADA CONFESSIONAL</option>
-                            <option value="REDE PRIVADA FILANTRÓPICA" {{#if_equal escola.orgaoregional "REDE PRIVADA FILANTRÓPICA"}}selected{{/if_equal}}>REDE PRIVADA FILANTRÓPICA</option>
+                            <option value="REDE PÚBLICA MUNICIPAL" {{#if_equal escola.dependenciaadm "REDE PÚBLICA MUNICIPAL"}}selected{{/if_equal}}>REDE PÚBLICA MUNICIPAL</option>
+                            <option value="REDE PÚBLICA ESTADUAL" {{#if_equal escola.dependenciaadm "REDE PÚBLICA ESTADUAL"}}selected{{/if_equal}}>REDE PÚBLICA ESTADUAL</option>
+                            <option value="REDE PÚBLICA FEDERAL" {{#if_equal escola.dependenciaadm "REDE PÚBLICA FEDERAL"}}selected{{/if_equal}}>REDE PÚBLICA FEDERAL</option>
+                            <option value="REDE PRIVADA PARTICULAR" {{#if_equal escola.dependenciaadm "REDE PRIVADA PARTICULAR"}}selected{{/if_equal}}>REDE PRIVADA PARTICULAR</option>
+                            <option value="REDE PRIVADA COMUNITÁRIA" {{#if_equal escola.dependenciaadm "REDE PRIVADA COMUNITÁRIA"}}selected{{/if_equal}}>REDE PRIVADA COMUNITÁRIA</option>
+                            <option value="REDE PRIVADA CONFESSIONAL" {{#if_equal escola.dependenciaadm "REDE PRIVADA CONFESSIONAL"}}selected{{/if_equal}}>REDE PRIVADA CONFESSIONAL</option>
+                            <option value="REDE PRIVADA FILANTRÓPICA" {{#if_equal escola.dependenciaadm "REDE PRIVADA FILANTRÓPICA"}}selected{{/if_equal}}>REDE PRIVADA FILANTRÓPICA</option>
                         </select>    
                     </div>
                 </div>
@@ -388,18 +388,18 @@
                     <div class="form-group">
                         <label for="turnosoferecidos">Turnos Oferecidos</label>
                         <select class="form-control" id="turnosoferecidos" name="turnosoferecidos" value="{{escola.turnosoferecidos}}">
-                            <option value="MATUTINO" {{#if_equal escola.orgaoregional "MATUTINO"}}selected{{/if_equal}}>MATUTINO</option>
-                            <option value="VESPERTINO" {{#if_equal escola.orgaoregional "VESPERTINO"}}selected{{/if_equal}}>VESPERTINO</option>
-                            <option value="NOTURNO" {{#if_equal escola.orgaoregional "NOTURNO"}}selected{{/if_equal}}>NOTURNO</option>
-                            <option value="DIURNO" {{#if_equal escola.orgaoregional "DIURNO"}}selected{{/if_equal}}>DIURNO</option>
-                            <option value="MATUTINO E VESPERTINO" {{#if_equal escola.orgaoregional "MATUTINO E VESPERTINO"}}selected{{/if_equal}}>MATUTINO E VESPERTINO</option>
-                            <option value="MATUTINO E NOTURNO" {{#if_equal escola.orgaoregional "MATUTINO E NOTURNO"}}selected{{/if_equal}}>MATUTINO E NOTURNO</option>
-                            <option value="VESPERTINO E NOTURNO" {{#if_equal escola.orgaoregional "VESPERTINO E NOTURNO"}}selected{{/if_equal}}>VESPERTINO E NOTURNO</option>
-                            <option value="MATUTINO, VESPERTINO E NOTURNO" {{#if_equal escola.orgaoregional "MATUTINO, VESPERTINO E NOTURNO"}}selected{{/if_equal}}>MATUTINO, VESPERTINO E NOTURNO</option>
-                            <option value="INTENGRAL" {{#if_equal escola.orgaoregional "INTENGRAL"}}selected{{/if_equal}}>INTENGRAL</option>
-                            <option value="INTERMEDIARIO" {{#if_equal escola.orgaoregional "INTERMEDIARIO"}}selected{{/if_equal}}>INTERMEDIARIO</option>
-                            <option value="MATUTINO E VESPERTINO INTEGRAL" {{#if_equal escola.orgaoregional "MATUTINO E VESPERTINO INTEGRAL"}}selected{{/if_equal}}>MATUTINO E VESPERTINO INTEGRAL</option>
-                            <option value="ALTERNANCIA" {{#if_equal escola.orgaoregional "ALTERNANCIA"}}selected{{/if_equal}}>ALTERNANCIA</option>
+                            <option value="MATUTINO" {{#if_equal escola.turnosoferecidos "MATUTINO"}}selected{{/if_equal}}>MATUTINO</option>
+                            <option value="VESPERTINO" {{#if_equal escola.turnosoferecidos "VESPERTINO"}}selected{{/if_equal}}>VESPERTINO</option>
+                            <option value="NOTURNO" {{#if_equal escola.turnosoferecidos "NOTURNO"}}selected{{/if_equal}}>NOTURNO</option>
+                            <option value="DIURNO" {{#if_equal escola.turnosoferecidos "DIURNO"}}selected{{/if_equal}}>DIURNO</option>
+                            <option value="MATUTINO E VESPERTINO" {{#if_equal escola.turnosoferecidos "MATUTINO E VESPERTINO"}}selected{{/if_equal}}>MATUTINO E VESPERTINO</option>
+                            <option value="MATUTINO E NOTURNO" {{#if_equal escola.turnosoferecidos "MATUTINO E NOTURNO"}}selected{{/if_equal}}>MATUTINO E NOTURNO</option>
+                            <option value="VESPERTINO E NOTURNO" {{#if_equal escola.turnosoferecidos "VESPERTINO E NOTURNO"}}selected{{/if_equal}}>VESPERTINO E NOTURNO</option>
+                            <option value="MATUTINO, VESPERTINO E NOTURNO" {{#if_equal escola.turnosoferecidos "MATUTINO, VESPERTINO E NOTURNO"}}selected{{/if_equal}}>MATUTINO, VESPERTINO E NOTURNO</option>
+                            <option value="INTENGRAL" {{#if_equal escola.turnosoferecidos "INTENGRAL"}}selected{{/if_equal}}>INTENGRAL</option>
+                            <option value="INTERMEDIARIO" {{#if_equal escola.turnosoferecidos "INTERMEDIARIO"}}selected{{/if_equal}}>INTERMEDIARIO</option>
+                            <option value="MATUTINO E VESPERTINO INTEGRAL" {{#if_equal escola.turnosoferecidos "MATUTINO E VESPERTINO INTEGRAL"}}selected{{/if_equal}}>MATUTINO E VESPERTINO INTEGRAL</option>
+                            <option value="ALTERNANCIA" {{#if_equal escola.turnosoferecidos "ALTERNANCIA"}}selected{{/if_equal}}>ALTERNANCIA</option>
                         </select>    
                     </div>
                 </div>
@@ -511,8 +511,8 @@
                     <div class="form-group">
                         <label for="tratamento">Tratamento</label>
                         <select class="form-control" id="tratamento" name="tratamento" value="{{escola.tratamento}}">
-                            <option value="Diretor" {{#if_equal escola.orgaoregional "Diretor"}}selected{{/if_equal}}>Diretor</option>
-                            <option value="Diretora" {{#if_equal escola.orgaoregional "Diretora"}}selected{{/if_equal}}>Diretora</option>
+                            <option value="Diretor" {{#if_equal escola.tratamento "Diretor"}}selected{{/if_equal}}>Diretor</option>
+                            <option value="Diretora" {{#if_equal escola.tratamento "Diretora"}}selected{{/if_equal}}>Diretora</option>
                         </select>    
                     </div>
                 </div>
@@ -534,10 +534,10 @@
                     <div class="form-group">
                         <label for="tratamentocoordenadorpedag">Tratamento</label>
                         <select class="form-control" id="tratamentocoordenadorpedag" name="tratamentocoordenadorpedag" value="{{escola.tratamentocoordenadorpedag}}">
-                            <option value="Coordenador" {{#if_equal escola.orgaoregional "Coordenador"}}selected{{/if_equal}}>Coordenador</option>
-                            <option value="Coordenadora" {{#if_equal escola.orgaoregional "Coordenadora"}}selected{{/if_equal}}>Coordenadora</option>
-                            <option value="Coordenador Pedagógico" {{#if_equal escola.orgaoregional "Coordenador Pedagógico"}}selected{{/if_equal}}>Coordenador Pedagógico</option>
-                            <option value="Coordenadora Pedagógica" {{#if_equal escola.orgaoregional "Coordenadora Pedagógica"}}selected{{/if_equal}}>Coordenadora Pedagógica</option>
+                            <option value="Coordenador" {{#if_equal escola.tratamentocoordenadorpedag "Coordenador"}}selected{{/if_equal}}>Coordenador</option>
+                            <option value="Coordenadora" {{#if_equal escola.tratamentocoordenadorpedag "Coordenadora"}}selected{{/if_equal}}>Coordenadora</option>
+                            <option value="Coordenador Pedagógico" {{#if_equal escola.tratamentocoordenadorpedag "Coordenador Pedagógico"}}selected{{/if_equal}}>Coordenador Pedagógico</option>
+                            <option value="Coordenadora Pedagógica" {{#if_equal escola.tratamentocoordenadorpedag "Coordenadora Pedagógica"}}selected{{/if_equal}}>Coordenadora Pedagógica</option>
                         </select>    
                     </div>
                 </div>
@@ -559,10 +559,10 @@
                     <div class="form-group">
                         <label for="tratamentocoordenadorsecret">Tratamento</label>
                         <select class="form-control" id="tratamentocoordenadorsecret" name="tratamentocoordenadorsecret" value="{{escola.tratamentocoordenadorsecret}}">
-                            <option value="Secretário" {{#if_equal escola.orgaoregional "Secretário"}}selected{{/if_equal}}>Secretário</option>
-                            <option value="Secretária" {{#if_equal escola.orgaoregional "Secretária"}}selected{{/if_equal}}>Secretária</option>
-                            <option value="Coordenador Secretário" {{#if_equal escola.orgaoregional "Coordenador Secretário"}}selected{{/if_equal}}>Coordenador Secretário</option>
-                            <option value="Coordenador Secretária" {{#if_equal escola.orgaoregional "Coordenador Secretária"}}selected{{/if_equal}}>Coordenadora Secretária</option>
+                            <option value="Secretário" {{#if_equal escola.tratamentocoordenadorsecret "Secretário"}}selected{{/if_equal}}>Secretário</option>
+                            <option value="Secretária" {{#if_equal escola.tratamentocoordenadorsecret "Secretária"}}selected{{/if_equal}}>Secretária</option>
+                            <option value="Coordenador Secretário" {{#if_equal escola.tratamentocoordenadorsecret "Coordenador Secretário"}}selected{{/if_equal}}>Coordenador Secretário</option>
+                            <option value="Coordenador Secretária" {{#if_equal escola.tratamentocoordenadorsecret "Coordenador Secretária"}}selected{{/if_equal}}>Coordenadora Secretária</option>
                         </select>    
                     </div>
                 </div>
