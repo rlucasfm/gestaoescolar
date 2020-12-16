@@ -1,17 +1,11 @@
-<form id="formCadastro">
-    <div class="row">
-        <div class="mx-auto">
-            <button type="submit" class="btn btn-primary">Cursos Específicos</button> 
-            <button type="submit" class="btn btn-primary">Escolaridade</button> 
-            <button type="submit" class="btn btn-primary">Formação Superior</button> 
-            <button type="submit" class="btn btn-primary">Pós Graduação</button> 
-            <button type="submit" class="btn btn-primary">Ocorrencias</button> 
-            <button type="submit" class="btn btn-primary">Lotação de Profissionais</button>
-            <button type="submit" class="btn btn-primary">Perfil de Acesso</button>  
-        </div>
-    </div>
-    <div class="card mt-4">
-        <div class="card-body">
+<h3 style="color: darkblue;" class="mb-4">Edição de Profissional</h3>
+
+<form id="formEditar">
+    <input type="hidden" name="id" id="id" value="{{profissional._id}}"> 
+<div class="card">
+<div class="card-body">
+    <div class="card">
+        <div class="card-body mt-4">
             <h5 class="card-title" style="color:darkblue">INFORMAÇÕES DO PROFISSIONAL</h5>
             <hr>
             <div class="row">
@@ -24,25 +18,25 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cpf">CPF</label>
-                        <input type="text" class="form-control cpf" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                        <input type="text" class="form-control cpf" id="cpf" name="cpf" placeholder="000.000.000-00" value="{{profissional.cpf}}" required>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" value="{{profissional.nome}}" required>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="matriculaProfissional">Matricula</label>
-                        <input type="text" class="form-control" id="matriculaProfissional" name="matriculaProfissional">
+                        <input type="text" class="form-control" id="matriculaProfissional" name="matriculaProfissional" value="{{profissional.matriculaProfissional}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="pasepprofissional">NIS/PIS/PASEP</label>
-                        <input type="text" class="form-control" id="pasepprofissional" name="pasepprofissional">
+                        <input type="text" class="form-control" id="pasepprofissional" name="pasepprofissional" value="{{profissional.pasepprofissional}}">
                     </div>
                 </div>
                 <div class="col-sm-2 mt-4">
@@ -53,62 +47,61 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="rgprofissional">Rg</label>
-                        <input type="text" class="form-control" id="rgprofissional" name="rgprofissional" required>
+                        <input type="text" class="form-control" id="rgprofissional" name="rgprofissional" value="{{profissional.rgprofissional}}" required>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="orgemissor">Org. Emissor</label>
-                        <input type="text" class="form-control" id="orgemissor" name="orgemissor" required>
+                        <input type="text" class="form-control" id="orgemissor" name="orgemissor" value="{{profissional.orgemissor}}" required>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="uf">UF</label>
                         <select class="form-control" id="uf" name="uf">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="MA" {{#if_equal profissional.uf "MA"}}selected{{/if_equal}}>MA</option>
+                            <option value="AC" {{#if_equal profissional.uf "AC"}}selected{{/if_equal}}>AC</option>
+                            <option value="AL" {{#if_equal profissional.uf "AL"}}selected{{/if_equal}}>AL</option>
+                            <option value="AP" {{#if_equal profissional.uf "AP"}}selected{{/if_equal}}>AP</option>
+                            <option value="AM" {{#if_equal profissional.uf "AM"}}selected{{/if_equal}}>AM</option>
+                            <option value="BA" {{#if_equal profissional.uf "BA"}}selected{{/if_equal}}>BA</option>
+                            <option value="CE" {{#if_equal profissional.uf "CE"}}selected{{/if_equal}}>CE</option>
+                            <option value="DF" {{#if_equal profissional.uf "DF"}}selected{{/if_equal}}>DF</option>
+                            <option value="ES" {{#if_equal profissional.uf "ES"}}selected{{/if_equal}}>ES</option>
+                            <option value="GO" {{#if_equal profissional.uf "GO"}}selected{{/if_equal}}>GO</option>
+                            <option value="MT" {{#if_equal profissional.uf "MT"}}selected{{/if_equal}}>MT</option>
+                            <option value="MS" {{#if_equal profissional.uf "MS"}}selected{{/if_equal}}>MS</option>
+                            <option value="MG" {{#if_equal profissional.uf "MG"}}selected{{/if_equal}}>MG</option>
+                            <option value="PA" {{#if_equal profissional.uf "PA"}}selected{{/if_equal}}>PA</option>
+                            <option value="PB" {{#if_equal profissional.uf "PB"}}selected{{/if_equal}}>PB</option>
+                            <option value="PR" {{#if_equal profissional.uf "PR"}}selected{{/if_equal}}>PR</option>
+                            <option value="PE" {{#if_equal profissional.uf "PE"}}selected{{/if_equal}}>PE</option>
+                            <option value="PI" {{#if_equal profissional.uf "PI"}}selected{{/if_equal}}>PI</option>
+                            <option value="RJ" {{#if_equal profissional.uf "RJ"}}selected{{/if_equal}}>RJ</option>
+                            <option value="RN" {{#if_equal profissional.uf "RN"}}selected{{/if_equal}}>RN</option>
+                            <option value="RS" {{#if_equal profissional.uf "RS"}}selected{{/if_equal}}>RS</option>
+                            <option value="RO" {{#if_equal profissional.uf "RO"}}selected{{/if_equal}}>RO</option>
+                            <option value="RR" {{#if_equal profissional.uf "RR"}}selected{{/if_equal}}>RR</option>
+                            <option value="SC" {{#if_equal profissional.uf "SC"}}selected{{/if_equal}}>SC</option>
+                            <option value="SP" {{#if_equal profissional.uf "SP"}}selected{{/if_equal}}>SP</option>
+                            <option value="SE" {{#if_equal profissional.uf "SE"}}selected{{/if_equal}}>SE</option>
+                            <option value="TO" {{#if_equal profissional.uf "TO"}}selected{{/if_equal}}>TO</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="dataDoc">Data emissão</label>
-                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" required>
+                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" value="{{profissional.dataDoc}}" required>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="sexo">Sexo</label>
                         <select class="form-control" id="sexo" name="sexo">
-                            <option value="MASCULINO">MASCULINO</option>
-                            <option value="FEMININO">FEMININO</option>
+                            <option value="MASCULINO" {{#if_equal profissional.sexo "MASCULINO"}}selected{{/if_equal}}>MASCULINO</option>
+                            <option value="FEMININO" {{#if_equal profissional.sexo "FEMININO"}}selected{{/if_equal}}>FEMININO</option>
                         </select>
                     </div>
                 </div>      
@@ -117,41 +110,40 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="dataNasc">Data Nascimento</label>
-                        <input type="date" class="form-control" id="dataNasc" name="dataNasc">
+                        <input type="date" class="form-control" id="dataNasc" name="dataNasc" value="{{profissional.dataNasc}}">
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="naturalidade">Naturalidade</label>
                         <select class="form-control" id="naturalidade" name="naturalidade">
-                            <option value="AC">Acre</option>
-                            <option value="AL">Alagoas</option>
-                            <option value="AP">Amapá</option>
-                            <option value="AM">Amazonas</option>
-                            <option value="BA">Bahia</option>
-                            <option value="CE">Ceará</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="ES">Espírito Santo</option>
-                            <option value="GO">Goiás</option>
-                            <option value="MA">Maranhão</option>
-                            <option value="MT">Mato Grosso</option>
-                            <option value="MS">Mato Grosso do Sul</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="PA">Pará</option>
-                            <option value="PB">Paraíba</option>
-                            <option value="PR">Paraná</option>
-                            <option value="PE">Pernambuco</option>
-                            <option value="PI">Piauí</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="RN">Rio Grande do Norte</option>
-                            <option value="RS">Rio Grande do Sul</option>
-                            <option value="RO">Rondônia</option>
-                            <option value="RR">Roraima</option>
-                            <option value="SC">Santa Catarina</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="SE">Sergipe</option>
-                            <option value="TO">Tocantins</option>
-                            <option value="EX">Estrangeiro</option>
+                            <option value="MA" {{#if_equal profissional.naturalidade "MA"}}selected{{/if_equal}}>Maranhão</option>
+                            <option value="AC" {{#if_equal profissional.naturalidade "AC"}}selected{{/if_equal}}>Acre</option>
+                            <option value="AL" {{#if_equal profissional.naturalidade "AL"}}selected{{/if_equal}}>Alagoas</option>
+                            <option value="AP" {{#if_equal profissional.naturalidade "AP"}}selected{{/if_equal}}>Amapá</option>
+                            <option value="AM" {{#if_equal profissional.naturalidade "AM"}}selected{{/if_equal}}>Amazonas</option>
+                            <option value="BA" {{#if_equal profissional.naturalidade "BA"}}selected{{/if_equal}}>Bahia</option>
+                            <option value="CE" {{#if_equal profissional.naturalidade "CE"}}selected{{/if_equal}}>Ceará</option>
+                            <option value="DF" {{#if_equal profissional.naturalidade "DF"}}selected{{/if_equal}}Distrito Federal</option>
+                            <option value="ES" {{#if_equal profissional.naturalidade "ES"}}selected{{/if_equal}}>Espírito Santo</option>
+                            <option value="GO" {{#if_equal profissional.naturalidade "GO"}}selected{{/if_equal}}>Goiás</option>
+                            <option value="MT" {{#if_equal profissional.naturalidade "MT"}}selected{{/if_equal}}>Mato Grosso</option>
+                            <option value="MS" {{#if_equal profissional.naturalidade "MS"}}selected{{/if_equal}}>Mato Grosso do Sul</option>
+                            <option value="MG" {{#if_equal profissional.naturalidade "MG"}}selected{{/if_equal}}>Minas Gerais</option>
+                            <option value="PA" {{#if_equal profissional.naturalidade "PA"}}selected{{/if_equal}}>Pará</option>
+                            <option value="PB" {{#if_equal profissional.naturalidade "PB"}}selected{{/if_equal}}>Paraíba</option>
+                            <option value="PR" {{#if_equal profissional.naturalidade "PR"}}selected{{/if_equal}}>Paraná</option>
+                            <option value="PE" {{#if_equal profissional.naturalidade "PE"}}selected{{/if_equal}}>Pernambuco</option>
+                            <option value="PI" {{#if_equal profissional.naturalidade "PI"}}selected{{/if_equal}}>Piauí</option>
+                            <option value="RJ" {{#if_equal profissional.naturalidade "RJ"}}selected{{/if_equal}}>Rio de Janeiro</option>
+                            <option value="RN" {{#if_equal profissional.naturalidade "RN"}}selected{{/if_equal}}>Rio Grande do Norte</option>
+                            <option value="RS" {{#if_equal profissional.naturalidade "RS"}}selected{{/if_equal}}>Rio Grande do Sul</option>
+                            <option value="RO" {{#if_equal profissional.naturalidade "RO"}}selected{{/if_equal}}>Rondônia</option>
+                            <option value="RR" {{#if_equal profissional.naturalidade "RR"}}selected{{/if_equal}}>Roraima</option>
+                            <option value="SC" {{#if_equal profissional.naturalidade "SC"}}selected{{/if_equal}}>Santa Catarina</option>
+                            <option value="SP" {{#if_equal profissional.naturalidade "SP"}}selected{{/if_equal}}>São Paulo</option>
+                            <option value="SE" {{#if_equal profissional.naturalidade "SE"}}selected{{/if_equal}}>Sergipe</option>
+                            <option value="TO" {{#if_equal profissional.naturalidade "TO"}}selected{{/if_equal}}>Tocantins</option>
                         </select>
                     </div>
                 </div>
@@ -159,14 +151,14 @@
                     <div class="form-group">
                     <label for="municipio">Município</label>
                     <select class="form-control" id="municipio" name="municipio">
-                        <option value="AÇAILÂNDIA">AÇAILÂNDIA</option>
-                        <option value="ITINGA">ITINGA</option>
-                        <option value="SÃO FRANCISCO DO BREJÃO">SÃO FRANCISCO DO BREJÃO</option>
-                        <option value="BOM JESUS DA SELVA">BOM JESUS DA SELVA</option>
-                        <option value="CIDELÂNDIA">CIDELÂNDIA</option>
-                        <option value="VILA NOVA DOS MARTÍRIOS">VILA NOVA DOS MARTÍRIOS</option>
-                        <option value="SÃO PEDRO DA ÁGUA BRANCA">SÃO PEDRO DA ÁGUA BRANCA</option>
-                        <option value="BURITICUPU">BURITICUPU</option>
+                        <option value="AÇAILÂNDIA" {{#if_equal profissional.municipio "AÇAILÂNDIA"}}selected{{/if_equal}}>AÇAILÂNDIA</option>
+                        <option value="ITINGA" {{#if_equal profissional.municipio "ITINGA"}}selected{{/if_equal}}>ITINGA</option>
+                        <option value="SÃO FRANCISCO DO BREJÃO" {{#if_equal profissional.municipio "SÃO FRANCISCO DO BREJÃO"}}selected{{/if_equal}}>SÃO FRANCISCO DO BREJÃO</option>
+                        <option value="BOM JESUS DA SELVA" {{#if_equal profissional.municipio "BOM JESUS DA SELVA"}}selected{{/if_equal}}>BOM JESUS DA SELVA</option>
+                        <option value="CIDELÂNDIA" {{#if_equal profissional.municipio "CIDELÂNDIA"}}selected{{/if_equal}}>CIDELÂNDIA</option>
+                        <option value="VILA NOVA DOS MARTÍRIOS" {{#if_equal profissional.municipio "VILA NOVA DOS MARTÍRIOS"}}selected{{/if_equal}}>VILA NOVA DOS MARTÍRIOS</option>
+                        <option value="SÃO PEDRO DA ÁGUA BRANCA" {{#if_equal profissional.municipio "SÃO PEDRO DA ÁGUA BRANCA"}}selected{{/if_equal}}>SÃO PEDRO DA ÁGUA BRANCA</option>
+                        <option value="BURITICUPU" {{#if_equal profissional.municipio "BURITICUPU"}}selected{{/if_equal}}>BURITICUPU</option>
                     </select>
                     </div>
                 </div>
@@ -174,9 +166,9 @@
                     <div class="form-group">
                         <label for="nacionalidade">Nacionalidade</label>
                         <select class="form-control" id="nacionalidade" name="nacionalidade">
-                            <option value="BRASILEIRA">Brasileira</option>
-                            <option value="BRASILEIRA NATURALIZADO">Brasileira naturalizado</option>
-                            <option value="ESTRANGEIRO">Estrangeiro</option>
+                            <option value="BRASILEIRA" {{#if_equal profissional.nacionalidade "BRASILEIRA"}}selected{{/if_equal}}>Brasileira</option>
+                            <option value="BRASILEIRA NATURALIZADO" {{#if_equal profissional.nacionalidade "BRASILEIRA NATURALIZADO"}}selected{{/if_equal}}>Brasileira naturalizado</option>
+                            <option value="ESTRANGEIRO" {{#if_equal profissional.nacionalidade "ESTRANGEIRO"}}selected{{/if_equal}}>Estrangeiro</option>
                         </select>
                     </div>
                 </div>   
@@ -186,7 +178,7 @@
                     <div class="form-group">
                         <label for="pais">País de origem</label>
                         <select class="form-control" id="pais" name="pais">                            
-                            <option value="África do Sul">África do Sul</option>
+                            <option value="África do Sul"> África do Sul</option>
                             <option value="Albânia">Albânia</option>
                             <option value="Alemanha">Alemanha</option>
                             <option value="Andorra">Andorra</option>
@@ -367,13 +359,13 @@
                     <div class="form-group">
                         <label for="cor">Cor/Raça</label>
                         <select class="form-control" id="cor" name="cor">
-                            <option value="BRANCA">BRANCA</option>
-                            <option value="PRETA">PRETA</option>
-                            <option value="PARDA">PARDA</option>
-                            <option value="AMARELA">AMARELA</option>
-                            <option value="INDÍGENA">INDÍGENA</option>
-                            <option value="QUILOMBOLA">QUILOMBOLA</option>
-                            <option value="NÃO DECLARADA">NÃO DECLARADA</option>                            
+                            <option value="BRANCA" {{#if_equal profissional.cor "BRANCA"}}selected{{/if_equal}}>BRANCA</option>
+                            <option value="PRETA" {{#if_equal profissional.cor "PRETA"}}selected{{/if_equal}}>PRETA</option>
+                            <option value="PARDA" {{#if_equal profissional.cor "PARDA"}}selected{{/if_equal}}>PARDA</option>
+                            <option value="AMARELA" {{#if_equal profissional.cor "AMARELA"}}selected{{/if_equal}}>AMARELA</option>
+                            <option value="INDÍGENA" {{#if_equal profissional.cor "INDÍGENA"}}selected{{/if_equal}}>INDÍGENA</option>
+                            <option value="QUILOMBOLA" {{#if_equal profissional.cor "QUILOMBOLA"}}selected{{/if_equal}}>QUILOMBOLA</option>
+                            <option value="NÃO DECLARADA" {{#if_equal profissional.cor "NÃO DECLARADA"}}selected{{/if_equal}}>NÃO DECLARADA</option>                            
                         </select>
                     </div>
                 </div>
@@ -381,17 +373,17 @@
                     <div class="form-group">
                         <label for="estadocivil">Estado Civil</label>
                         <select class="form-control" id="estadocivil" name="estadocivil">
-                            <option value="solteiro">Solteiro(a)</option>
-                            <option value="casado">Casado(a)</option>
-                            <option value="separado">Separado(a)</option>
-                            <option value="divorciado">Divorciado(a)</option>                           
+                            <option value="solteiro" {{#if_equal profissional.estadocivil "solteiro"}}selected{{/if_equal}}>Solteiro(a)</option>
+                            <option value="casado" {{#if_equal profissional.estadocivil "casado"}}selected{{/if_equal}}>Casado(a)</option>
+                            <option value="separado" {{#if_equal profissional.estadocivil "separado"}}selected{{/if_equal}}>Separado(a)</option>
+                            <option value="divorciado" {{#if_equal profissional.estadocivil "divorciado"}}selected{{/if_equal}}>Divorciado(a)</option>                           
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="conjugue">Conjugue</label>
-                        <input type="text" class="form-control" id="conjugue" name="conjugue">
+                        <input type="text" class="form-control" id="conjugue" name="conjugue" value="{{profissional.conjugue}}">
                     </div>
                 </div>
             </div>
@@ -399,13 +391,13 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="mae">Nome da Mãe</label>
-                        <input type="text" class="form-control" id="mae" name="mae">
+                        <input type="text" class="form-control" id="mae" name="mae" value="{{profissional.mae}}">
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label for="pai">Nome do Pai</label>
-                        <input type="text" class="form-control" id="pai" name="pai">
+                        <input type="text" class="form-control" id="pai" name="pai" value="{{profissional.pai}}">
                     </div>
                 </div>
             </div>
@@ -413,39 +405,39 @@
                  <div class="col-sm-3">
                     <div class="form-group">
                         <label for="dataadmissao">Data Admissão</label>
-                        <input type="date" class="form-control" id="dataadmissao" name="dataadmissao">
+                        <input type="date" class="form-control" id="dataadmissao" name="dataadmissao" value="{{profissional.dataadmissao}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="datademissao">Data Demissão</label>
-                        <input type="date" class="form-control" id="datademissao" name="datademissao">
+                        <input type="date" class="form-control" id="datademissao" name="datademissao" value="{{profissional.datademissao}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cargo">Cargo</label>
-                        <input type="text" class="form-control" id="cargo" name="cargo">
+                        <input type="text" class="form-control" id="cargo" name="cargo" value="{{profissional.cargo}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="chsemanais">CH Semanais</label>
-                        <input type="text" class="form-control" id="chsemanais" name="chsemanais">
+                        <input type="text" class="form-control" id="chsemanais" name="chsemanais" value="{{profissional.chsemanais}}">
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="necessidade">Necessiadade Especial</label>
                         <select class="form-control" id="necessidade" name="necessidade">
-                            <option value="Baixavisao">Baixa Visão</option>
-                            <option value="Cegueira">Cegueira</option>
-                            <option value="Deficienciaauditiva">Deficiência Auditiva</option>
-                            <option value="Deficienciafisica">Deficiência Física</option>
-                            <option value="Deficienciaintelectual">Deficiência Intelectual</option> 
-                            <option value="Deficienciamultipla">Deficiência Multipla</option> 
-                            <option value="Surdez">Surdez</option>
-                            <option value="surocegueira">Surdocegueira</option>                         
+                            <option value="Baixavisao" {{#if_equal profissional.necessidade "Baixavisao"}}selected{{/if_equal}}>Baixa Visão</option>
+                            <option value="Cegueira" {{#if_equal profissional.necessidade "Cegueira"}}selected{{/if_equal}}>Cegueira</option>
+                            <option value="Deficienciaauditiva" {{#if_equal profissional.necessidade "Deficienciaauditiva"}}selected{{/if_equal}}>Deficiência Auditiva</option>
+                            <option value="Deficienciafisica" {{#if_equal profissional.necessidade "Deficienciafisica"}}selected{{/if_equal}}>Deficiência Física</option>
+                            <option value="Deficienciaintelectual" {{#if_equal profissional.necessidade "Deficienciaintelectual"}}selected{{/if_equal}}>Deficiência Intelectual</option> 
+                            <option value="Deficienciamultipla" {{#if_equal profissional.necessidade "Deficienciamultipla"}}selected{{/if_equal}}>Deficiência Multipla</option> 
+                            <option value="Surdez" {{#if_equal profissional.necessidade "Surdez"}}selected{{/if_equal}}>Surdez</option>
+                            <option value="surocegueira" {{#if_equal profissional.necessidade "surocegueira"}}selected{{/if_equal}}>Surdocegueira</option>                         
                         </select>
                     </div>
                 </div>
@@ -455,8 +447,8 @@
                     <div class="form-group">
                         <label for="tipoendereco">Tipo de endereço</label>
                         <select class="form-control" id="tipoendereco" name="tipoendereco">
-                            <option value="zonaurbana">Zona Urbana</option>
-                            <option value="zonarural">Zona Rural</option>                        
+                            <option value="zonaurbana" {{#if_equal profissional.tipoendereco "zonaurbana"}}selected{{/if_equal}}>Zona Urbana</option>
+                            <option value="zonarural" {{#if_equal profissional.tipoendereco "zonarural"}}selected{{/if_equal}}>Zona Rural</option>                        
                         </select>
                     </div>
                 </div>
@@ -489,13 +481,13 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="email@email.com" required>
+                        <input type="text" class="form-control" id="email" name="email" placeholder="email@email.com" value="{{profissional.email}}">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control" id="senha" name="senha" required>
+                        <input type="password" class="form-control" id="senha" name="senha" value="{{profissional.senha}}">
                     </div>
                 </div>
                 <div class="col-sm-4 mt-4">
@@ -532,31 +524,31 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cep">CEP</label>
-                    <inp    ut type="text" class="form-control cep" id="cep" name="cep">
+                    <inp    ut type="text" class="form-control cep" id="cep" name="cep" value="{{profissional.cep}}">
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="endereco">Endereço</label>
-                        <input type="text" class="form-control" id="endereco" name="endereco">
+                        <input type="text" class="form-control" id="endereco" name="endereco" value="{{profissional.endereco}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="bairro">Bairro</label>
-                        <input type="text" class="form-control" id="bairro" name="bairro">
+                        <input type="text" class="form-control" id="bairro" name="bairro" value="{{profissional.bairro}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="numero">Numero</label>
-                        <input type="text" class="form-control" id="numero" name="numero">
+                        <input type="text" class="form-control" id="numero" name="numero" value="{{profissional.numero}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="complemento">Complemento</label>
-                        <input type="text" class="form-control" id="complemento" name="complemento">
+                        <input type="text" class="form-control" id="complemento" name="complemento" value="{{profissional.complemento}}">
                     </div>
                 </div>  
             </div>
@@ -565,34 +557,34 @@
                     <div class="form-group">
                         <label for="ufEndereco">UF</label>
                         <select class="form-control" id="ufEndereco" name="ufEndereco">
-                            <option value="AC">AC</option>
-                            <option value="AL">AL</option>
-                            <option value="AP">AP</option>
-                            <option value="AM">AM</option>
-                            <option value="BA">BA</option>
-                            <option value="CE">CE</option>
-                            <option value="DF">DF</option>
-                            <option value="ES">ES</option>
-                            <option value="GO">GO</option>
-                            <option value="MA">MA</option>
-                            <option value="MT">MT</option>
-                            <option value="MS">MS</option>
-                            <option value="MG">MG</option>
-                            <option value="PA">PA</option>
-                            <option value="PB">PB</option>
-                            <option value="PR">PR</option>
-                            <option value="PE">PE</option>
-                            <option value="PI">PI</option>
-                            <option value="RJ">RJ</option>
-                            <option value="RN">RN</option>
-                            <option value="RS">RS</option>
-                            <option value="RO">RO</option>
-                            <option value="RR">RR</option>
-                            <option value="SC">SC</option>
-                            <option value="SP">SP</option>
-                            <option value="SE">SE</option>
-                            <option value="TO">TO</option>
-                            <option value="EX">EX</option>
+                            <option value="MA" {{#if_equal profissional.ufEndereco "MA"}}selected{{/if_equal}}>MA</option>
+                            <option value="AC" {{#if_equal profissional.ufEndereco "AC"}}selected{{/if_equal}}>AC</option>
+                            <option value="AL" {{#if_equal profissional.ufEndereco "AL"}}selected{{/if_equal}}>AL</option>
+                            <option value="AP" {{#if_equal profissional.ufEndereco "AP"}}selected{{/if_equal}}>AP</option>
+                            <option value="AM" {{#if_equal profissional.ufEndereco "AM"}}selected{{/if_equal}}>AM</option>
+                            <option value="BA" {{#if_equal profissional.ufEndereco "BA"}}selected{{/if_equal}}>BA</option>
+                            <option value="CE" {{#if_equal profissional.ufEndereco "CE"}}selected{{/if_equal}}>CE</option>
+                            <option value="DF" {{#if_equal profissional.ufEndereco "DF"}}selected{{/if_equal}}>DF</option>
+                            <option value="ES" {{#if_equal profissional.ufEndereco "ES"}}selected{{/if_equal}}>ES</option>
+                            <option value="GO" {{#if_equal profissional.ufEndereco "GO"}}selected{{/if_equal}}>GO</option>
+                            <option value="MT" {{#if_equal profissional.ufEndereco "MT"}}selected{{/if_equal}}>MT</option>
+                            <option value="MS" {{#if_equal profissional.ufEndereco "MS"}}selected{{/if_equal}}>MS</option>
+                            <option value="MG" {{#if_equal profissional.ufEndereco "MG"}}selected{{/if_equal}}>MG</option>
+                            <option value="PA" {{#if_equal profissional.ufEndereco "PA"}}selected{{/if_equal}}>PA</option>
+                            <option value="PB" {{#if_equal profissional.ufEndereco "PB"}}selected{{/if_equal}}>PB</option>
+                            <option value="PR" {{#if_equal profissional.ufEndereco "PR"}}selected{{/if_equal}}>PR</option>
+                            <option value="PE" {{#if_equal profissional.ufEndereco "PE"}}selected{{/if_equal}}>PE</option>
+                            <option value="PI" {{#if_equal profissional.ufEndereco "PI"}}selected{{/if_equal}}>PI</option>
+                            <option value="RJ" {{#if_equal profissional.ufEndereco "RJ"}}selected{{/if_equal}}>RJ</option>
+                            <option value="RN" {{#if_equal profissional.ufEndereco "RN"}}selected{{/if_equal}}>RN</option>
+                            <option value="RS" {{#if_equal profissional.ufEndereco "RS"}}selected{{/if_equal}}>RS</option>
+                            <option value="RO" {{#if_equal profissional.ufEndereco "RO"}}selected{{/if_equal}}>RO</option>
+                            <option value="RR" {{#if_equal profissional.ufEndereco "RR"}}selected{{/if_equal}}>RR</option>
+                            <option value="SC" {{#if_equal profissional.ufEndereco "SC"}}selected{{/if_equal}}>SC</option>
+                            <option value="SP" {{#if_equal profissional.ufEndereco "SP"}}selected{{/if_equal}}>SP</option>
+                            <option value="SE" {{#if_equal profissional.ufEndereco "SE"}}selected{{/if_equal}}>SE</option>
+                            <option value="TO" {{#if_equal profissional.ufEndereco "TO"}}selected{{/if_equal}}>TO</option>
+                            <option value="EX" {{#if_equal profissional.ufEndereco "EX"}}selected{{/if_equal}}>EX</option>
                         </select>
                     </div>
                 </div>
@@ -600,27 +592,27 @@
                     <div class="form-group">
                     <label for="municipiomoradia">Município</label>
                     <select class="form-control" id="municipiomoradia" name="municipiomoradia">
-                        <option value="AÇAILÂNDIA">AÇAILÂNDIA</option>
-                        <option value="ITINGA">ITINGA</option>
-                        <option value="SÃO FRANCISCO DO BREJÃO">SÃO FRANCISCO DO BREJÃO</option>
-                        <option value="BOM JESUS DA SELVA">BOM JESUS DA SELVA</option>
-                        <option value="CIDELÂNDIA">CIDELÂNDIA</option>
-                        <option value="VILA NOVA DOS MARTÍRIOS">VILA NOVA DOS MARTÍRIOS</option>
-                        <option value="SÃO PEDRO DA ÁGUA BRANCA">SÃO PEDRO DA ÁGUA BRANCA</option>
-                        <option value="BURITICUPU">BURITICUPU</option>
+                        <option value="AÇAILÂNDIA" {{#if_equal profissional.municipiomoradia "AÇAILÂNDIA"}}selected{{/if_equal}}>AÇAILÂNDIA</option>
+                        <option value="ITINGA" {{#if_equal profissional.municipiomoradia "ITINGA"}}selected{{/if_equal}}>ITINGA</option>
+                        <option value="SÃO FRANCISCO DO BREJÃO" {{#if_equal profissional.municipiomoradia "SÃO FRANCISCO DO BREJÃO"}}selected{{/if_equal}}>SÃO FRANCISCO DO BREJÃO</option>
+                        <option value="BOM JESUS DA SELVA" {{#if_equal profissional.municipiomoradia "BOM JESUS DA SELVA"}}selected{{/if_equal}}>BOM JESUS DA SELVA</option>
+                        <option value="CIDELÂNDIA" {{#if_equal profissional.municipiomoradia "CIDELÂNDIA"}}selected{{/if_equal}}>CIDELÂNDIA</option>
+                        <option value="VILA NOVA DOS MARTÍRIOS" {{#if_equal profissional.municipiomoradia "VILA NOVA DOS MARTÍRIOS"}}selected{{/if_equal}}>VILA NOVA DOS MARTÍRIOS</option>
+                        <option value="SÃO PEDRO DA ÁGUA BRANCA" {{#if_equal profissional.municipiomoradia "SÃO PEDRO DA ÁGUA BRANCA"}}selected{{/if_equal}}>SÃO PEDRO DA ÁGUA BRANCA</option>
+                        <option value="BURITICUPU" {{#if_equal profissional.municipiomoradia "BURITICUPU"}}selected{{/if_equal}}>BURITICUPU</option>
                     </select>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="telfixo">Tel. Fixo</label>
-                        <input type="text" class="form-control phone" id="telfixo" name="telfixo">
+                        <input type="text" class="form-control phone" id="telfixo" name="telfixo" value="{{profissional.telfixo}}">
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="telcelular">Tel. Celular</label>
-                        <input type="text" class="form-control phone" id="telcelular" name="telcelular">
+                        <input type="text" class="form-control phone" id="telcelular" name="telcelular" value="{{profissional.telcelular}}">
                     </div>
                 </div>    
             </div>  
@@ -634,53 +626,53 @@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="carteira">N. Carteira Profissional</label>
-                        <input type="text" class="form-control" id="carteira" name="carteira">    
+                        <input type="text" class="form-control" id="carteira" name="carteira" value="{{profissional.carteira}}">    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="serie">Série</label>
-                        <input type="text" class="form-control" id="serie" name="serie">    
+                        <input type="text" class="form-control" id="serie" name="serie" value="{{profissional.serie}}">    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="emissaodoc">Emissão</label>
-                        <input type="date" class="form-control" id="emissaodoc" name="emissaodoc">    
+                        <input type="date" class="form-control" id="emissaodoc" name="emissaodoc" value="{{profissional.emissaodoc}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="ufdoc">UF</label>
                         <select class="form-control" id="ufdoc" name="ufdoc">
-                            <option value="AC">AC</option>
-                            <option value="AL">AL</option>
-                            <option value="AP">AP</option>
-                            <option value="AM">AM</option>
-                            <option value="BA">BA</option>
-                            <option value="CE">CE</option>
-                            <option value="DF">DF</option>
-                            <option value="ES">ES</option>
-                            <option value="GO">GO</option>
-                            <option value="MA">MA</option>
-                            <option value="MT">MT</option>
-                            <option value="MS">MS</option>
-                            <option value="MG">MG</option>
-                            <option value="PA">PA</option>
-                            <option value="PB">PB</option>
-                            <option value="PR">PR</option>
-                            <option value="PE">PE</option>
-                            <option value="PI">PI</option>
-                            <option value="RJ">RJ</option>
-                            <option value="RN">RN</option>
-                            <option value="RS">RS</option>
-                            <option value="RO">RO</option>
-                            <option value="RR">RR</option>
-                            <option value="SC">SC</option>
-                            <option value="SP">SP</option>
-                            <option value="SE">SE</option>
-                            <option value="TO">TO</option>
-                            <option value="EX">EX</option>
+                            <option value="MA" {{#if_equal profissional.ufdoc "MA"}}selected{{/if_equal}}>MA</option>
+                            <option value="AC" {{#if_equal profissional.ufdoc "AC"}}selected{{/if_equal}}>AC</option>
+                            <option value="AL" {{#if_equal profissional.ufdoc "AL"}}selected{{/if_equal}}>AL</option>
+                            <option value="AP" {{#if_equal profissional.ufdoc "AP"}}selected{{/if_equal}}>AP</option>
+                            <option value="AM" {{#if_equal profissional.ufdoc "AM"}}selected{{/if_equal}}>AM</option>
+                            <option value="BA" {{#if_equal profissional.ufdoc "BA"}}selected{{/if_equal}}>BA</option>
+                            <option value="CE" {{#if_equal profissional.ufdoc "CE"}}selected{{/if_equal}}>CE</option>
+                            <option value="DF" {{#if_equal profissional.ufdoc "DF"}}selected{{/if_equal}}>DF</option>
+                            <option value="ES" {{#if_equal profissional.ufdoc "ES"}}selected{{/if_equal}}>ES</option>
+                            <option value="GO" {{#if_equal profissional.ufdoc "GO"}}selected{{/if_equal}}>GO</option>
+                            <option value="MT" {{#if_equal profissional.ufdoc "MT"}}selected{{/if_equal}}>MT</option>
+                            <option value="MS" {{#if_equal profissional.ufdoc "MS"}}selected{{/if_equal}}>MS</option>
+                            <option value="MG" {{#if_equal profissional.ufdoc "MG"}}selected{{/if_equal}}>MG</option>
+                            <option value="PA" {{#if_equal profissional.ufdoc "PA"}}selected{{/if_equal}}>PA</option>
+                            <option value="PB" {{#if_equal profissional.ufdoc "PB"}}selected{{/if_equal}}>PB</option>
+                            <option value="PR" {{#if_equal profissional.ufdoc "PR"}}selected{{/if_equal}}>PR</option>
+                            <option value="PE" {{#if_equal profissional.ufdoc "PE"}}selected{{/if_equal}}>PE</option>
+                            <option value="PI" {{#if_equal profissional.ufdoc "PI"}}selected{{/if_equal}}>PI</option>
+                            <option value="RJ" {{#if_equal profissional.ufdoc "RJ"}}selected{{/if_equal}}>RJ</option>
+                            <option value="RN" {{#if_equal profissional.ufdoc "RN"}}selected{{/if_equal}}>RN</option>
+                            <option value="RS" {{#if_equal profissional.ufdoc "RS"}}selected{{/if_equal}}>RS</option>
+                            <option value="RO" {{#if_equal profissional.ufdoc "RO"}}selected{{/if_equal}}>RO</option>
+                            <option value="RR" {{#if_equal profissional.ufdoc "RR"}}selected{{/if_equal}}>RR</option>
+                            <option value="SC" {{#if_equal profissional.ufdoc "SC"}}selected{{/if_equal}}>SC</option>
+                            <option value="SP" {{#if_equal profissional.ufdoc "SP"}}selected{{/if_equal}}>SP</option>
+                            <option value="SE" {{#if_equal profissional.ufdoc "SE"}}selected{{/if_equal}}>SE</option>
+                            <option value="TO" {{#if_equal profissional.ufdoc "TO"}}selected{{/if_equal}}>TO</option>
+                            <option value="EX" {{#if_equal profissional.ufdoc "EX"}}selected{{/if_equal}}>EX</option>
                         </select>
                     </div>
                 </div>
@@ -689,31 +681,31 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="titulo">Título de Eleitor</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo">    
+                        <input type="text" class="form-control" id="titulo" name="titulo" value="{{profissional.titulo}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="secao">Seção</label>
-                        <input type="text" class="form-control" id="secao" name="secao">    
+                        <input type="text" class="form-control" id="secao" name="secao" value="{{profissional.secao}}">    
                     </div>
                 </div>   
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="zona">Zona</label>
-                        <input type="text" class="form-control" id="zona" name="zona">    
+                        <input type="text" class="form-control" id="zona" name="zona" value="{{profissional.zona}}">    
                     </div>
                 </div>  
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="reservista">Certificado Reservista</label>
-                        <input type="text" class="form-control" id="reservista" name="reservista">    
+                        <input type="text" class="form-control" id="reservista" name="reservista" value="{{profissional.reservista}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="passaporte">Passaporte:</label>
-                        <input type="text" class="form-control" id="passaporte" name="passaporte">    
+                        <input type="text" class="form-control" id="passaporte" name="passaporte" value="{{profissional.passaporte}}">    
                     </div>
                 </div> 
             </div>
@@ -722,75 +714,75 @@
                     <div class="form-group">
                     <label for="tipocertidao">Tipo de Certidão</label>
                     <select class="form-control" id="tipocertidao" name="tipocertidao">
-                        <option value="naoconsta">Não Consta</option>
-                        <option value="Nascimento">Nascimento</option>
-                        <option value="Casamento">Casamento</option>
+                        <option value="naoconsta" {{#if_equal profissional.tipocertidao "naoconsta"}}selected{{/if_equal}}>Não Consta</option>
+                        <option value="Nascimento" {{#if_equal profissional.tipocertidao "Nascimento"}}selected{{/if_equal}}>Nascimento</option>
+                        <option value="Casamento" {{#if_equal profissional.tipocertidao "Casamento"}}selected{{/if_equal}}>Casamento</option>
                     </select>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="certidao">Certião/Matricula:</label>
-                        <input type="text" class="form-control" id="certidao" name="certidao">    
+                        <input type="text" class="form-control" id="certidao" name="certidao" value="{{profissional.certidao}}">    
                     </div>
                 </div>
                 <div class="col-sm-1">
                     <div class="form-group">
                         <label for="livro">Livro:</label>
-                        <input type="text" class="form-control" id="livro" name="livro">    
+                        <input type="text" class="form-control" id="livro" name="livro" value="{{profissional.livro}}">    
                     </div>
                 </div>
                 <div class="col-sm-1">
                     <div class="form-group">
                         <label for="folha">Folha:</label>
-                        <input type="text" class="form-control" id="folha" name="folha">    
+                        <input type="text" class="form-control" id="folha" name="folha" value="{{profissional.folha}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="datacertidao">Data Emissão:</label>
-                        <input type="date" class="form-control" id="datacertidao" name="datacertidao">    
+                        <input type="date" class="form-control" id="datacertidao" name="datacertidao" value="{{profissional.datacertidao}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="ufcertidao">UF</label>
                         <select class="form-control" id="ufcertidao" name="ufcertidao">
-                            <option value="AC">AC</option>
-                            <option value="AL">AL</option>
-                            <option value="AP">AP</option>
-                            <option value="AM">AM</option>
-                            <option value="BA">BA</option>
-                            <option value="CE">CE</option>
-                            <option value="DF">DF</option>
-                            <option value="ES">ES</option>
-                            <option value="GO">GO</option>
-                            <option value="MA">MA</option>
-                            <option value="MT">MT</option>
-                            <option value="MS">MS</option>
-                            <option value="MG">MG</option>
-                            <option value="PA">PA</option>
-                            <option value="PB">PB</option>
-                            <option value="PR">PR</option>
-                            <option value="PE">PE</option>
-                            <option value="PI">PI</option>
-                            <option value="RJ">RJ</option>
-                            <option value="RN">RN</option>
-                            <option value="RS">RS</option>
-                            <option value="RO">RO</option>
-                            <option value="RR">RR</option>
-                            <option value="SC">SC</option>
-                            <option value="SP">SP</option>
-                            <option value="SE">SE</option>
-                            <option value="TO">TO</option>
-                            <option value="EX">EX</option>
+                            <option value="MA" {{#if_equal profissional.ufcertidao "MA"}}selected{{/if_equal}}>MA</option>
+                            <option value="AC" {{#if_equal profissional.ufcertidao "AC"}}selected{{/if_equal}}>AC</option>
+                            <option value="AL" {{#if_equal profissional.ufcertidao "AL"}}selected{{/if_equal}}>AL</option>
+                            <option value="AP" {{#if_equal profissional.ufcertidao "AP"}}selected{{/if_equal}}>AP</option>
+                            <option value="AM" {{#if_equal profissional.ufcertidao "AM"}}selected{{/if_equal}}>AM</option>
+                            <option value="BA" {{#if_equal profissional.ufcertidao "BA"}}selected{{/if_equal}}>BA</option>
+                            <option value="CE" {{#if_equal profissional.ufcertidao "CE"}}selected{{/if_equal}}>CE</option>
+                            <option value="DF" {{#if_equal profissional.ufcertidao "DF"}}selected{{/if_equal}}>DF</option>
+                            <option value="ES" {{#if_equal profissional.ufcertidao "ES"}}selected{{/if_equal}}>ES</option>
+                            <option value="GO" {{#if_equal profissional.ufcertidao "GO"}}selected{{/if_equal}}>GO</option>
+                            <option value="MT" {{#if_equal profissional.ufcertidao "MT"}}selected{{/if_equal}}>MT</option>
+                            <option value="MS" {{#if_equal profissional.ufcertidao "MS"}}selected{{/if_equal}}>MS</option>
+                            <option value="MG" {{#if_equal profissional.ufcertidao "MG"}}selected{{/if_equal}}>MG</option>
+                            <option value="PA" {{#if_equal profissional.ufcertidao "PA"}}selected{{/if_equal}}>PA</option>
+                            <option value="PB" {{#if_equal profissional.ufcertidao "PB"}}selected{{/if_equal}}>PB</option>
+                            <option value="PR" {{#if_equal profissional.ufcertidao "PR"}}selected{{/if_equal}}>PR</option>
+                            <option value="PE" {{#if_equal profissional.ufcertidao "PE"}}selected{{/if_equal}}>PE</option>
+                            <option value="PI" {{#if_equal profissional.ufcertidao "PI"}}selected{{/if_equal}}>PI</option>
+                            <option value="RJ" {{#if_equal profissional.ufcertidao "RJ"}}selected{{/if_equal}}>RJ</option>
+                            <option value="RN" {{#if_equal profissional.ufcertidao "RN"}}selected{{/if_equal}}>RN</option>
+                            <option value="RS" {{#if_equal profissional.ufcertidao "RS"}}selected{{/if_equal}}>RS</option>
+                            <option value="RO" {{#if_equal profissional.ufcertidao "RO"}}selected{{/if_equal}}>RO</option>
+                            <option value="RR" {{#if_equal profissional.ufcertidao "RR"}}selected{{/if_equal}}>RR</option>
+                            <option value="SC" {{#if_equal profissional.ufcertidao "SC"}}selected{{/if_equal}}>SC</option>
+                            <option value="SP" {{#if_equal profissional.ufcertidao "SP"}}selected{{/if_equal}}>SP</option>
+                            <option value="SE" {{#if_equal profissional.ufcertidao "SE"}}selected{{/if_equal}}>SE</option>
+                            <option value="TO" {{#if_equal profissional.ufcertidao "TO"}}selected{{/if_equal}}>TO</option>
+                            <option value="EX" {{#if_equal profissional.ufcertidao "EX"}}selected{{/if_equal}}>EX</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cartorio">Cartório:</label>
-                        <input type="text" class="form-control" id="cartorio" name="cartorio">    
+                        <input type="text" class="form-control" id="cartorio" name="cartorio" value="{{profissional.cartorio}}">    
                     </div>
                 </div>
             </div>    
@@ -804,37 +796,37 @@
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="cargahoria">Carga Horária:</label>
-                        <input type="text" class="form-control" id="cargahoria" name="cargahoria">    
+                        <input type="text" class="form-control" id="cargahoria" name="cargahoria" value="{{profissional.cargahoria}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="decreto">Decreto:</label>
-                        <input type="text" class="form-control" id="decreto" name="decreto">    
+                        <input type="text" class="form-control" id="decreto" name="decreto" value="{{profissional.decreto}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="termo">Termo:</label>
-                        <input type="text" class="form-control" id="termo" name="termo">    
+                        <input type="text" class="form-control" id="termo" name="termo" value="{{profissional.termo}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="temposervico">Tempo de Serviço:</label>
-                        <input type="text" class="form-control" id="temposervico" name="temposervico">    
+                        <input type="text" class="form-control" id="temposervico" name="temposervico" value="{{profissional.temposervico}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="dataenquadramento">Data Enquadramento:</label>
-                        <input type="date" class="form-control" id="dataenquadramento" name="dataenquadramento">    
+                        <input type="date" class="form-control" id="dataenquadramento" name="dataenquadramento" value="{{profissional.dataenquadramento}}">    
                     </div>
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="area">Área:</label>
-                        <input type="text" class="form-control" id="area" name="area">    
+                        <input type="text" class="form-control" id="area" name="area" value="{{profissional.area}}">    
                     </div>
                 </div>
             </div>
@@ -848,38 +840,38 @@
                 <div class="col-sm-1">
                     <div class="form-group">
                         <label for="peso">Peso:</label>
-                        <input type="text" class="form-control" id="peso" name="peso">    
+                        <input type="text" class="form-control" id="peso" name="peso" value="{{profissional.peso}}">    
                     </div>
                 </div>
                 <div class="col-sm-1">
                     <div class="form-group">
                         <label for="altura">Altura:</label>
-                        <input type="text" class="form-control" id="altura" name="altura">    
+                        <input type="text" class="form-control" id="altura" name="altura" value="{{profissional.altura}}">    
                     </div>
                 </div> 
                 <div class="col-sm-2">
                     <div class="form-group">
                         <label for="tiposanguineo">Tipo Sanguíneo:</label>
-                        <input type="text" class="form-control" id="tiposanguineo" name="tiposanguineo">    
+                        <input type="text" class="form-control" id="tiposanguineo" name="tiposanguineo" value="{{profissional.tiposanguineo}}">    
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="alergia">Alergias:</label>
-                        <input type="text" class="form-control" id="alergia" name="alergia">    
+                        <input type="text" class="form-control" id="alergia" name="alergia" value="{{profissional.alergia}}">    
                     </div>
                 </div> 
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label for="tipomedicamento">Tipo Medicamento:</label>
-                        <input type="text" class="form-control" id="tipomedicamento" name="tipomedicamento">    
+                        <input type="text" class="form-control" id="tipomedicamento" name="tipomedicamento" value="{{profissional.tipomedicamento}}">    
                     </div>
                 </div>     
             </div>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="form-group mt-4">
-                        <input type="checkbox" class="form-control-md" id="deficienciafisica" name="deficienciafisica" value="true">
+                        <input type="checkbox" class="form-control-md" id="deficienciafisica" name="deficienciafisica" value="{{profissional.deficienciafisica}}">
                         Deficiência Física
                     </div>
                 </div>    
@@ -906,27 +898,27 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="banco">Banco:</label>
-                        <input type="text" class="form-control" id="banco" name="banco">    
+                        <input type="text" class="form-control" id="banco" name="banco" value="{{profissional.banco}}">    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="agencia">Agência:</label>
-                        <input type="text" class="form-control" id="agencia" name="agencia">    
+                        <input type="text" class="form-control" id="agencia" name="agencia" value="{{profissional.agencia}}">    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="conta">Conta:</label>
-                        <input type="text" class="form-control" id="conta" name="conta">    
+                        <input type="text" class="form-control" id="conta" name="conta" value="{{profissional.conta}}">    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                     <label for="tipoconta">Tipo</label>
                     <select class="form-control" id="tipoconta" name="tipoconta">
-                        <option value="corrente">Conta Corrente</option>
-                        <option value="poupanca">Conta Poupança</option>
+                        <option value="corrente" {{#if_equal profissional.tipoconta "EX"}}selected{{/if_equal}}>Conta Corrente</option>
+                        <option value="poupanca" {{#if_equal profissional.tipoconta "EX"}}selected{{/if_equal}}>Conta Poupança</option>
                     </select>
                     </div>
                 </div>    
@@ -935,27 +927,27 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="banco1">Banco:</label>
-                        <input type="text" class="form-control" id="banco1" name="banco1">    
+                        <input type="text" class="form-control" id="banco1" name="banco1" value="{{profissional.banco1}}">    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="agencia1">Agência:</label>
-                        <input type="text" class="form-control" id="agencia1" name="agencia1">    
+                        <input type="text" class="form-control" id="agencia1" name="agencia1" value="{{profissional.agencia1}}">    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="conta1">Conta:</label>
-                        <input type="text" class="form-control" id="conta1" name="conta1">    
+                        <input type="text" class="form-control" id="conta1" name="conta1" value="{{profissional.conta1}}">    
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group">
                     <label for="tipoconta1">Tipo</label>
                     <select class="form-control" id="tipoconta1" name="tipoconta1">
-                        <option value="corrente">Conta Corrente</option>
-                        <option value="poupanca">Conta Poupança</option>
+                        <option value="corrente" {{#if_equal profissional.tipoconta1 "EX"}}selected{{/if_equal}}>Conta Corrente</option>
+                        <option value="poupanca" {{#if_equal profissional.tipoconta1 "EX"}}selected{{/if_equal}}>Conta Poupança</option>
                     </select>
                     </div>
                 </div>    
@@ -970,7 +962,7 @@
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="observacoes">Obs:</label>
-                        <textarea type="text" class="form-control" id="observacoes" name="observacoes"></textarea>    
+                        <textarea type="text" class="form-control" id="observacoes" name="observacoes" value="{{profissional.observacoes}}"></textarea>    
                     </div>
                 </div> 
             </div>    
@@ -978,40 +970,41 @@
     </div>
     <div class="row">
         <div class="col-12 mb-4 mt-4 text-center">
-            <button type="submit" class="btn btn-success">Cadastrar Profissional</button> 
+            <button type="submit" class="btn btn-success">Salvar profissional</button> 
         </div>
-    </div> 
-
-<!-- Modal -->
-<div class="modal hide fade mx-auto" id="cadastroSucesso" tabindex="-1" aria-labelledby="cadastroSucessoLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="cadastroSucessoLabel">Sucesso!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        O cadastro do profissional foi efetuado!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="modalOk" data-dismiss="modal">OK!</button>        
-      </div>
     </div>
-  </div>
-</div>
 
+    <!-- Modal -->
+    <div class="modal hide fade mx-auto" id="cadastroSucesso" tabindex="-1" aria-labelledby="cadastroSucessoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroSucessoLabel">Sucesso!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                A edição do profissional foi efetuada!
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="modalOk" data-dismiss="modal">OK!</button>        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 </form>
 
 <!-- ENVIO DO FORMULÁRIO -->
 <script>
     $(document).ready(() => {
-        $("#formCadastro").submit(function(event){
+        $("#formEditar").submit(function(event){
             event.preventDefault();            
             $.ajax({
                 type: "post",
-                url: "/profissionais/cadastro/add",
+                url: "/profissionais/cadastro/edit",
                 data: $(this).serialize(),
                 success: function(data){          
                     console.log(data)                      
@@ -1020,10 +1013,17 @@
             })
         })
     })   
+</script>
 
-    $("#modalOk").click(() => {
-        $("#formCadastro").trigger("reset")
-    }) 
+<!-- TRATAMENTO DAS DATAS -->
+<script>
+    insertFormatedDate("dataDoc", "{{profissional.dataDoc}}")
+    insertFormatedDate("dataNasc", "{{profissional.dataNasc}}")
+    insertFormatedDate("dataadmissao", "{{profissional.dataadmissao}}")
+    insertFormatedDate("datademissao", "{{profissional.datademissao}}")
+    insertFormatedDate("emissaodoc", "{{profissional.emissaodoc}}")
+    insertFormatedDate("datacertidao", "{{profissional.datacertidao}}")
+    insertFormatedDate("dataenquadramento", "{{profissional.dataenquadramento}}")
 </script>
 
 <!-- CONFIGURAÇÃO DAS MÁSCARAS -->

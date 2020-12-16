@@ -1,0 +1,70 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title" style="color: darkblue;">Busca de Profissional</h5>
+        <hr>
+        <form id="formFiltro">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="nome">Nome do Profissional</label>
+                        <input type="text" class="form-control" id="descricao" name="nome" placeholder="Nome do Profissional">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="CPF do Profissional">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control" id="bairro" name="bairro" placeholder="Bairro do Profissional">
+                    </div>
+                </div>                
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-4 text-center">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success form-control">Buscar profissional</button> 
+                    </div> 
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h4 style="color: darkblue;">Resultados da busca</h4>
+    <table id="tabBuscaProfissional" class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Bairro</th>             
+            </tr>                    
+        </thead>
+        <tbody id="resultadoBusca"></tbody>
+    </table>
+</div>
+
+<!-- ENVIO DO FORMULÁRIO -->
+<script>
+    $(document).ready(() => {
+        $("#formFiltro").submit(function(event){
+            event.preventDefault();            
+            $.ajax({
+                type: "post",
+                url: "/profissionais/busca/filtro",
+                data: $(this).serialize(),
+                success: function(data){                     
+                    $("#resultadoBusca").html(data)                                                           
+                }
+            })
+        })
+    })   
+
+    $("#modalOk").click(() => {
+        $("#formCadastro").trigger("reset")
+    }) 
+</script>
