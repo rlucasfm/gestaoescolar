@@ -177,13 +177,13 @@ router.post("/cadastro/edit", (req, res) => {
     portariacoordenadorsecret: req.body.portariacoordenadorsecret || ""
 
   }
-Escola.findByIdAndUpdate(req.body.id, editEscola, {'runValidators': true}, (err) => {
-if(err){
-  res.send(err)
-}else{
-  res.send("Edição feita com sucesso")
-}
-})
+  Escola.findByIdAndUpdate(req.body.id, editEscola, {'runValidators': true}, (err) => {
+    if(err){
+      res.send(err)
+    }else{
+      res.send("Edição feita com sucesso")
+    }
+  })
 })
 
 module.exports = router

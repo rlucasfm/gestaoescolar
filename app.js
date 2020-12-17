@@ -12,6 +12,7 @@
     const dashboard = require("./routes/dashboard")
     const alunos = require("./routes/alunos")
     const escolas = require("./routes/escolas")
+    const profissionais = require("./routes/profissionais")
     const passport = require('passport')
     require("./config/auth")(passport)
     const {isLogged} = require("./helpers/logged")
@@ -61,6 +62,7 @@
 app.use('/dashboard', isLogged, dashboard)
 app.use('/alunos', isLogged, alunos)
 app.use('/escolas', isLogged, escolas)
+app.use('/profissionais', isLogged, profissionais)
 
 app.get('/', (req,res) => {
     if(req.isAuthenticated()){

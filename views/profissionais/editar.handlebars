@@ -1,7 +1,7 @@
 <h3 style="color: darkblue;" class="mb-4">Edição de Profissional</h3>
 
 <form id="formEditar">
-    <input type="hidden" name="id" id="id" value="{{profissional._id}}"> 
+    <input type="hidden" name="idProf" id="idProf" value="{{profissional._id}}"> 
 <div class="card">
 <div class="card-body">
     <div class="card">
@@ -93,7 +93,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="dataDoc">Data emissão</label>
-                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" value="{{profissional.dataDoc}}" required>
+                        <input type="date" class="form-control" id="dataDoc" name="dataDoc" required>
                     </div>
                 </div>
                 <div class="col-sm-2">
@@ -110,7 +110,7 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="dataNasc">Data Nascimento</label>
-                        <input type="date" class="form-control" id="dataNasc" name="dataNasc" value="{{profissional.dataNasc}}">
+                        <input type="date" class="form-control" id="dataNasc" name="dataNasc">
                     </div>
                 </div>
                 <div class="col-sm-3">

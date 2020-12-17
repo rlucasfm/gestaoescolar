@@ -142,7 +142,7 @@ new Profissional(novoProfissional).save().then(() => {
 
 router.post("/cadastro/edit", (req, res) => {
   const editProfissional = {
-    buscaescola: req.body.buscaescola || "",
+    // buscaescola: req.body.buscaescola || "",
     cpf: req.body.cpf || "",
     nome: req.body.nome || "",
     matriculaProfissional: req.body.matriculaProfissional || "",
@@ -168,7 +168,7 @@ router.post("/cadastro/edit", (req, res) => {
     chsemanais: req.body.chsemanais || "",
     necessidade: req.body.necessidade || "",
     tipoendereco: req.body.tipoendereco || "",
-    nees: req.body.nees || "",
+    // nees: req.body.nees || "",
     inep: req.body.inep || "",
     financeiro: req.body.financeiro || "",
     email: req.body.email || "",
@@ -221,16 +221,16 @@ router.post("/cadastro/edit", (req, res) => {
     agencia1: req.body.agencia1 || "",
     conta1: req.body.conta1 || "",
     tipoconta1: req.body.tipoconta1 || "",
-    observacoes: req.body.observacoes || ""
-    
+    observacoes: req.body.observacoes || ""    
   }
-Profissional.findByIdAndUpdate(req.body.id, editProfissional, {'runValidators': true}, (err) => {
-if(err){
-  res.send(err)
-}else{
-  res.send("Edição feita com sucesso")
-}
-})
+  
+  Profissional.findByIdAndUpdate(req.body.idProf, editProfissional, {'runValidators': true}, (err) => {
+    if(err){
+      res.send(err)
+    }else{
+      res.send("Edição feita com sucesso")
+    }
+  })
 })
 
 module.exports = router
