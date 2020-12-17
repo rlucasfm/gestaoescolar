@@ -12,13 +12,13 @@ const Profissional = new Schema({
     nome:{
         type: String,
     },
-    matricula:{
+    matriculaProfissional:{
         type: String,
     },
-    pasep:{
+    pasepprofissional:{
         type: String,
     },
-    rg:{
+    rgprofissional:{
         type: String,
     },
     orgemissor:{
@@ -160,7 +160,7 @@ const Profissional = new Schema({
     tipocertidao:{
         type: String,
     },
-    matricula:{
+    certidao:{
         type: String,
     },
     livro:{
