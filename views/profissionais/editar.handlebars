@@ -1,8 +1,56 @@
 <h3 style="color: darkblue;" class="mb-4">Edição de Profissional</h3>
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <form id="formCursos">
+                        <button type="submit" class="btn btn-primary">Cursos Específ</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <form id="formEscolaridade">
+                        <button type="submit" class="btn btn-primary">Escolaridade</button>
+                    </form> 
+                </div>
+            </div>  
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <form id="formFormacao">
+                        <button type="submit" class="btn btn-primary">Formação Sup</button>
+                    </form> 
+                </div>
+            </div>  
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <form id="formGraducao">
+                        <button type="submit" class="btn btn-primary">Pós Graduação</button>
+                    </form> 
+                </div>
+            </div> 
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <form id="formOcorrencias">
+                        <button type="submit" class="btn btn-primary">Ocorrencias</button>
+                    </form>
+                </div>
+            </div>              
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <form id="formLotacao">
+                        <button type="submit" class="btn btn-primary">Lot. Profissionais</button>
+                    </form> 
+                </div>
+            </div>                   
+        </div>
+    </div>
+</div>
 
 <form id="formEditar">
     <input type="hidden" name="idProf" id="idProf" value="{{profissional._id}}"> 
-<div class="card">
+<div class="card mt-4">
 <div class="card-body">
     <div class="card">
         <div class="card-body mt-4">
@@ -11,7 +59,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group">
-                        <input type="checkbox" class="form-control-md" id="buscaescola" name="buscaescola" value="true">
+                        <input type="checkbox" class="form-control-md" id="buscaescola" name="buscaescola" value="true" {{#if_equal profissional.buscaescola true}}checked{{/if_equal}}>
                         Buscar Somente profissional da escola atual (apenas com funções exercidas definidas!)
                     </div>
                 </div>
@@ -454,19 +502,19 @@
                 </div>
                 <div class="col-sm-2">
                     <div class="form-group mt-4">
-                        <input type="checkbox" class="form-control-md" id="nees" name="nees" value="true">
+                        <input type="checkbox" class="form-control-md" id="nees" name="nees" value="true" {{#if_equal profissional.nees true}}checked{{/if_equal}}>
                         Possui NEES
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group mt-4">
-                        <input type="checkbox" class="form-control-md" id="inep" name="inep" value="true">
+                        <input type="checkbox" class="form-control-md" id="inep" name="inep" value="true" {{#if_equal profissional.inep true}}checked{{/if_equal}}>
                         Registro cadsatrado no INEP
                     </div>
                 </div>
                 <div class="col-sm-3">
                     <div class="form-group mt-4">
-                        <input type="checkbox" class="form-control-md" id="financeiro" name="financeiro" value="true">
+                        <input type="checkbox" class="form-control-md" id="financeiro" name="financeiro" value="true" {{#if_equal profissional.financeiro true}}checked{{/if_equal}}>
                         Permitir Lançamento no Financeiro
                     </div>
                 </div>
@@ -497,7 +545,7 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="form-group mt-4">
-                        <input type="checkbox" class="form-control-md" id="bloqueio" name="bloqueio" value="true">
+                        <input type="checkbox" class="form-control-md" id="bloqueio" name="bloqueio" value="true" {{#if_equal profissional.bloqueio true}}checked{{/if_equal}}>
                         Bloqueio Total
                     </div>
                 </div>
@@ -871,19 +919,19 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="form-group mt-4">
-                        <input type="checkbox" class="form-control-md" id="deficienciafisica" name="deficienciafisica" value="{{profissional.deficienciafisica}}">
+                        <input type="checkbox" class="form-control-md" id="deficienciafisica" name="deficienciafisica" value="true" {{#if_equal profissional.deficienciafisica true}}checked{{/if_equal}}>
                         Deficiência Física
                     </div>
                 </div>    
                 <div class="col-sm-3">
                     <div class="form-group mt-4">
-                        <input type="checkbox" class="form-control-md" id="fumante" name="fumante" value="true">
+                        <input type="checkbox" class="form-control-md" id="fumante" name="fumante" value="true" {{#if_equal profissional.fumante true}}checked{{/if_equal}}>
                         Fumante
                     </div>
                 </div> 
                 <div class="col-sm-6">
                     <div class="form-group mt-4">
-                        <input type="checkbox" class="form-control-md" id="tomamedicacao" name="tomamedicacao" value="true">
+                        <input type="checkbox" class="form-control-md" id="tomamedicacao" name="tomamedicacao" value="true" {{#if_equal profissional.tomamedicacao true}}checked{{/if_equal}}>
                         Toma Medicação regularmente
                     </div>
                 </div>  
