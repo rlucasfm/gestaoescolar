@@ -1,48 +1,29 @@
 <h3 style="color: darkblue;" class="mb-4">Edição de Profissional</h3>
 <div class="card">
     <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-sm-12">
+                <button type="button" class="btn btn-success" id="btn_resumo">Resumo</button>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-2">
-                <div class="form-group">
-                    <form id="formCursos">
-                        <button type="submit" class="btn btn-primary">Cursos Específ</button>
-                    </form>
-                </div>
+                <button type="button" class="btn btn-primary" id="btn_cursos_esp">Cursos Específ</button>
             </div>
             <div class="col-sm-2">
-                <div class="form-group">
-                    <form id="formEscolaridade">
-                        <button type="submit" class="btn btn-primary">Escolaridade</button>
-                    </form> 
-                </div>
+                <button type="button" class="btn btn-primary">Escolaridade</button>
             </div>  
             <div class="col-sm-2">
-                <div class="form-group">
-                    <form id="formFormacao">
-                        <button type="submit" class="btn btn-primary">Formação Sup</button>
-                    </form> 
-                </div>
+                <button type="button" class="btn btn-primary">Formação Sup</button>
             </div>  
             <div class="col-sm-2">
-                <div class="form-group">
-                    <form id="formGraducao">
-                        <button type="submit" class="btn btn-primary">Pós Graduação</button>
-                    </form> 
-                </div>
+                <button type="button" class="btn btn-primary">Pós Graduação</button>                
             </div> 
             <div class="col-sm-2">
-                <div class="form-group">
-                    <form id="formOcorrencias">
-                        <button type="submit" class="btn btn-primary">Ocorrencias</button>
-                    </form>
-                </div>
+                <button type="button" class="btn btn-primary">Ocorrencias</button>
             </div>              
             <div class="col-sm-2">
-                <div class="form-group">
-                    <form id="formLotacao">
-                        <button type="submit" class="btn btn-primary">Lot. Profissionais</button>
-                    </form> 
-                </div>
+                <button type="button" class="btn btn-primary">Lot. Profissionais</button>
             </div>                   
         </div>
     </div>
@@ -1087,4 +1068,17 @@
 
     $('.rg').attr("onkeypress", "mascara(this, aplicarRg)")
     $('.rg').attr("maxlength", "13")
+</script>
+
+<!-- BOTÕES DAS ABAS -->
+<script>
+    $('#btn_resumo').click(() => {
+        $("form").hide();
+        $("#formEditar").show();
+    });
+
+    $('#btn_cursos_esp').click(() => {
+        $("form").hide();
+        $("#formCursos").show();
+    })
 </script>
