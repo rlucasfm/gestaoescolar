@@ -3,27 +3,27 @@
     <div class="card-body">
         <div class="row mb-3">
             <div class="col-sm-12">
-                <button type="button" class="btn btn-success" id="btn_resumo">Resumo</button>
+                <button type="button" class="btn btn-success mb-2" id="btn_resumo">Resumo</button>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button type="button" class="btn btn-primary" id="btn_cursos_esp">Cursos Específ</button>
+                <button type="button" class="btn btn-primary mb-2" id="btn_cursos_esp">Cursos Específ</button>
             </div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-primary">Escolaridade</button>
+                <button type="button" class="btn btn-primary mb-2">Escolaridade</button>
             </div>  
             <div class="col-sm-2">
-                <button type="button" class="btn btn-primary">Formação Sup</button>
+                <button type="button" class="btn btn-primary mb-2">Formação Sup</button>
             </div>  
             <div class="col-sm-2">
-                <button type="button" class="btn btn-primary">Pós Graduação</button>                
+                <button type="button" class="btn btn-primary mb-2">Pós Graduação</button>                
             </div> 
             <div class="col-sm-2">
-                <button type="button" class="btn btn-primary">Ocorrencias</button>
+                <button type="button" class="btn btn-primary mb-2">Ocorrencias</button>
             </div>              
             <div class="col-sm-2">
-                <button type="button" class="btn btn-primary">Lot. Profissionais</button>
+                <button type="button" class="btn btn-primary mb-2">Lot. Profissionais</button>
             </div>                   
         </div>
     </div>
@@ -1086,6 +1086,11 @@
 
 <!-- BOTÕES DAS ABAS -->
 <script>
+    $(document).ready(() => {
+        $("form").hide();
+        $("#formEditar").show();
+    });
+
     $('#btn_resumo').click(() => {
         $("form").hide();
         $("#formEditar").show();
